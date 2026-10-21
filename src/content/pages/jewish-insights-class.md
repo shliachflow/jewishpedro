@@ -2,7 +2,7 @@
 title: Jewish Insights Class
 description: Live class with Rabbi Yisroel on Zoom
 ---
-Join us every Tuesday at 7:00 PM for Jewish Insights, a weekly Torah class that explores the weekly portion and its timeless lessons. The class is open to all levels and provides meaningful, practical insights.
+Join us every Tuesday at 7:00 PM for Jewish Insights, a weekly Torah class on the weekly portion. It's open to all levels and offers practical insights.
 
 ## This Week's Flyer
 

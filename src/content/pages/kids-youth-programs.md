@@ -16,18 +16,18 @@ Interactive early childhood programs for parents and toddlers to explore Jewish 
 
 ### Hebrew School
 
-Comprehensive Jewish education program teaching Hebrew language, prayers, and Jewish heritage.
+Jewish education covering the Hebrew language, prayers, and Jewish heritage.
 
 ### CKids
 
-Fun and engaging programs for elementary school children featuring Jewish learning and activities.
+Jewish learning and activities for elementary school children.
 
 ### CTeen
 
-Dynamic programs for teenagers exploring Jewish identity, community service, and leadership.
+Programs for teenagers on Jewish identity, community service, and leadership.
 
 ## Ready to Get Started?
 
-Help us build the programs your family wants to see! Let us know about your children's interests and we'll work together to create engaging Jewish programming for our community.
+Help us build the programs your family wants to see! Tell us about your children's interests and we'll work with you to create them.
 
 [Express Interest Here](/contact)

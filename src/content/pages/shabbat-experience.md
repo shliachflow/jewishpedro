@@ -6,21 +6,19 @@ description: Saturday, Shabbat, kiddush
 
 ## Deep Dive into the Chassidic teachings
 
-We are excited to invite you to explore the profound depths of Jewish wisdom found in the Chassidic works. These foundational Chassidic texts offer transformative insights into life's big questions, such as the nature of the soul and our purpose in the world.
+Join us to explore the Chassidic works. These foundational texts take up life's big questions, such as the nature of the soul and our purpose in the world.
 
-Join us weekly as we uncover inspirational guidance on serving G-d with joy and aligning our lives with greater meaning.
+Each week we look at practical guidance on serving G-d with joy and living with purpose.
 
 ## Uplifting Prayer & Song
 
-We will spend time praying and singing some of the most popular and uplifting songs in Jewish prayer, which have the power to elevate our spirits and bring us closer to G-d.
+We spend time praying and singing some of the best-loved songs in Jewish prayer.
 
 Scientific Benefits of Prayer: Studies have shown that prayer can have a profound impact on our physical, emotional, and spiritual well-being - from reducing stress and anxiety to increasing feelings of happiness and connection to others.
 
 ## Community Connection
 
-One of the most important aspects of Shabbat is the opportunity to come together as a community and bond with one another. The Kiddush luncheon after the service is a perfect chance to socialize, catch up with friends, and make new connections.
-
-It's a special time to celebrate and connect with the beauty of Shabbat and each other.
+Shabbat is a time to come together as a community. The Kiddush luncheon after the service is a chance to catch up with friends and meet new people.
 
 ## Shabbat Schedule
 
@@ -35,6 +33,6 @@ Kiddush Luncheon
 
 ## Join Our Shabbat Community
 
-Whether you are a seasoned prayer-goer or new to the concept, we believe there is something special and transformative about coming together as a community to connect with G-d and with each other.
+Whether you're a seasoned prayer-goer or new to it, you're welcome to join us and connect with G-d and with each other.
 
 [Learn More About Our Services](/synagogue-services)

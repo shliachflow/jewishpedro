@@ -10,7 +10,7 @@ heroImageMobile: /images/hero-harbor-sunset-m.jpg
 heroAlt: A lighthouse at the end of the harbor breakwater at sunset
 feature:
   title: The Shabbat Experience
-  text: "Learning, Prayer, community, and a delicious kiddush lunch every Saturday morning."
+  text: "Learning, prayer, community, and a kiddush lunch every Saturday morning."
   href: /shabbat-experience
   image: /images/shabbat-kiddush-cup.jpg
   alt: A silver kiddush cup and a decanter of wine on a table
@@ -26,15 +26,15 @@ people:
     role: Co-Founder and Program Director
 featured:
   - title: "Move to Pedro!"
-    text: "Are you looking for a more affordable Jewish community in SoCal? Check out this page to see we are a good fit!"
+    text: "Looking for a more affordable Jewish community in SoCal? See whether we're a good fit."
     href: /move-to-pedro
     image: /images/hero-vtb-containership.jpg
     alt: A container ship passing under the Vincent Thomas Bridge in San Pedro
   - title: Join Chai Society
-    text: "Be part of a circle of monthly givers keeping Jewish life in San Pedro thriving."
+    text: "Join a circle of monthly givers supporting Jewish life in San Pedro."
     href: /chai-society
   - title: Weekly Torah Insights
-    text: "Join our engaging weekly class exploring Jewish wisdom for modern life."
+    text: "Our weekly class on Jewish wisdom for modern life."
     href: /jewish-insights-class
   - title: "Bassie's Challah Shoppe"
     text: "Pre-order by Wednesday and pick up fresh, homemade challah for Shabbat."
@@ -42,4 +42,4 @@ featured:
 ---
 An open home for timeless, joyful Judaism - where every Jew is family.
 
-Chabad S. Pedro is a warm, welcoming, and non-judgmental home for Jewish life. No matter your background or level of observance, you’ll always feel welcome here — with opportunities to learn, celebrate, and connect in a spirit of joy. [Learn more](/about)
+Chabad S. Pedro is a friendly, non-judgmental home for Jewish life. Whatever your background or level of observance, you’re welcome here to learn, celebrate, and connect. [Learn more](/about)

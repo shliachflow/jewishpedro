@@ -41,13 +41,13 @@ Feel free to [reach out](/contact) to Rabbi Yisroel if you have any other questi
 
 ### What is Chabad?
 
-Chabad is a philosophy, a movement, and an organization. It is one of the most dynamic forces in Jewish life today, with over **3,500 centers in 100 countries** dedicated to the welfare of the Jewish people worldwide.
+Chabad is a philosophy, a movement, and an organization. It has over **3,500 centers in 100 countries** dedicated to the welfare of the Jewish people worldwide.
 
 [Back to top ↑](#)
 
 ### Are Chabad programs exclusively for Orthodox Jews?
 
-Chabad is welcoming and non-judgmental, and our programs are open to all Jews. In fact, most people who attend Chabad programs are not Orthodox. Chabad avoids labels as they can create barriers between people. The teachings of Chabad are infused with the joy and warmth of Chassidic tradition, but no level of observance is required to participate.
+Chabad is welcoming and non-judgmental, and our programs are open to all Jews. In fact, most people who attend Chabad programs are not Orthodox. Chabad avoids labels as they can create barriers between people. Chabad's teachings come from Chassidic tradition, but no level of observance is required to participate.
 
 [Back to top ↑](#)
 
@@ -66,10 +66,10 @@ The Chabad Center is located at 817 W 9th St, San Pedro, CA 90731.
 ### What services and programs do you offer?
 
 - **Classes** – Weekly classes, one [on Zoom on Tuesday evenings](/jewish-insights-class) and another [on Shabbat mornings](/shabbat-experience).
-- **Shabbat Community Dinners** – Enjoy a warm, traditional Shabbat experience with great food and song.
+- **Shabbat Community Dinners** – A traditional Shabbat meal with good food and song.
 - **[Shabbat Experience @ Chabad](/shabbat-experience)** – Saturday morning: class, prayers, Torah reading, and Kiddush luncheon.
 - **[Shabbat meals at the Rabbi & Rebbetzin's home](/shabbat-meal)**
-- **Holiday Programs** – Grand Chanukah celebrations, Passover Seders, and more.
+- **Holiday Programs** – Chanukah celebrations, Passover Seders, and more.
 - **[One-on-One Learning with the Rabbi](/adult-education)**
 - **[Women's Jewish Circle](/womens-circle)** – Events and gatherings for women in the community.
 - **[Youth Programs/Hebrew School](/kids-youth-programs)** – Planned for the future as our community grows.

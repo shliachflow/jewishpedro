@@ -11,7 +11,7 @@ Any week\*
 Friday Evenings @ the Rabbi & Rebbetzin's House  
 or Saturday day Kiddush Lunch @ Shul
 
-Please join us for a Shabbat meal. The delicious homemade food, the songs and tradition... It's just the perfect opportunity to explore and experience our beautiful heritage. We'd love it if you came! Let us know if you would like to join us. We look forward!
+Please join us for a Shabbat meal. Homemade food, songs, and tradition... a great way to experience Shabbat. We'd love it if you came! Let us know if you would like to join us.
 
 (Not sure what Shabbat is? Read more about it [here](https://www.chabad.org/633659).)
 

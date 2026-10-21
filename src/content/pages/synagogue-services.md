@@ -1,6 +1,6 @@
 ---
 title: Synagogue Services
-description: Warm, welcoming, every Jew welcome
+description: Every Jew welcome
 ---
 ## Services & Schedule
 
@@ -38,6 +38,6 @@ Join us for in-depth Torah study and discussion relating to that week's Torah po
 
 ## Questions About Services?
 
-Have questions about our schedule, want to confirm service times, or interested in joining us? Rabbi Yisroel is here to help and would love to hear from you.
+Have questions about our schedule, want to confirm service times, or interested in joining us? Rabbi Yisroel is happy to help.
 
 [Call Rabbi Yisroel: (310) 935-5236](tel:310-935-5236)

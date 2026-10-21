@@ -6,13 +6,13 @@ description: Tuesday Insights · Shabbat Class · One-on-one
 
 ## Adult Education at Chabad
 
-At Chabad, we believe that ongoing Torah study nourishes the mind and heart, deepens connection, and brings timeless wisdom into everyday life. Our adult education offerings are open to everyone—whether you're exploring for the first time or looking to go deeper. Join a warm, welcoming environment where questions are encouraged and learning is truly for all.
+Our adult education offerings are open to everyone—whether you're exploring for the first time or looking to go deeper. Questions are encouraged.
 
 ## Weekly Offerings
 
 ### Jewish Insights — Tuesdays at 7:00 PM
 
-A weekly, accessible class that explores the weekly Torah portion and its timeless lessons. We unpack core ideas, discuss real-life applications, and make space for Q&A. Suitable for beginners through advanced learners.
+A weekly class on the weekly Torah portion. We unpack core ideas, discuss how they apply to real life, and leave time for Q&A. Suitable for beginners through advanced learners.
 
 Virtual on Zoom
 
@@ -20,7 +20,7 @@ Virtual on Zoom
 
 ### Tanya — Shabbat Morning
 
-Before services, we learn from Tanya, the foundational Chassidic work by Rabbi Schneur Zalman of Liadi. Tanya explores the inner life of the soul, the purpose of our struggles, and practical guidance for living with joy, focus, and integrity. Clear explanations and friendly discussion make classic ideas feel relevant and alive.
+Before services, we learn from Tanya, the foundational Chassidic work by Rabbi Schneur Zalman of Liadi. Tanya explores the inner life of the soul, the purpose of our struggles, and practical guidance for living with joy, focus, and integrity. We keep the explanations clear and the discussion friendly.
 
 Part of the Shabbat Experience
 
@@ -28,7 +28,7 @@ Part of the Shabbat Experience
 
 ## Holiday Learning
 
-In the weeks leading up to Jewish holidays, we offer special classes and primers to help you prepare—inspiration, meaning, and practical how-to's for celebrating.
+In the weeks leading up to Jewish holidays, we offer special classes and primers to help you prepare—the meaning behind each holiday and practical how-to's for celebrating.
 
 ## One-on-One Learning
 

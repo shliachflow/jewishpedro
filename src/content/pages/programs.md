@@ -11,7 +11,7 @@ description: "Shabbat · Holidays · Learning · Kids · More"
   Shabbat, classes, holidays, events
 - [Upcoming Events](/events)
 - [Shabbat Morning, 10:15 AM](/synagogue-services)  
-  Warm, welcoming, every Jew welcome
+  Every Jew welcome
 - [Jewish Learning for Everyone](/adult-education)  
   Tuesday Insights · Shabbat Class · One-on-one
 - [Men's Club at Chabad](/mens-club)  
