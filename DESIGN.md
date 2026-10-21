@@ -28,3 +28,9 @@ Harbor signage and timetables, not nautical decoration. No anchors, ropes, waves
 - No stock or archive images (the old ChabadOne photos were removed). Use only real photos of the community, the shul and the family, the logo, flyers, or deliberately created art.
 - Hero photo slot: set `heroImage` (and `heroAlt`) in `src/content/pages/home.md`. The hero then becomes photo-led with a teal overlay for legibility.
 - Pages that still use images from the old site (to verify as the center's own): about (rabbi, rebbetzin, family), challah photos, banners, flyers, `move-to-pedro.png`.
+
+## References studied (getdesign.md, via `npx getdesign add <brand>`, read as reference only, not copied)
+- Starbucks: color-block page rhythm (hero band, paper, tinted band, deep footer), tinted warm neutrals instead of pure white, one color reserved for one job. We use the same rhythm with the logo's teal and gold.
+- Airbnb: photography carries the visual weight (so type stays modest), a single accent, one soft shadow tier, editorial dropdowns. Applies once real photos are in.
+- Oura: warm paper with an editorial type pairing. We use a sans display plus a reading serif.
+- The catalog has no religious or nonprofit entries, so these inform structure only; the identity comes from the logo and the port town.

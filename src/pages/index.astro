@@ -44,11 +44,13 @@ const { heroImage, heroAlt, featured } = home.data;
     </section>
   )}
 
-  <section class="container section">
-    <h2>Coming up</h2>
-    {upcoming.length === 0
-      ? <p>No events scheduled right now. Check back soon.</p>
-      : <div class="event-rows">{upcoming.map((e) => <EventRow event={e} />)}</div>}
-    <p class="more"><a href={url('/events')}>All upcoming events →</a></p>
+  <section class="band">
+    <div class="container">
+      <h2>Coming up</h2>
+      {upcoming.length === 0
+        ? <p>No events scheduled right now. Check back soon.</p>
+        : <div class="event-rows">{upcoming.map((e) => <EventRow event={e} />)}</div>}
+      <p class="more"><a href={url('/events')}>All upcoming events →</a></p>
+    </div>
   </section>
 </Base>

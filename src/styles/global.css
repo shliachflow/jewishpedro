@@ -47,6 +47,7 @@ h3 { font-size: 1.25rem; font-stretch: 100%; letter-spacing: -.01em; }
 .btn { display: inline-block; padding: .8em 1.4em; border-radius: var(--radius); background: var(--primary); color: var(--paper);
   font: 600 1rem/1.2 var(--font-display); text-decoration: none; border: 2px solid var(--primary); cursor: pointer; transition: transform .2s var(--ease); }
 .btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(.97); }
 .btn-sm { padding: .55em 1.1em; font-size: .95rem; }
 .btn-brass { background: var(--accent); color: var(--ink); border-color: var(--accent); }
 .btn-ghost { background: transparent; color: #fff; border-color: color-mix(in oklab, #fff 55%, transparent); }
@@ -87,7 +88,7 @@ h3 { font-size: 1.25rem; font-stretch: 100%; letter-spacing: -.01em; }
   .main-nav a.btn { padding: .55rem 1.1rem; }
   .has-children { position: relative; }
   .submenu { position: absolute; top: calc(100% + .35rem); left: 0; width: 21rem; background: var(--paper); border: 1px solid var(--line);
-    border-radius: var(--radius); padding: .4rem; box-shadow: 0 14px 32px -10px color-mix(in oklab, var(--primary) 35%, transparent); z-index: 5; }
+    border-radius: var(--radius); padding: .4rem; box-shadow: 0 0 0 1px color-mix(in oklab, var(--primary) 6%, transparent), 0 2px 6px color-mix(in oklab, var(--primary) 10%, transparent), 0 12px 24px -6px color-mix(in oklab, var(--primary) 22%, transparent); z-index: 5; }
   .submenu a { padding: .6rem .8rem; }
   .submenu a:hover { background: var(--mist); }
   .submenu span { display: block; }
@@ -131,6 +132,11 @@ h3 { font-size: 1.25rem; font-stretch: 100%; letter-spacing: -.01em; }
 .directory a:hover .dir-arrow { transform: translateX(6px); }
 .directory a:hover .dir-title { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: .2em; }
 @media (min-width: 48rem) { .directory a { grid-template-columns: 17rem 1fr 2rem; } .dir-arrow { display: block; text-align: right; } }
+
+/* Color-block rhythm: teal hero, paper, sand band, deep footer */
+.band { background: var(--sand); margin-top: clamp(3rem, 7vw, 5rem); padding-block: clamp(2.5rem, 6vw, 4rem); }
+.band .event-when { background: var(--paper); }
+main:has(> .band:last-child) + .site-footer { margin-top: 0; }
 
 /* Events */
 .event-rows { margin-top: 1.25rem; border-top: 2px solid var(--primary); }
