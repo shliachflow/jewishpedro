@@ -175,6 +175,11 @@
           "label": "Contact",
           "href": "/contact",
           "desc": "Call, text, or send a message"
+        },
+        {
+          "label": "Gallery",
+          "href": "/gallery",
+          "desc": "Photos from around the center"
         }
       ]
     }
@@ -196,6 +201,10 @@
     {
       "label": "Holidays",
       "href": "/holidays"
+    },
+    {
+      "label": "Gallery",
+      "href": "/gallery"
     },
     {
       "label": "Move to Pedro",
