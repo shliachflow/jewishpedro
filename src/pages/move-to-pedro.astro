@@ -7,7 +7,7 @@ const stats = [['~$800K', 'Median SP home'], ['$700K+', 'Saved vs. Pico'], ['~35
 const chapters = [['reputation', 'The reputation'], ['distance', 'The distance'], ['numbers', 'The numbers'], ['lifestyle', 'The lifestyle'], ['community', 'The community'], ['infrastructure', 'Infrastructure'], ['questions', 'The questions']];
 const drives = [['Pico-Robertson', '~35-45 min'], ['Hancock Park / La Brea', '~45-55 min'], ['Beverly Hills', '~45-55 min'], ['Sherman Oaks / Encino (Valley)', '~60-80 min'], ['Long Beach Chabad (daily minyan community)', '~20-25 min'], ['Kaiser Permanente Harbor City (hospital & medical offices)', '~13-15 min'], ['LAX Airport', '~25 min'], ['Long Beach Airport (LGB)', '~25-30 min']];
 // [name, low, high, label] in $K. San Pedro is a single figure.
-const homes = [['San Pedro', 0, 800, '~$800,000', true], ['Tarzana', 1100, 1300, '~$1.1M — $1.3M'], ['Pico-Robertson', 1300, 1800, '~$1.3M — $1.8M'], ['Sherman Oaks', 1300, 1700, '~$1.3M — $1.7M'], ['Encino', 1400, 2100, '~$1.4M — $2.1M'], ['Beverlywood', 2300, 3300, '~$2.3M — $3.3M'], ['Hancock Park', 2300, 4200, '~$2.3M — $4.2M']] as const;
+const homes = [['San Pedro', 780, 820, '~$800,000', true], ['Tarzana', 1100, 1300, '~$1.1M — $1.3M'], ['Pico-Robertson', 1300, 1800, '~$1.3M — $1.8M'], ['Sherman Oaks', 1300, 1700, '~$1.3M — $1.7M'], ['Encino', 1400, 2100, '~$1.4M — $2.1M'], ['Beverlywood', 2300, 3300, '~$2.3M — $3.3M'], ['Hancock Park', 2300, 4200, '~$2.3M — $4.2M']] as const;
 const rents = [['1 bedroom', '~$1,900 / mo'], ['2 bedroom', '~$2,700 / mo'], ['3 bedroom', '~$3,800 / mo'], ['4+ bedroom (single-family)', '~$7,300 / mo']];
 const rent3 = [['San Pedro', 3800, '~$3,800 / mo', true], ['Hancock Park (apartments)', 4000, '~$4,000 / mo'], ['Pico-Robertson', 4600, '~$4,600 / mo'], ['Tarzana', 4600, '~$4,600 / mo'], ['Encino', 5000, '~$5,000 / mo'], ['Sherman Oaks', 5200, '~$5,200 / mo'], ['Beverlywood', 5300, '~$5,300 / mo']] as const;
 const lifestyle = [
@@ -108,8 +108,8 @@ const pct = (n: number, max: number) => `${(n / max) * 100}%`;
         <h2>What You Get for Your Money</h2>
         <p>San Pedro isn't dirt cheap — nowhere in California is. But compared to the LA neighborhoods most Jewish families consider, it's several hundred thousand dollars more affordable.</p>
       </div>
-      <div class="mv-chart" role="table" aria-label="Median home price by neighborhood, 2026">
-        <p class="mv-label">Neighborhood <span>Median home price (2026)</span></p>
+      <p class="mv-label mv-chart-label" id="homes-h">Neighborhood <span>Median home price (2026)</span></p>
+      <div class="mv-chart" role="table" aria-labelledby="homes-h">
         {homes.map(([n, lo, hi, label, hl]) => (
           <div class:list={['mv-bar', { hl }]} role="row">
             <span class="mv-bar-name" role="cell">{n}</span>
@@ -127,12 +127,14 @@ const pct = (n: number, max: number) => `${(n / max) * 100}%`;
         <div class="mv-card">
           <h3>Rental Prices in San Pedro</h3>
           <p>Not ready to buy? Renting in San Pedro runs well below West LA and the Valley. Ballpark medians:</p>
+          <p class="mv-label">Size <span>Median rent (2026)</span></p>
           <ul class="mv-route">{rents.map(([a, b]) => <li><span>{a}</span><b>{b}</b></li>)}</ul>
           <p class="mv-src">Sources: Apartments.com, Zumper, Apartment Finder (2026). Ranges vary by neighborhood, condition, and amenities.</p>
         </div>
         <div class="mv-card">
           <h3>3-Bedroom Rent — By Neighborhood</h3>
           <p>Renting a 3BR in San Pedro runs noticeably less than the LA Jewish neighborhoods most families consider:</p>
+          <p class="mv-label">Neighborhood <span>Median 3BR rent (2026)</span></p>
           <div class="mv-chart mv-chart-sm">{rent3.map(([n, v, label, hl]) => (
             <div class:list={['mv-bar', { hl }]}><span class="mv-bar-name">{n}</span><span class="mv-track"><i style={`left:0;width:${pct(v, 5500)}`}></i></span><b>{label}</b></div>
           ))}</div>

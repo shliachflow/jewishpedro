@@ -114,7 +114,7 @@ const sv = site.shabbos.services;
         <p class="visit-contact"><a href={`tel:${site.phone}`}>{site.phone}</a> · <a href={site.social.whatsapp}>{ui.socialLabels.whatsapp}</a> · <a href={`mailto:${site.email}`}>{site.email}</a></p>
       </div>
       <div class="visit-map">
-        <iframe title={`Map: ${fullAddress}`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://maps.google.com/maps?q=${encodeURIComponent(fullAddress)}&z=15&output=embed`}></iframe>
+        <iframe title={`Map: ${fullAddress}`} loading="lazy" referrerpolicy="no-referrer" src={`https://maps.google.com/maps?q=${encodeURIComponent(fullAddress)}&z=15&output=embed`}></iframe>
       </div>
     </div>
   </section>

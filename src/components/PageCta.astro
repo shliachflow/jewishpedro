@@ -1,0 +1,17 @@
+---
+import { site, url } from '../lib/site';
+const a = site.address;
+---
+<section class="page-cta">
+  <div class="container page-cta-inner">
+    <div>
+      <p class="page-cta-h">{site.ui.pageCtaHeading}</p>
+      <p class="page-cta-sub">{a.street}, {a.city} · {site.shabbos.services?.detail}</p>
+    </div>
+    <p class="page-cta-actions">
+      <a class="btn btn-brass" href={site.social.whatsapp}>{site.ui.socialLabels.whatsapp}</a>
+      <a class="btn btn-ghost" href={`tel:${site.phone}`}>{site.phone}</a>
+      <a class="btn btn-ghost" href={url('/contact')}>{site.ui.contactHeading ?? 'Contact'}</a>
+    </p>
+  </div>
+</section>

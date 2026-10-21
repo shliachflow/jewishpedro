@@ -9,6 +9,8 @@ export function remarkBase({ base = '' } = {}) {
     visit(tree, ['link', 'image'], (node) => {
       if (node.url && node.url.startsWith('/') && !node.url.startsWith('//')) {
         node.url = prefix + node.url;
+        // Page links end in a slash (trailingSlash: 'always'); files, #anchors and ?queries are left alone.
+        if (node.type === 'link' && !/[.#?]/.test(node.url.split('/').pop() ?? '') && !node.url.endsWith('/')) node.url += '/';
       }
     });
   };

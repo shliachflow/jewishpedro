@@ -391,7 +391,7 @@ html { scroll-padding-top: 6rem; }
 .cal-cell:first-child { border-left: 0; }
 .cal-cell.out { background: var(--sand); }
 .cal-cell.sat { background: color-mix(in oklab, var(--accent) 9%, var(--paper)); }
-.cal-cell.past { opacity: .55; }
+.cal-cell.past { opacity: .75; }
 .cal-dates { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .25rem; }
 .cal-greg { font-weight: 800; font-size: 1.05rem; color: var(--primary); }
 .cal-heb { color: var(--brass-text); font-size: .75rem; }
@@ -438,7 +438,8 @@ html { scroll-padding-top: 6rem; }
   .cal-head { display: grid !important; background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .cal-head .long { display: inline; } .cal-head .short { display: none; }
   .cal-week { display: grid !important; break-inside: avoid; }
-  .cal-cell, .cal-cell.out, .cal-cell:not(.has), .cal-cell.past { display: block !important; opacity: 1; min-height: 1.15in; border-color: #999; font-size: 8pt; background: #fff !important; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .cal-cell, .cal-cell.out, .cal-cell:not(.has), .cal-cell.past { display: block !important; opacity: 1; min-height: .95in; border-color: #999; font-size: 8pt; background: #fff !important; }
   .cal-cell.out { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .cal-dates { display: flex !important; margin-bottom: .1rem; }
   .cal-dow { display: none !important; }
@@ -448,7 +449,8 @@ html { scroll-padding-top: 6rem; }
   .cal-key { font-size: 8pt; color: #333; }
 }
 
-.cal-nav .btn { white-space: nowrap; }
+.cal-nav { flex-wrap: wrap; justify-content: center; } .cal-nav .btn { white-space: nowrap; min-height: 2.75rem; display: inline-flex; align-items: center; }
+.cal-months a { display: inline-flex; align-items: center; min-height: 2.75rem; } .hol-actions .btn { min-height: 2.75rem; display: inline-flex; align-items: center; }
 .add-cal-note { flex-basis: 100%; margin: 0; color: var(--ink-soft); font-size: .95rem; }
 .cal-cell.today { outline: 2px solid var(--accent); outline-offset: -2px; }
 .hol-h { margin-top: 2.5rem; }
@@ -472,7 +474,7 @@ html { scroll-padding-top: 6rem; }
 .mv-stats dl > div:first-child { border-left: 0; padding-left: 0; }
 .mv-stats dt { font: 400 clamp(1.8rem, 5.5vw, 3.4rem)/1 var(--font-display); color: var(--accent); }
 .mv-stats dd { margin: .35rem 0 0; font: 600 clamp(.65rem, 2vw, .8rem) var(--font-ui); letter-spacing: .1em; text-transform: uppercase; color: color-mix(in oklab, #fff 80%, transparent); }
-.mv-nav { position: sticky; top: 0; z-index: 5; background: color-mix(in oklab, var(--paper) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.mv-nav { position: sticky; top: 4.4rem; z-index: 5; background: color-mix(in oklab, var(--paper) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .mv-nav ul { display: flex; gap: .25rem 1.5rem; list-style: none; margin: 0; padding: .35rem 0; overflow-x: auto; scrollbar-width: none; font: 600 .9rem var(--font-ui); white-space: nowrap; }
 .mv-nav a { display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: none; color: var(--ink); }
 .mv-nav a:hover { color: var(--primary); text-decoration: underline; text-decoration-color: var(--accent); }
@@ -546,10 +548,6 @@ html { scroll-padding-top: 6rem; }
 .big-h { font: 400 clamp(2.6rem, 6.5vw, 5.2rem)/.98 var(--font-display); letter-spacing: -.02em; max-width: 14em; margin: 0 0 clamp(2rem, 5vw, 3.5rem); }
 .reveal-on [data-reveal] { opacity: 0; transform: translateY(1.75rem); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal-on [data-reveal].in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero-photo { animation: heroZoom 24s ease-out both; background-size: 112%; }
-  @keyframes heroZoom { from { background-size: 118%; } to { background-size: 108%; } }
-}
 
 /* Full-bleed Shabbat section */
 .feature-hero { position: relative; margin-top: clamp(3rem, 7vw, 5rem); min-height: min(78vh, 46rem); display: flex; align-items: flex-end; color: #fff; isolation: isolate;
@@ -602,3 +600,49 @@ html { scroll-padding-top: 6rem; }
 .visit .eyebrow { color: var(--accent); }
 .visit-map { border-radius: 14px; overflow: hidden; min-height: 22rem; background: var(--primary); }
 .visit-map iframe { display: block; width: 100%; height: 100%; min-height: 22rem; border: 0; filter: grayscale(.6) contrast(1.05) sepia(.25) hue-rotate(130deg) saturate(.8); }
+.mv-chart-label { margin-top: 2rem; margin-bottom: 0; }
+
+/* Inner pages v2: bold header with the logo's chevron motif, two-column sections, accordions, closing contact band */
+.page-head { position: relative; background: var(--primary); color: #fff; border-bottom: 0; overflow: hidden; padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 7vw, 5rem);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='72' viewBox='0 0 120 72' fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2'%3E%3Cpath d='M0 20 60 -4l60 24M0 44 60 20l60 24M0 68 60 44l60 24'/%3E%3C/svg%3E"); }
+.page-head::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--accent); }
+.page-head h1 { color: #fff; font: 400 clamp(2.8rem, 7.5vw, 6rem)/.95 var(--font-display); letter-spacing: -.03em; max-width: 12em; margin-bottom: .25em; }
+.page-head p { color: color-mix(in oklab, #fff 85%, transparent); }
+.page-head a { color: #fff; }
+.page-sub { font-size: clamp(1.15rem, 2.2vw, 1.5rem) !important; max-width: 36rem !important; color: color-mix(in oklab, var(--accent) 30%, white) !important; }
+.page-head-grid { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 60rem) { .page-head.has-photo .page-head-grid { grid-template-columns: 1.2fr .8fr; gap: 4rem; } }
+.page-head-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 200px 200px 6px 6px; max-height: 24rem; display: block; }
+@media (max-width: 59.99rem) { .page-head-photo { border-radius: 6px 6px 6px 80px; max-height: 18rem; } }
+
+.page-body { display: block; padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 7vw, 6rem); }
+.prose > .pg-intro, .prose > .pg-sec { max-width: none; }
+.pg-intro { max-width: 44rem; padding-bottom: 2rem; font-size: 1.2rem; }
+.pg-intro > * { max-width: 44rem; }
+.pg-intro > :first-child { margin-top: 0; }
+.pg-sec { display: grid; gap: 1rem; padding-block: clamp(2rem, 5vw, 3.5rem); border-top: 1px solid var(--line); }
+@media (min-width: 62rem) { .pg-sec { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 4rem; } .pg-sec-head { position: sticky; top: 6.5rem; align-self: start; } }
+.pg-sec-head h2 { margin: 0; font: 400 clamp(2rem, 4.2vw, 3.2rem)/1 var(--font-display); letter-spacing: -.02em; }
+.pg-sec-body { max-width: 42rem; min-width: 0; }
+.pg-sec-body > :first-child { margin-top: 0; }
+.pg-sec-body h3 { font: 400 1.6rem/1.15 var(--font-display); }
+.pg-sec-body > table, .pg-sec-body > img { max-width: 100%; }
+.page-image { max-width: 28rem; }
+
+.faq-list { max-width: 48rem; border-top: 2px solid var(--primary); margin-top: 1rem; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 0; min-height: 3.25rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 { margin: 0; font: 400 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--font-display); }
+.faq-item summary::after { content: '+'; font: 300 1.8rem/1 var(--font-ui); color: var(--brass-text); flex: none; }
+.faq-item[open] summary::after { content: '–'; }
+.faq-a { padding-bottom: 1.25rem; max-width: 42rem; } .faq-a > :last-child { margin-bottom: 0; }
+
+.page-cta { background: var(--deep); color: #fff; padding-block: clamp(2.5rem, 6vw, 4rem); }
+.page-cta-inner { display: grid; gap: 1.5rem; align-items: center; }
+@media (min-width: 52rem) { .page-cta-inner { grid-template-columns: 1fr auto; gap: 3rem; } }
+.page-cta-h { font: 400 clamp(2rem, 5vw, 3.4rem)/1 var(--font-display); margin: 0 0 .4rem; }
+.page-cta-sub { margin: 0; color: color-mix(in oklab, #fff 80%, transparent); }
+.page-cta-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 0; } .page-cta .btn-brass { color: var(--ink); }
+main:has(> .page-cta:last-child) + .site-footer { margin-top: 0; border-top: 0; }
+.pg-intro h2 { font: 400 clamp(2rem, 4.2vw, 3.2rem)/1 var(--font-display); letter-spacing: -.02em; margin: 0 0 .5em; }

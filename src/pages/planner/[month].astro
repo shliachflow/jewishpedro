@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 }
 const { model } = Astro.props;
 ---
-<Base title={`${model.title} planner`} description={`Printable monthly planner for ${model.title}, with Hebrew dates, holidays and events.`}>
+<Base noindex title={`${model.title} planner`} description={`Printable monthly planner for ${model.title}, with Hebrew dates, holidays and events.`}>
   <div class="page-head no-print"><div class="container">
     <h1>Monthly planner</h1>
     <p class="page-sub">A one-page printable calendar for {model.title}. It updates itself every day.</p>

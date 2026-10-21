@@ -3,7 +3,7 @@ import { addDays, type EventEntry } from './events';
 
 const iso = (d: Date) => d.toISOString().slice(0, 10);
 const compact = (s: string) => s.replace(/-/g, '');
-const esc = (s: string) => s.replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+const esc = (s: string) => s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
 
 // Pull "9:45am - 12:15pm" apart. No times found means an all-day event.
 export function parseTimes(time?: string): { start: string; end: string } | null {
@@ -59,7 +59,18 @@ export function vevent(e: EventEntry, pageUrl: string): string {
   return lines.join('\r\n');
 }
 
-const fold = (s: string) => s.split('\r\n').map((l) => { const o: string[] = []; let r = l; while (r.length > 74) { o.push(r.slice(0, 74)); r = ' ' + r.slice(74); } o.push(r); return o.join('\r\n'); }).join('\r\n');
+// RFC 5545: lines are folded at 75 octets (UTF-8 bytes), never inside a character.
+const enc = new TextEncoder();
+const fold = (s: string) => s.split('\r\n').map((l) => {
+  const out: string[] = []; let cur = '', bytes = 0;
+  for (const ch of l) {
+    const n = enc.encode(ch).length;
+    if (bytes + n > (out.length ? 74 : 75)) { out.push(cur); cur = ''; bytes = 0; }
+    cur += ch; bytes += n;
+  }
+  out.push(cur);
+  return out.join('\r\n ');
+}).join('\r\n');
 
 export function vcalendar(events: { e: EventEntry; pageUrl: string }[], name = site.name): string {
   return fold([

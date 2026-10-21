@@ -11,9 +11,9 @@ export async function getStaticPaths() {
     props: { model: await buildMonth(m.y, m.m0), prev: months[i - 1]?.key, next: months[i + 1]?.key, all: months.map((x) => x.key) },
   })));
 }
-const { model, prev, next, all } = Astro.props;
+const { model, prev, next, all, canonicalPath } = Astro.props;
 ---
-<Base title={`${model.title} calendar`} description={`Hebrew and English calendar for ${model.title}: holidays, Shabbos times and events at ${site.shortName}.`}>
+<Base canonicalPath={canonicalPath} title={`${model.title} calendar`} description={`Hebrew and English calendar for ${model.title}: holidays, Shabbos times and events at ${site.shortName}.`}>
   <div class="page-head"><div class="container">
     <p><a href={url('/events')}>← Upcoming events</a></p>
     <h1>{model.title}</h1>

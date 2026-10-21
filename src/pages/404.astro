@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { url, site } from '../lib/site';
+---
+<Base title="Page not found" noindex>
+  <div class="page-head"><div class="container">
+    <h1>We can't find that page</h1>
+    <p class="page-sub">It may have moved or expired. Here are good places to start.</p>
+  </div></div>
+  <div class="container page">
+    <p class="mv-cta">
+      <a class="btn" href={url('/')}>Home</a>
+      <a class="btn btn-line" href={url('/events')}>Upcoming events</a>
+      <a class="btn btn-line" href={url('/contact')}>Contact us</a>
+    </p>
+    <p>Questions? Call <a href={`tel:${site.phone}`}>{site.phone}</a> or email <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+  </div>
+</Base>

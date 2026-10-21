@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import FormEmbed from '../components/FormEmbed.astro';
 import ContactForm from '../components/ContactForm.astro';
 import { getLivePages } from '../lib/pages';
+import PageCta from '../components/PageCta.astro';
 import { url } from '../lib/site';
 
 export async function getStaticPaths() {
@@ -12,27 +13,23 @@ export async function getStaticPaths() {
 }
 const { page } = Astro.props;
 const { Content, headings } = await render(page);
-const { title, description, image, formUrl, contactForm, layout } = page.data;
-const toc = headings.filter((h) => h.depth === 2);
-const showToc = toc.length >= 4 && toc.length <= 18;
+const { title, description, image, formUrl, contactForm, layout, heroImage, heroAlt } = page.data;
 ---
 <Base title={title} description={description}>
-  <div class="page-head"><div class="container">
-    <h1>{title}</h1>
-    {description && <p class="page-sub">{description}</p>}
+  <div class:list={['page-head', heroImage && 'has-photo']}><div class="container page-head-grid">
+    <div>
+      <h1>{title}</h1>
+      {description && <p class="page-sub">{description}</p>}
+    </div>
+    {heroImage && <img class="page-head-photo" src={url(heroImage)} alt={heroAlt ?? ''} fetchpriority="high" />}
   </div></div>
-  <div class:list={['container', 'page', 'page-body', showToc && 'has-toc']}>
+  <div class="container page page-body">
     <article class:list={['prose', layout && `prose-${layout}`]}>
       {image && <img class="page-image" src={url(image)} alt="" />}
       <Content />
       {contactForm && <ContactForm />}
       {formUrl && <FormEmbed url={formUrl} title={title} />}
     </article>
-    {showToc && (
-      <nav class="toc" aria-label="On this page">
-        <p>On this page</p>
-        <ul>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
-      </nav>
-    )}
   </div>
+  <PageCta />
 </Base>
