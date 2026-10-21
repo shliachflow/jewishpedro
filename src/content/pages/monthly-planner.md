@@ -1,18 +1,25 @@
 ---
 title: Monthly Planner
-description: This month's Shabbat services, classes, holidays, and events.
+description: "Shabbat, classes, holidays, events"
 ---
-Our monthly planner lists upcoming Shabbat services, classes, holidays, and events. We update it near the end of each month with the next month or two.
+Last updated: 2/22/26
 
-For the latest list with RSVP links, see our [events page](/events). Questions? Call or text [310-935-5236](tel:310-935-5236).
+Hey there!
 
-## What you'll find
+We are thrilled to share with you that on our website, you can now find all the updated programs and events for the current/following months. Stay connected with our community and never miss out on any of the exciting happenings!
 
-- Synagogue services
-- Adult education
-- Holiday celebrations
-- Men's Club
-- Women's Circle
-- Community services
+Bookmark this page, plan ahead and mark your calendars with all the enriching activities we have in store for you.
 
-_Monthly planner flyers were images on the previous site and have not been migrated. Add the current flyer to `public/images/` and reference it here._
+Looking forward to seeing you at our upcoming events!
+
+Feel free to reach out @ [310-935-5236](tel:310-935-5236) with any questions!
+
+\*This web page is usually updated towards the end of the month with the information for the upcoming month (or two).
+
+\*If the flyer has an RSVP link or a link associated with it, you can click on the image to be taken there.
+
+## This Month's Programs
+
+[![Program flyer: Purim in Mexico](/images/planner-purim-flyer.png)](https://secure.givelively.org/event/san-pedro-jewish-center/purim-in-mexico)
+
+[![Program flyer: Passover Seder](/images/planner-seder-flyer.png)](https://secure.givelively.org/event/san-pedro-jewish-center/passover-seder)

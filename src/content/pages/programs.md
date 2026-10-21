@@ -1,30 +1,27 @@
 ---
 title: Programs
-description: Everything happening at Chabad of San Pedro.
+description: "Shabbat · Holidays · Learning · Kids · More"
 ---
-Something for every Jew in San Pedro and the LA Harbor area, whatever your background.
-
-## Holidays and Shabbat
-
-- [**Every Jewish Holiday**](/holidays): celebrations open to every Jew in San Pedro, with no tickets required.
-- [**Shabbat Morning**](/synagogue-services): weekly services at 10:15am at 817 W 9th St.
-- [**The Full Shabbat Experience**](/shabbat-experience): services, a Chassidic class, and a kiddush lunch.
-- [**Shabbat Meals**](/shabbat-meal): Friday night dinners hosted by Rabbi Yisroel and Bassie, open to all with RSVP.
-
-## Learning
-
-- [**Jewish Learning for Everyone**](/adult-education): Tuesday Insights, a Shabbat class, holiday classes, and one-on-one study for all levels.
-- [**Jewish Insights Class**](/jewish-insights-class): live on Zoom every Tuesday at 7:00 PM.
-
-## Community
-
-- [**Men's Club**](/mens-club): learning, camaraderie, and bagels for Jewish men.
-- [**Women's Circle**](/womens-circle): monthly gatherings for Jewish women of the LA Harbor area.
-- [**Jewish Kids & Teens**](/kids-youth-programs): Hebrew lessons, holiday parties, and youth events as interest grows.
-- [**First Thursday Challah Booth**](/challah-booth-first-thursday): free challah at the San Pedro First Thursday Art Walk.
-- [**Bassie's Challah Shoppe**](/bassies-challah-shoppe): fresh, homemade challah with local pickup.
-
-## Plan ahead
-
-- [**Upcoming Events**](/events)
-- [**Monthly Planner**](/monthly-planner): Shabbat, classes, holidays, and events for the month.
+- [Every Jewish Holiday](/holidays)  
+  Celebrated together in San Pedro
+- [Fresh, Homemade Challah](/bassies-challah-shoppe)  
+  From Bassie's San Pedro kitchen
+- [This Month at Chabad](/monthly-planner)  
+  Shabbat, classes, holidays, events
+- [Upcoming Events](/events)
+- [Shabbat Morning, 10:15 AM](/synagogue-services)  
+  Warm, welcoming, every Jew welcome
+- [Jewish Learning for Everyone](/adult-education)  
+  Tuesday Insights · Shabbat Class · One-on-one
+- [Men's Club at Chabad](/mens-club)  
+  Camaraderie, learning, bagels
+- [Shabbat Meals at Chabad](/shabbat-meal)  
+  Homemade food · Songs · Warmth
+- [Women's Circle](/womens-circle)  
+  Jewish women of the LA Harbor area
+- [The Full Shabbat Experience](/shabbat-experience)  
+  Saturday, Shabbat, kiddush
+- [First Thursday Challah Booth](/challah-booth-first-thursday)  
+  At the San Pedro Art Walk
+- [Jewish Kids & Teens](/kids-youth-programs)  
+  Hebrew · Holidays · Friends

@@ -1,10 +1,12 @@
 ---
-title: Shabbat Experience
+title: Shabbat Experience @ Chabad
 date: 2026-11-14
-time: 9:45am – 12:15pm
-location: Chabad of San Pedro, 817 W 9th St, San Pedro, CA 90731
+time: 9:45am - 12:15pm
+location: Chabad S. Pedro Jewish Center, 817 W 9th St San Pedro, CA 90731
 image: /images/shabbat-experience.jpg
 ---
-Start with a Chassidic class at 9:45am, then join Shabbat morning prayers with explanations and song at 10:15am. A kiddush lunch with the community follows. Newcomers and seasoned davveners are equally welcome.
+- Learn the great Chassidic teachings that will change your perspective on so many things
+- Shabbat morning prayers with explanations and songs
+- Enjoy a Delicious Kiddush Luncheon in the company of other community members.
 
-[More about the Shabbat Experience](/shabbat-experience)
+[More information](/shabbat-experience)

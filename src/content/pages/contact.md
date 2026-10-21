@@ -10,4 +10,18 @@ We're here to help. Reach out by phone, text, WhatsApp, or email, or use the for
 - **Visit:** 817 W 9th St, San Pedro, CA 90731
 - **Mailing address:** 1536 W 25th St #614, San Pedro, CA 90732
 
-Co-directors: Rabbi Yisroel Shuchat and Rebbetzin Bassie Shuchat.
+## Our team
+
+- **Rabbi Yisroel Shuchat** — Founder, Director, and Spiritual Leader
+- **Rebbetzin Bassie Shuchat** — Co-Founder and Program Director
+
+## What the message form asks for
+
+The old Chabad.org contact form (jewishpedro.org/tools/feedback.asp) had these fields:
+
+- First Name
+- Last Name
+- Email Address
+- Message
+- Checkbox: "I would like to receive news and updates from Chabad S. Pedro Jewish Center by email."
+- Button: "SUBMIT »"

@@ -1,22 +1,49 @@
 ---
 title: Synagogue Services
-description: Shabbat and holiday services at 817 W 9th St, San Pedro.
+description: Warm, welcoming, every Jew welcome
 ---
-Services are held at 817 W 9th St, San Pedro, CA 90731.
+## Services & Schedule
 
-## Shabbat morning (Saturday)
+Services take place on Shabbat (Saturday) as well as on Jewish Holidays at our synagogue. Join us for prayer, Torah study, and community fellowship.
 
-- **9:45am** Torah class
-- **10:15am** Prayer services and Torah reading
-- Followed by a **kiddush lunch**
+Location: 817 W 9th St, San Pedro, CA 90731
 
-We do not currently hold Friday night services. If you live nearby and would like to help organize them, please let us know.
+Important: It's always best to confirm the schedule prior to Shabbat or Holiday by contacting Rabbi Yisroel at [310-935-5236](tel:310-935-5236)
 
-## Weekly Torah classes
+### Friday Night
 
-- **Tuesdays at 7:00pm:** in-depth study of the week's Torah portion ([Jewish Insights Class](/jewish-insights-class))
-- **Wednesdays at 8:00pm:** a beginner-friendly study of Ein Yaakov, Talmudic stories and ethical teachings
+We currently do not offer Friday Night Services at the synagogue.
 
-## Holidays
+Want to make it happen? Feel free to reach out if you're visiting or a local that wants to organize Friday night services!
 
-Services are also held on Jewish holidays. Please confirm times before Shabbat or a holiday by calling Rabbi Yisroel at [(310) 935-5236](tel:310-935-5236).
+Featured
+
+### Shabbat Day
+
+9:45am — Torah Class  
+10:15am — Prayer Services & Torah Reading  
+Following Services — Kiddush Luncheon
+
+[Read more about our Shabbat services here](/shabbat-experience)
+
+### Torah Classes
+
+Every Tuesday
+
+7:00pm
+
+Join us for in-depth Torah study and discussion relating to that week's Torah portion.
+
+Every Wednesday
+
+8:00pm
+
+Join us for an Ein Yaakov study, exploring the Talmud's stories and ethical teachings—rich with wisdom, meaning, and insight for everyday life. Open, engaging, and beginner-friendly.
+
+[Learn more about our Torah classes](/jewish-insights-class)
+
+## Questions About Services?
+
+Have questions about our schedule, want to confirm service times, or interested in joining us? Rabbi Yisroel is here to help and would love to hear from you.
+
+[Call Rabbi Yisroel: (310) 935-5236](tel:310-935-5236)

@@ -1,27 +1,35 @@
 ---
 title: Bassie's Challah Shoppe
-description: Fresh homemade challah for Shabbat, baked in San Pedro.
-image: /images/challah-shoppe.png
+description: From Bassie's San Pedro kitchen
 ---
-Homemade challah from Bassie's San Pedro kitchen, the same challah served at the First Thursday booth. It is available most weeks for Shabbat, though the schedule may change around holidays and special weeks.
+![Bassie's Challah Shoppe banner](/images/challah-shoppe-banner.png)
 
-## Varieties
+## Welcome to the Challah Shoppe
 
-- Plain Challah
-- Everything But The Bagel Challah
-- Sugar Crumb Challah
+## About Our Challah
 
-## How to order
+We're excited to make our homemade challah — the same one you've enjoyed from our First Thursday booth — available most weeks\* in time for Shabbat.
 
-Orders are open Sunday through Wednesday night. A dedicated checkout is still in development, so for now please order through the [donation page](https://secure.givelively.org/donate/san-pedro-jewish-center) and note the item and quantity with your payment.
+Order Sunday through Wednesday night using the form below. Pickup is on Thursday after noon, and Friday up to about an hour before Shabbat begins (sunset).
 
-## Pickup
+Challahs are usually baked Thursday morning, then frozen to lock in freshness until pickup (unless you pickup right away).
 
-- **Thursday**, after noon. Contact us that day to set a time.
-- **Friday**, until about an hour before Shabbat begins.
+Please be in touch on Thursday to coordinate the pickup time.
 
-Challah is usually baked Thursday morning and frozen to keep it fresh until pickup, unless you collect it right away.
+Questions or custom requests? Send us an email at [info@jewishpedro.org](mailto:info@jewishpedro.org) or text us at [310-935-5236](tel:310-935-5236) — we're happy to help.
 
-## Questions and custom requests
+Thank you for your order — we appreciate your support and hope you enjoy the challah!
 
-Call or text [310-935-5236](tel:310-935-5236) or email [info@jewishpedro.org](mailto:info@jewishpedro.org).
+\*Schedule may vary on holidays or special weeks.
+
+## Our Fresh Challahs
+
+| Plain Challah | Everything But The Bagel Challah | Sugar Crumb Challah |
+|---|---|---|
+| ![Plain Challah](/images/challah-plain.png) | ![Everything But The Bagel Challah](/images/challah-everything-but-the-bagel.png) | ![Sugar Crumb Challah](/images/challah-sugar-crumb.png) |
+
+## Place Your Order
+
+While we build our custom checkout section for this page, in the meantime, please use our donation page to place your order. Please make sure to indicate in the notes of whatever payment method you use, what is the item and quantity that you would like to place an order for. Please be in touch for any questions or to arrange a pickup time.
+
+[Click Here To Place Your Order](/donate)

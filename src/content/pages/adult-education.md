@@ -1,21 +1,39 @@
 ---
 title: Adult Education
-description: Jewish learning for every level, from first-timers to advanced students.
+description: Tuesday Insights · Shabbat Class · One-on-one
 ---
-Our adult education program is open to everyone, from first-time learners to advanced students. Questions are always encouraged.
+![Adult Education banner](/images/adult-education-banner.png)
 
-## Jewish Insights (Tuesdays at 7:00pm)
+## Adult Education at Chabad
 
-A weekly class on the Torah portion: its core ideas, practical applications, and Q&A. It meets on Zoom and suits all levels. [Resources and Zoom link](/jewish-insights-class)
+At Chabad, we believe that ongoing Torah study nourishes the mind and heart, deepens connection, and brings timeless wisdom into everyday life. Our adult education offerings are open to everyone—whether you're exploring for the first time or looking to go deeper. Join a warm, welcoming environment where questions are encouraged and learning is truly for all.
 
-## Tanya (Shabbat mornings)
+## Weekly Offerings
 
-Before services, we study Tanya, the foundational Chassidic work by Rabbi Schneur Zalman of Liadi, which explores the inner life of the soul and offers practical guidance for living. It is part of the [Shabbat Experience](/shabbat-experience).
+### Jewish Insights — Tuesdays at 7:00 PM
 
-## Holiday learning
+A weekly, accessible class that explores the weekly Torah portion and its timeless lessons. We unpack core ideas, discuss real-life applications, and make space for Q&A. Suitable for beginners through advanced learners.
 
-Special classes and primers in the weeks before each holiday cover its meaning and how to observe it.
+Virtual on Zoom
 
-## One-on-one learning
+[View Resources & Join Class](/jewish-insights-class)
 
-If group classes don't fit your schedule, or you'd like to learn at your own pace, private sessions are available with Rabbi Yisroel or Rebbetzin Bassie, tailored to your topic and level. [Contact us](/contact) to set one up.
+### Tanya — Shabbat Morning
+
+Before services, we learn from Tanya, the foundational Chassidic work by Rabbi Schneur Zalman of Liadi. Tanya explores the inner life of the soul, the purpose of our struggles, and practical guidance for living with joy, focus, and integrity. Clear explanations and friendly discussion make classic ideas feel relevant and alive.
+
+Part of the Shabbat Experience
+
+Explore Shabbat Morning
+
+## Holiday Learning
+
+In the weeks leading up to Jewish holidays, we offer special classes and primers to help you prepare—inspiration, meaning, and practical how-to's for celebrating.
+
+## One-on-One Learning
+
+If scheduled classes don’t fit your calendar—or you’d like to explore a topic at your own pace—we also offer one-on-one learning. Study with Rabbi Yisroel or Rebbetzin Bassie on a topic and level that suit you.
+
+Get in touch:
+
+[Contact us to set up a session](/contact)

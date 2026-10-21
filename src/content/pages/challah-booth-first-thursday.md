@@ -1,8 +1,5 @@
 ---
 title: First Thursday Challah Booth
-description: Free challah at the San Pedro First Thursday Art Walk.
-image: /images/challah-booth.png
+description: At the San Pedro Art Walk
 ---
-Find us at the San Pedro First Thursday Art Walk each month, handing out free challah. Stop by, say hello, and take a loaf.
-
-Want more? Visit [Bassie's Challah Shoppe](/bassies-challah-shoppe).
+![First Thursday Challah Booth flyer](/images/challah-booth.png)

@@ -1,16 +1,20 @@
 ---
 title: Shabbat Meals
-description: Homemade food, songs, and warmth. Join us for Shabbat dinner or lunch.
+description: Homemade food · Songs · Warmth
 ---
-**Homemade food · Songs · Warmth**
+## You're invited to a SHABBAT MEAL
 
-You are invited to a Shabbat meal any week, with advance reservation. We offer two ways to join:
+Any week\*
 
-- **Friday evening** at the Rabbi and Rebbetzin's home
-- **Saturday kiddush lunch** at the synagogue, 817 W 9th St
+\*with advance reservation
 
-It's a chance to enjoy good food and singing and to experience Jewish heritage first-hand. New to Shabbat? Don't worry, no experience is needed.
+Friday Evenings @ the Rabbi & Rebbetzin's House  
+or Saturday day Kiddush Lunch @ Shul
 
-Please RSVP by calling or texting [310-935-5236](tel:310-935-5236) or via our [contact page](/contact).
+Please join us for a Shabbat meal. The delicious homemade food, the songs and tradition... It's just the perfect opportunity to explore and experience our beautiful heritage. We'd love it if you came! Let us know if you would like to join us. We look forward!
 
-_Rabbi Yisroel and Bassie Shuchat_
+(Not sure what Shabbat is? Read more about it [here](https://www.chabad.org/633659).)
+
+\- Rabbi Yisroel & Bassie Shuchat
+
+[RSVP](/contact)
