@@ -5,6 +5,12 @@ Visual world for Chabad S. Pedro Jewish Center. Edit styles only in `src/styles/
 ## Homepage (v3)
 People first. A big wide-set headline beside a real family photo; the Shabbat timetable as a horizontal board overlapping the hero; a full brass band for the flagship Saturday program with a photo of the shul; Explore (one place photo plus a plain index); the mission statement set large with the Rabbi and Rebbetzin; events on a sand band; a teal "Come visit" band with directions. All photos are set in `src/content/pages/home.md` (heroImage, feature, people, featured[].image), so swapping a photo is a one-line edit.
 
+## Hero direction
+`theme.hero` in `site.config.json`: `collage` (default; dark teal field with a warm brass glow, huge type with the town name in brass, three layered real photos, a thin animated "tide line") or `split` (one photo beside the headline on solid teal). Photos come from `heroImage` and `heroExtras` in `home.md`. A full-bleed place photo hero was tried and dropped: it needs a genuinely strong wide harbor photograph that we do not have yet.
+
+## Image policy
+Only the center's own photos, the logo, flyers, or open-licensed photos with credit. Credits live in `src/content/pages/credits.md` (linked from the footer). Open-licensed photos are sourced from Wikimedia Commons (check each file's license; CC BY-SA needs the credit line).
+
 ## What the reference sites taught us
 Seen in a real browser: IKAR (calm teal field, this week's events up front), Romemu (a bold graphic device taken from its own logo, "what's happening" column), Sixth & I (saturated color blocks, events as the main event), MemGlobal (collage of real faces), Passion City (huge confident type). Common thread: real people, big type, events first, color used boldly. A flat block with a list is what reads as boring.
 

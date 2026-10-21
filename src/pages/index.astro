@@ -9,7 +9,9 @@ import { site, url } from '../lib/site';
 const home = (await getEntry('pages', 'home'))!;
 const { Content } = await render(home);
 const upcoming = (await getUpcomingEvents()).slice(0, 3);
-const { heroImage, heroAlt, feature, mission, people, featured } = home.data;
+const { heroImage, heroAlt, heroExtras, peoplePhoto, peoplePhotoAlt, feature, mission, people, featured } = home.data;
+const style = site.theme.hero ?? 'split';
+const h1 = home.data.title.replace('S. Pedro', '<span class="accent">S. Pedro</span>');
 const lead = featured?.find((f) => f.image);
 const rest = featured?.filter((f) => f !== lead) ?? [];
 const a = site.address;
@@ -17,18 +19,28 @@ const fullAddress = `${a.street}, ${a.city}, ${a.state} ${a.zip}`;
 const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
 ---
 <Base description={site.description}>
-  <section class="hero">
+  <section class:list={['hero', `hero-${style}`]}>
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>{home.data.title}</h1>
+        <h1 set:html={h1} />
         <div class="hero-text"><Content /></div>
         <p class="hero-actions">
           <a class="btn btn-brass" href={url('/shabbat-experience')}>Join us Saturday morning</a>
           <a class="btn btn-ghost" href={url('/contact')}>Say hello</a>
         </p>
       </div>
-      {heroImage && <img class="hero-photo" src={url(heroImage)} alt={heroAlt ?? ''} />}
+      {style === 'split' && heroImage && <img class="hero-photo" src={url(heroImage)} alt={heroAlt ?? ''} />}
+      {style === 'collage' && heroImage && (
+        <div class="collage">
+          <img class="c1" src={url(heroImage)} alt={heroAlt ?? ''} />
+          {heroExtras?.[0] && <img class="c2" src={url(heroExtras[0].image)} alt={heroExtras[0].alt} />}
+          {heroExtras?.[1] && <img class="c3" src={url(heroExtras[1].image)} alt={heroExtras[1].alt} />}
+        </div>
+      )}
     </div>
+    {style === 'collage' && (
+      <svg class="tide" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C240,6 480,54 720,30 C960,6 1200,54 1440,30" /></svg>
+    )}
   </section>
 
   <div class="container board-wrap"><ShabbosBox /></div>
@@ -73,19 +85,17 @@ const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIC
 
   {mission && (
     <section class="mission">
-      <div class="container">
-        <p>{mission}</p>
-        {people && (
-          <ul class="people">
-            {people.map((p) => (
-              <li>
-                <img src={url(p.image)} alt="" loading="lazy" />
-                <span><strong>{p.name}</strong>{p.role}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-        <p class="more"><a href={url('/about')}>Our story →</a></p>
+      <div class:list={['container', 'mission-grid', peoplePhoto && 'has-photo']}>
+        {peoplePhoto && <img class="mission-photo" src={url(peoplePhoto)} alt={peoplePhotoAlt ?? ''} loading="lazy" />}
+        <div>
+          <p class="mission-text">{mission}</p>
+          {people && (
+            <ul class="people">
+              {people.map((p) => (<li><strong>{p.name}</strong><span>{p.role}</span></li>))}
+            </ul>
+          )}
+          <p class="more"><a href={url('/about')}>Our story →</a></p>
+        </div>
       </div>
     </section>
   )}

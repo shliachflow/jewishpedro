@@ -8,20 +8,25 @@ feature:
   href: /shabbat-experience
   image: /images/move-to-pedro-shul.jpg
   alt: The shul at 817 W 9th St, tables set for a meal, with the menorah
+heroExtras:
+  - image: /images/rabbi-rebbetzin.jpg
+    alt: Rabbi Yisroel and Rebbetzin Bassie Shuchat
+  - image: /images/move-to-pedro-shul.jpg
+    alt: The shul at 817 W 9th St, set for a meal
+peoplePhoto: /images/rabbi-rebbetzin.jpg
+peoplePhotoAlt: Rabbi Yisroel and Rebbetzin Bassie Shuchat
 mission: "Our mission is to create a vibrant Jewish community where everyone, regardless of background or level of observance, feels welcome, valued, and inspired."
 people:
   - name: Rabbi Yisroel Shuchat
     role: Founder, Director, and Spiritual Leader
-    image: /images/about-rabbi-yisroel.png
   - name: Rebbetzin Bassie Shuchat
     role: Co-Founder and Program Director
-    image: /images/about-rebbetzin-bassie.png
 featured:
   - title: "Move to Pedro!"
     text: "Are you looking for a more affordable Jewish community in SoCal? Check out this page to see we are a good fit!"
     href: /move-to-pedro
-    image: /images/san-pedro-aerial.jpg
-    alt: Aerial view of San Pedro and the harbor
+    image: /images/point-fermin-lighthouse.jpg
+    alt: Point Fermin Lighthouse in San Pedro
   - title: JNet
     text: "Sign up to study one-on-one with a volunteer for half an hour a week. You choose the topic and time. JNet makes the connection."
     href: https://www.jnet.org/

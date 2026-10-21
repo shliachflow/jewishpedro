@@ -1,6 +1,9 @@
 import config from '../../site.config.json';
 
-export const site = config;
+export const site = {
+  ...config,
+  theme: { ...config.theme, hero: process.env.HERO_STYLE ?? config.theme.hero },
+};
 
 // Prefix a root-relative path with the deploy base (e.g. "/events" -> "/jewishpedro/events/").
 export function url(path: string): string {

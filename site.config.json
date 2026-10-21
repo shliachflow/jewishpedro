@@ -158,7 +158,8 @@
   ],
   "theme": {
     "primary": "#004850",
-    "accent": "#d0a858"
+    "accent": "#d0a858",
+    "hero": "collage"
   },
   "footerLinks": [
     {
@@ -184,6 +185,10 @@
     {
       "label": "Contact",
       "href": "/contact"
+    },
+    {
+      "label": "Photo credits",
+      "href": "/credits"
     }
   ],
   "contactForm": {

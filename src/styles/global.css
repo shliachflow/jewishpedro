@@ -222,13 +222,13 @@ h3 { font-size: 1.25rem; font-stretch: 100%; letter-spacing: -.01em; }
 
 /* Mission + people */
 .mission { padding-block: clamp(3.5rem, 8vw, 6rem) 0; }
-.mission > .container > p:first-child { font: 700 clamp(1.6rem, 3.8vw, 2.7rem)/1.15 var(--font-display); font-stretch: 110%; color: var(--primary); letter-spacing: -.02em; max-width: 34ch; text-wrap: balance; margin: 0 0 2rem; }
-.people { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; }
-.people li { display: flex; align-items: center; gap: 1rem; }
-.people img { width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; }
-.people strong { display: block; font: 700 1.15rem var(--font-display); color: var(--primary); }
-.people span span, .people li > span { font-size: 1rem; color: var(--ink-soft); }
-.people li > span { display: grid; }
+.mission-grid { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 62rem) { .mission-grid.has-photo { grid-template-columns: .8fr 1.2fr; gap: 5rem; } }
+.mission-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; border-radius: 14px; display: block; }
+.mission-text { font: 700 clamp(1.6rem, 3.6vw, 2.6rem)/1.15 var(--font-display); font-stretch: 110%; color: var(--primary); letter-spacing: -.02em; max-width: 30ch; text-wrap: balance; margin: 0 0 2rem; }
+.people { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 1.1rem; }
+.people strong { display: block; font: 700 1.2rem var(--font-display); color: var(--primary); }
+.people span { font-size: 1rem; color: var(--ink-soft); }
 
 /* Events band */
 .band { background: var(--sand); margin-top: clamp(3rem, 7vw, 5rem); padding-block: clamp(2.5rem, 6vw, 4rem); }
@@ -244,3 +244,25 @@ h3 { font-size: 1.25rem; font-stretch: 100%; letter-spacing: -.01em; }
 .visit-times p { font: 600 1.5rem/1.35 var(--font-display); margin: 0; }
 .visit-contact { margin: 1.5rem 0 0; } .visit a:not(.btn) { color: #fff; text-decoration-color: var(--accent); }
 main:has(> .visit:last-child) + .site-footer { margin-top: 0; border-top: 0; }
+
+/* ---------- Hero variants (theme.hero in site.config.json: split | collage) ---------- */
+.hero .accent { color: var(--accent); }
+.hero-collage { background:
+    radial-gradient(ellipse 70% 60% at 88% 18%, color-mix(in oklab, var(--accent) 22%, transparent) 0%, transparent 62%),
+    radial-gradient(ellipse 80% 90% at 8% 100%, color-mix(in oklab, var(--primary) 70%, #1b8a96) 0%, transparent 65%),
+    var(--deep);
+  position: relative; overflow: hidden; padding-block: clamp(3rem, 8vw, 6rem) clamp(6rem, 11vw, 9rem); }
+.hero-collage .hero-grid { grid-template-columns: 1fr; }
+@media (min-width: 62rem) { .hero-collage .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 3rem; } }
+.hero-collage h1 { font-size: clamp(2.8rem, 8.6vw, 7.2rem); line-height: .92; letter-spacing: -.04em; font-stretch: 118%; }
+.hero-collage .hero-text p:not(:first-child) { display: none; }
+.collage { position: relative; min-height: 24rem; }
+@media (min-width: 62rem) { .collage { min-height: 33rem; } }
+.collage img { position: absolute; border-radius: 12px; object-fit: cover; box-shadow: 0 0 0 1px rgb(255 255 255 / .12), 0 4px 10px rgb(0 0 0 / .25), 0 24px 40px -10px rgb(0 0 0 / .5); }
+.collage .c1 { width: 64%; aspect-ratio: 4 / 5; left: 0; top: 0; transform: rotate(-2.5deg); object-position: 50% 22%; }
+.collage .c2 { width: 50%; aspect-ratio: 3 / 4; right: 0; top: 8%; transform: rotate(2.5deg); object-position: 50% 30%; }
+.collage .c3 { width: 58%; aspect-ratio: 3 / 2; right: 6%; bottom: 0; transform: rotate(-1deg); }
+.tide { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 3.5rem; pointer-events: none; }
+.tide path { fill: none; stroke: color-mix(in oklab, var(--accent) 55%, transparent); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 1800; stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: no-preference) { .tide path { animation: tide-draw 3.2s var(--ease) both; } @keyframes tide-draw { from { stroke-dashoffset: 1800; } } }
+
