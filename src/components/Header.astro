@@ -1,8 +1,9 @@
 ---
 import { site, url } from '../lib/site';
+const { overHero = false } = Astro.props;
 const suffix = site.name.replace(site.shortName, '').trim();
 ---
-<header class="site-header">
+<header class:list={['site-header', overHero && 'over-hero']}>
   <div class="topbar">
     <div class="container topbar-inner">
       <span>{site.address.street}, {site.address.city}</span>
@@ -42,12 +43,18 @@ const suffix = site.name.replace(site.shortName, '').trim();
   </div>
 </header>
 <script>
+  const header = document.querySelector<HTMLElement>('.site-header');
   const btn = document.querySelector('.menu-toggle');
   const nav = document.getElementById('main-nav');
   btn?.addEventListener('click', () => {
     const open = nav?.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(!!open));
+    header?.classList.toggle('menu-open', !!open);
   });
+  if (header?.classList.contains('over-hero')) {
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+  }
   const all = [...document.querySelectorAll<HTMLDetailsElement>('.main-nav details')];
   all.forEach((d) => d.addEventListener('toggle', () => d.open && all.filter((o) => o !== d).forEach((o) => (o.open = false))));
   document.addEventListener('click', (e) => {

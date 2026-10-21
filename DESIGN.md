@@ -3,7 +3,7 @@
 Visual world for Chabad S. Pedro Jewish Center. Edit styles only in `src/styles/global.css`; colors come from `site.config.json` -> `theme`.
 
 ## Homepage (v3)
-People first. A big wide-set headline beside a real family photo; the Shabbat timetable as a horizontal board overlapping the hero; a full brass band for the flagship Saturday program with a photo of the shul; Explore (one place photo plus a plain index); the mission statement set large with the Rabbi and Rebbetzin; events on a sand band; a teal "Come visit" band with directions. All photos are set in `src/content/pages/home.md` (heroImage, feature, people, featured[].image), so swapping a photo is a one-line edit.
+A full-bleed photo of the place with a big serif headline; the Shabbat timetable as a horizontal board overlapping the hero; a deep teal band for the flagship Saturday program with a photo of the shul (brass is kept for buttons and rules); Explore (one place photo plus a plain index); the mission statement set large with the Rabbi and Rebbetzin; events on a sand band; a teal "Come visit" band with directions. All photos are set in `src/content/pages/home.md` (heroImage, feature, people, featured[].image), so swapping a photo is a one-line edit.
 
 ## Hero direction
 `theme.hero` in `site.config.json`: `photo` (default) is a full-bleed photo of the place with big type anchored bottom-left, the town name in brass, and the Shabbat board overlapping its bottom edge; `split` is one photo beside the headline on solid teal. The photo is `heroImage` in `home.md`. Keep the text column narrow and to the left so it never covers the subject of the photo (the lighthouse). The family is deliberately not in the hero: the hero is about the place; people appear further down (community strip, mission section).
@@ -26,9 +26,9 @@ Harbor signage and timetables, not nautical decoration. No anchors, ropes, waves
 - Brass is a fill/rule color. For brass text on light backgrounds use `--brass-text` (darkened for contrast).
 
 ## Type
-- Display and UI: Archivo (variable width axis), heavy and slightly wide for headings.
-- Body: Literata, a reading serif, 18px, ~40rem measure.
-- Deliberately not Inter, Fraunces or other common defaults.
+- Display: Instrument Serif (regular weight, large; italic for the brass accent word in the hero). Quiet and editorial, not heavy.
+- Body and UI: Figtree, 18px, comfortable measure.
+- An earlier pass used a heavy extended grotesk (Archivo) with Literata; it read as "poster", not refined, so it was replaced. A friendlier grotesk (Bricolage) was also tried and not chosen.
 
 ## Rules we keep
 - No identical card grids, no icon tiles, no eyebrow labels above headings, no numbered sections, no gradient text, no glass, no colored side-stripe borders.
@@ -46,3 +46,6 @@ Harbor signage and timetables, not nautical decoration. No anchors, ropes, waves
 - Airbnb: photography carries the visual weight (so type stays modest), a single accent, one soft shadow tier, editorial dropdowns. Applies once real photos are in.
 - Oura: warm paper with an editorial type pairing. We use a sans display plus a reading serif.
 - The catalog has no religious or nonprofit entries, so these inform structure only; the identity comes from the logo and the port town.
+
+## Header
+On the homepage the header floats transparent over the hero photo (white logo mark and nav), and becomes a solid paper bar once the page scrolls or the mobile menu opens. Inner pages use the solid header.

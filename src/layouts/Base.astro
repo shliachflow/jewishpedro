@@ -1,13 +1,13 @@
 ---
-import '@fontsource-variable/archivo/wdth.css';
-import '@fontsource-variable/literata';
+import '@fontsource/instrument-serif';
+import '@fontsource-variable/figtree';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site, url } from '../lib/site';
 
-interface Props { title?: string; description?: string }
-const { title, description = site.description } = Astro.props;
+interface Props { title?: string; description?: string; overHero?: boolean }
+const { title, description = site.description, overHero = false } = Astro.props;
 const fullTitle = title ? `${title} | ${site.shortName}` : site.name;
 ---
 <!doctype html>
@@ -23,7 +23,7 @@ const fullTitle = title ? `${title} | ${site.shortName}` : site.name;
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <Header />
+    <Header overHero={overHero} />
     <main id="main"><slot /></main>
     <Footer />
   </body>

@@ -18,7 +18,7 @@ const a = site.address;
 const fullAddress = `${a.street}, ${a.city}, ${a.state} ${a.zip}`;
 const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
 ---
-<Base description={site.description}>
+<Base description={site.description} overHero>
   <section class:list={['hero', `hero-${style}`]} style={style === 'photo' && heroImage ? `--hero-img:url('${url(heroImage)}')` : undefined}>
     <div class="container hero-grid">
       <div class="hero-copy">
