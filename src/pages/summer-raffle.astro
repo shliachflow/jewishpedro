@@ -1,0 +1,56 @@
+---
+// The summer raffle has been drawn; this page now asks for help reaching the yearly goal.
+// Set fundraiser.goal and fundraiser.raised in site.config.json (numbers, in dollars) to show a progress bar.
+import Base from '../layouts/Base.astro';
+import { url, site } from '../lib/site';
+
+const give = site.donate.url;
+const { goal, raised, label } = site.fundraiser;
+const pct = goal > 0 ? Math.min(100, Math.round((raised / goal) * 100)) : 0;
+const money = (n: number) => `$${n.toLocaleString('en-US')}`;
+const prizes = [
+  ['Grand prize', '$10,000', 'Pooled with other Chabad centers.'],
+  ['Second prize', 'Apple AirPods 4', ''],
+  ['Local prize', '2 challahs every week', 'For four weeks.'],
+];
+---
+<Base title="Help Us Reach Our Goal" description="The summer raffle is over, but Chabad S. Pedro hasn't reached its goal yet. Your gift keeps our classes, holiday celebrations, and Shabbat going all year.">
+  <div class="page-head"><div class="container">
+    <h1>Help us reach our goal</h1>
+    <p class="page-sub">The summer raffle is over, but we haven't reached our goal yet.</p>
+  </div></div>
+
+  <section class="container dn-top">
+    <div class="dn-main">
+      <p class="eyebrow">Keep Jewish S. Pedro growing</p>
+      <h2 class="dn-h">We would love your help reaching our goal, so we can continue offering our programming.</h2>
+      <p>Every gift supports Chabad S. Pedro — the classes, holiday celebrations, and one-on-one help that keep Jewish life here going all year. 100% of proceeds support Chabad S. Pedro's local programming.</p>
+      {goal > 0 && (
+        <div class="goal-meter" role="img" aria-label={`${pct}% of the goal reached`}>
+          <p><strong>{money(raised)}</strong> raised of {money(goal)} — {label}</p>
+          <div class="goal-track"><i style={`width:${pct}%`}></i></div>
+        </div>
+      )}
+      <p class="dn-actions"><a class="btn btn-brass btn-lg" href={give} target="_blank" rel="noopener">Donate online</a> <a class="btn btn-line btn-lg" href={url('/chai-society')}>Give monthly: Chai Society</a></p>
+      <p class="dn-trust">San Pedro Jewish Center &bull; Registered 501(c)(3) Nonprofit &bull; EIN: 87-1905537<br />Your donation is tax-deductible to the full extent permitted by law.</p>
+    </div>
+    <aside class="dn-chai">
+      <p class="eyebrow">Prefer Zelle or Cash App?</p>
+      <h3>Other ways to give</h3>
+      <p>Zelle: <strong>chabadspedro</strong><br />Cash App: <a href="https://cash.app/$ChabadSPedro" style="color:#fff">$ChabadSPedro</a></p>
+      <p><a class="btn btn-brass" href={url('/donate')}>All ways to give</a></p>
+    </aside>
+  </section>
+
+  <section class="cs-quote">
+    <div class="container">
+      <p class="eyebrow">This summer</p>
+      <p class="cs-q">The summer raffle drew on July 30, and it helped. Thank you to everyone who entered.</p>
+      <ul class="prize-list">{prizes.map(([k, v, n]) => <li><span>{k}</span><b>{v}</b>{n && <em>{n}</em>}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="container goal-contact">
+    <p>Questions about giving? Call <a href="tel:310-935-5236">310-935-5236</a> or email <a href="mailto:info@jewishpedro.org">info@jewishpedro.org</a>.</p>
+  </section>
+</Base>

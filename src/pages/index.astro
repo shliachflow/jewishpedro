@@ -65,6 +65,13 @@ const sv = site.shabbos.services;
     </div>
   </section>
 
+  <section class="goal-band">
+    <div class="container goal-band-inner">
+      <div><h2>{ui.goalHeading}</h2><p>{ui.goalText}</p></div>
+      <a class="btn btn-lg" href={url('/summer-raffle')}>{ui.goalCta}</a>
+    </div>
+  </section>
+
   {featured && (
     <section class="container section explore-section">
       <p class="eyebrow">{ui.exploreHeading}</p>

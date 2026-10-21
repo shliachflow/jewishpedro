@@ -275,7 +275,10 @@
     "galleryLabel": "Gallery",
     "galleryTitle": "Life at the center",
     "galleryCta": "See the gallery →",
-    "followHeading": "Follow along on social media"
+    "followHeading": "Follow along on social media",
+    "goalHeading": "Help us reach our goal",
+    "goalText": "This summer's raffle helped, but we haven't reached our goal yet. Your gift keeps the classes, holidays, and Shabbat going.",
+    "goalCta": "See how to help"
   },
   "location": {
     "latitude": 33.743297,
@@ -284,5 +287,10 @@
   "calendar": {
     "googleCalendarIcsUrl": "",
     "horizonMonths": 12
+  },
+  "fundraiser": {
+    "goal": 0,
+    "raised": 0,
+    "label": "Our yearly goal"
   }
 }

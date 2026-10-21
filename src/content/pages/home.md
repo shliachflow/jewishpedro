@@ -28,8 +28,8 @@ featured:
   - title: "Move to Pedro!"
     text: "Looking for a more affordable Jewish community in SoCal? See whether we're a good fit."
     href: /move-to-pedro
-    image: /images/hero-vtb-containership.jpg
-    alt: A container ship passing under the Vincent Thomas Bridge in San Pedro
+    image: /images/hero-harbor-sunset.jpg
+    alt: The harbor breakwater lighthouse at sunset in San Pedro
   - title: Join Chai Society
     text: "Join a circle of monthly givers supporting Jewish life in San Pedro."
     href: /chai-society

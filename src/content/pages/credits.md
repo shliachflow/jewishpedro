@@ -8,4 +8,3 @@ Other images:
 
 - **Harbor breakwater lighthouse at sunset**, photo by James Lee, via [Pexels](https://www.pexels.com/photo/sunset-view-of-point-fermin-lighthouse-in-california-38842630/) (free to use).
 - **Kiddush cup and wine decanter**, photo by RDNE Stock project, via [Pexels](https://www.pexels.com/photo/close-up-photograph-of-a-kiddush-cup-9242385/) (free to use).
-- **Container ship and the Vincent Thomas Bridge**, public domain (CC0).
