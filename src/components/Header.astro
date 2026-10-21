@@ -1,0 +1,35 @@
+---
+import { site, url } from '../lib/site';
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={url('/')}>
+      <img src={url(site.logo)} alt="" width="44" height="44" />
+      <span>{site.name}</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main">
+      <ul>
+        {site.nav.map((item) => (
+          <li class={item.children ? 'has-children' : ''}>
+            <a href={url(item.href)}>{item.label}</a>
+            {item.children && (
+              <ul class="submenu">
+                {item.children.map((c) => <li><a href={url(c.href)}>{c.label}</a></li>)}
+              </ul>
+            )}
+          </li>
+        ))}
+        <li><a class="btn" href={site.donate.url}>{site.donate.label}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  const btn = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  btn?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(!!open));
+  });
+</script>

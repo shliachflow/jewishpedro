@@ -1,0 +1,57 @@
+{
+  "name": "San Pedro Jewish Center",
+  "shortName": "Chabad of San Pedro",
+  "tagline": "A welcoming Jewish home for everyone in San Pedro and the LA Harbor area.",
+  "description": "Chabad of San Pedro: Shabbat services, classes, holidays, challah, and community for Jews of every background.",
+  "address": {
+    "street": "817 W 9th St",
+    "city": "San Pedro",
+    "state": "CA",
+    "zip": "90731"
+  },
+  "mailingAddress": "1536 W 25th St #614, San Pedro, CA 90732",
+  "phone": "310-935-5236",
+  "email": "info@jewishpedro.org",
+  "zip": "90731",
+  "timezone": "America/Los_Angeles",
+  "logo": "/images/logo.png",
+  "accentColor": "#b5542b",
+  "shabbos": {
+    "candleLightingMinutes": 18,
+    "havdalah": { "method": "degrees", "minutes": 50 },
+    "zemanimUrl": "https://www.chabad.org/zemanim"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/jewishspedro",
+    "instagram": "https://www.instagram.com/jewishspedro",
+    "whatsapp": "https://wa.me/13109355236"
+  },
+  "donate": { "label": "Donate", "url": "https://secure.givelively.org/donate/san-pedro-jewish-center" },
+  "deploy": { "site": "https://shliachflow.github.io", "base": "/jewishpedro" },
+  "nav": [
+    { "label": "About", "href": "/about" },
+    {
+      "label": "Programs",
+      "href": "/programs",
+      "children": [
+        { "label": "Shabbat Experience", "href": "/shabbat-experience" },
+        { "label": "Synagogue Services", "href": "/synagogue-services" },
+        { "label": "Shabbat Meals", "href": "/shabbat-meal" },
+        { "label": "Adult Education", "href": "/adult-education" },
+        { "label": "Jewish Insights Class", "href": "/jewish-insights-class" },
+        { "label": "Holidays", "href": "/holidays" },
+        { "label": "Bassie's Challah Shoppe", "href": "/bassies-challah-shoppe" },
+        { "label": "First Thursday Challah Booth", "href": "/challah-booth-first-thursday" },
+        { "label": "Men's Club", "href": "/mens-club" },
+        { "label": "Women's Circle", "href": "/womens-circle" },
+        { "label": "Kids & Youth", "href": "/kids-youth-programs" },
+        { "label": "Monthly Planner", "href": "/monthly-planner" }
+      ]
+    },
+    { "label": "Events", "href": "/events" },
+    { "label": "Move to Pedro", "href": "/move-to-pedro" },
+    { "label": "Resources", "href": "/online-resources" },
+    { "label": "FAQ", "href": "/faq" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

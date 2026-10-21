@@ -1,0 +1,6 @@
+---
+// Reusable CRM form embed: <FormEmbed url="https://..." title="Contact form" height={700} />
+interface Props { url: string; title?: string; height?: number }
+const { url, title = 'Form', height = 700 } = Astro.props;
+---
+<iframe class="form-embed" src={url} title={title} style={`height:${height}px`} loading="lazy"></iframe>

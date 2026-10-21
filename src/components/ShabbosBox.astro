@@ -1,0 +1,40 @@
+---
+// Swappable Shabbos box. Fetches times client-side from Hebcal. All settings come from site.config.json.
+import { site } from '../lib/site';
+const s = site.shabbos;
+const params = new URLSearchParams({ cfg: 'json', zip: site.zip, b: String(s.candleLightingMinutes) });
+if (s.havdalah.method === 'minutes') params.set('m', String(s.havdalah.minutes));
+// method "degrees": Hebcal's default (nightfall at 8.5° below the horizon), so no "m" param.
+const api = `https://www.hebcal.com/shabbat?${params}`;
+---
+<section class="shabbos-box" data-api={api} data-tz={site.timezone}>
+  <h2>This Shabbos</h2>
+  <dl>
+    <div><dt>Parsha</dt><dd data-field="parsha">…</dd></div>
+    <div><dt>Candle lighting</dt><dd data-field="candles">…</dd></div>
+    <div><dt>Shabbos ends</dt><dd data-field="havdalah">…</dd></div>
+  </dl>
+  <p class="shabbos-note" data-field="note" hidden>Times unavailable right now.</p>
+  <a href={s.zemanimUrl}>Full daily times (Chabad.org)</a>
+</section>
+<script>
+  const box = document.querySelector<HTMLElement>('.shabbos-box');
+  if (box) {
+    const set = (k: string, v: string) => { const el = box.querySelector(`[data-field="${k}"]`); if (el) el.textContent = v; };
+    const fmt = (iso: string) =>
+      new Date(iso).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: box.dataset.tz });
+    fetch(box.dataset.api!)
+      .then((r) => r.json())
+      .then((d) => {
+        for (const i of d.items) {
+          if (i.category === 'candles') set('candles', fmt(i.date));
+          if (i.category === 'havdalah') set('havdalah', fmt(i.date));
+          if (i.category === 'parashat') set('parsha', i.title.replace(/^Parashat\s+/, ''));
+        }
+      })
+      .catch(() => {
+        ['parsha', 'candles', 'havdalah'].forEach((k) => set(k, '—'));
+        box.querySelector<HTMLElement>('[data-field="note"]')!.hidden = false;
+      });
+  }
+</script>
