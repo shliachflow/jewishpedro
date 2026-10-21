@@ -1,0 +1,59 @@
+---
+// Copy is verbatim from the old Donate page. Payment details live here and in site.config.json (donate.url).
+import Base from '../layouts/Base.astro';
+import { url, site } from '../lib/site';
+
+const give = site.donate.url;
+const ways = [
+  { name: 'Check', lines: ['Payable to San Pedro Jewish Center', '1536 W 25th St #614', 'San Pedro, CA 90732'] },
+  { name: 'Zelle', lines: ['Send directly via Zelle by using the following Zelle tag:'], copy: 'chabadspedro' },
+  { name: 'PayPal', lines: ['Send directly via PayPal'], href: 'https://paypal.me/chabadspedro', cta: 'Open PayPal' },
+  { name: 'Cash App', lines: ['Send directly via Cash App'], href: 'https://cash.app/$ChabadSPedro', cta: 'Open Cash App' },
+  { name: 'Venmo', lines: ['Send directly via Venmo'], href: 'https://venmo.com/u/chabadspedro', cta: 'Open Venmo' },
+];
+---
+<Base title="Donate" description="Every dollar funds community. Give online, by check, Zelle, PayPal, Cash App, or Venmo to Chabad S. Pedro.">
+  <div class="page-head"><div class="container">
+    <h1>Donate</h1>
+    <p class="page-sub">Every dollar funds community</p>
+  </div></div>
+
+  <section class="container dn-top">
+    <div class="dn-main">
+      <p class="eyebrow">Support our mission</p>
+      <h2 class="dn-h">Every gift, large or small, makes a real difference in our community.</h2>
+      <p class="dn-actions"><a class="btn btn-brass btn-lg" href={give} target="_blank" rel="noopener">Click Here to Donate Online</a></p>
+      <p class="dn-trust">San Pedro Jewish Center &bull; Registered 501(c)(3) Nonprofit &bull; EIN: 87-1905537<br />Your donation is tax-deductible to the full extent permitted by law.</p>
+    </div>
+    <aside class="dn-chai">
+      <p class="eyebrow">Chai Society</p>
+      <h3>Create a Continuous Source of “Chai – Life”</h3>
+      <p>Join our monthly donation program and become a pillar of support for Chabad S. Pedro</p>
+      <p><a class="btn btn-brass" href={url('/chai-society')}>Join the Chai Society</a></p>
+    </aside>
+  </section>
+
+  <section class="container dn-ways">
+    <p class="eyebrow">Or donate directly via</p>
+    <ul class="dn-list">
+      {ways.map((w) => (
+        <li>
+          <h3>{w.name}</h3>
+          <p>{w.lines.map((l, i) => <>{l}{i < w.lines.length - 1 && <br />}</>)}{w.copy && <><br /><strong class="dn-tag">{w.copy}</strong></>}</p>
+          <p class="dn-act">
+            {w.href && <a class="btn btn-line btn-sm" href={w.href} target="_blank" rel="noopener">{w.cta}</a>}
+            {w.copy && <button type="button" class="btn btn-line btn-sm" data-copy={w.copy}>Copy Zelle tag</button>}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </section>
+  <script is:inline>
+    document.querySelectorAll('[data-copy]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var done = function () { var t = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = t; }, 1800); };
+        if (navigator.clipboard) navigator.clipboard.writeText(b.dataset.copy).then(done, function () {}); else { var r = document.createRange(); r.selectNodeContents(b.closest('li').querySelector('.dn-tag')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+      });
+    });
+  </script>
+</Base>

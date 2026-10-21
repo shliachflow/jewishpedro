@@ -1,0 +1,78 @@
+---
+// Copy is verbatim from the old Chai Society page. Members live in src/data/chai-members.json.
+import Base from '../layouts/Base.astro';
+import PageCta from '../components/PageCta.astro';
+import members from '../data/chai-members.json';
+import { site } from '../lib/site';
+
+const join = site.donate.url;
+const tiers = [['Bronze', '$18+/mo'], ['Silver', '$72+/mo'], ['Gold', '$180+/mo'], ['Platinum', '$360+/mo']];
+const reasons = [
+  ['Join a Greater Good', 'Your donation, together with all other Chai Society members, adds up to a significant amount that makes real impact possible.'],
+  ['Strengthen the Focus', 'With a set amount to rely on, we can put more of our focus on serving the community and less on fundraising.'],
+  ['Enable Growth', 'By giving us the ability to predictably plan for future programs and initiatives that will benefit our community.'],
+];
+const faq = [
+  ['Is there a minimum donation amount to become a Chai Society member?', 'While there are different donor “tiers,” we welcome donations of every size because every dollar adds up to make a huge difference.'],
+  ['Can I change my monthly donation amount?', 'Definitely! If you ever want to adjust your donation, you can reach out and we\'ll process the change before your next donation goes through.'],
+  ['How long does the monthly commitment last?', 'Once you become a Chai Society member, your card will be charged monthly. You have the option to cancel or adjust at any point – we understand that people\'s capacity changes and appreciate your commitment no matter how long it is.'],
+  ['Can I give anonymously?', 'Of course. If you don\'t want to be featured on the honor roll, simply choose “anonymous” when setting up your donation. Your name will not be featured in any public location.'],
+  ['Will I receive a tax receipt?', 'Yes. Your donations are 100% tax-deductible. We will send you a receipt at the end of every calendar year for your total donation amount.'],
+  ['When will my card be charged?', 'Typically, we process Chai Society donations on the day you submit your form and it will then repeat on the same day in the following months. However, if you prefer a different date, reach out, and we\'ll do our best to accommodate, G-d willing.'],
+];
+---
+<Base title="Chai Society" description="Monthly giving at Chabad S. Pedro: a continuous source of “Chai – Life” for our community.">
+  <div class="page-head"><div class="container">
+    <h1>Chai Society</h1>
+    <p class="page-sub">Monthly Giving at Chabad S. Pedro</p>
+  </div></div>
+
+  <section class="container dn-top">
+    <div class="dn-main">
+      <p class="eyebrow">Create a continuous source of “Chai – Life”</p>
+      <h2 class="dn-h">Join our monthly donation program and become a pillar of support for Chabad S. Pedro</h2>
+      <p>Every Chabad house is an individually funded center. Chabad S. Pedro does not receive funding from the central Chabad offices and every dollar of our budget needs to be raised – which is why we're so grateful for donors like you.</p>
+      <p>With your consistent monthly donation, we have a foundation that serves as the lifeline in all we do.</p>
+      <p class="dn-actions"><a class="btn btn-brass btn-lg" href={join} target="_blank" rel="noopener">Join the Chai Society</a></p>
+    </div>
+    <aside class="dn-chai">
+      <p class="eyebrow">Our tiers</p>
+      <ul class="cs-tiers">{tiers.map(([n, p]) => <li><span>{n}</span><b>{p}</b></li>)}</ul>
+    </aside>
+  </section>
+
+  <section class="container cs-reasons">
+    {reasons.map(([h, t]) => <article><h3>{h}</h3><p>{t}</p></article>)}
+  </section>
+
+  <section class="cs-quote">
+    <div class="container">
+      <p class="eyebrow">Did you know?</p>
+      <p class="cs-q">Rambam (Maimonides) writes that giving on repeat is better than a one-off sum – even if it will be the same dollar total – because by giving on a regular basis, we become givers. It changes the nature of who we are.</p>
+      <p>The repeated action gives us the repeated merits of the mitzvah. When you join the Chai Society, every month, you unlock the blessings that tzedakah brings.</p>
+      <p><a class="btn btn-brass" href={join} target="_blank" rel="noopener">Join the Chai Society</a></p>
+    </div>
+  </section>
+
+  <section class="container cs-members">
+    <div>
+      <p class="eyebrow">Become a monthly partner</p>
+      <h2 class="dn-h">Become a partner in outreach, community, and authentic Judaism</h2>
+    </div>
+    <div>
+      <h3 class="cs-h3">Our Members</h3>
+      <p>Thank you to those who make it all possible.</p>
+      <dl class="cs-roll">{members.tiers.map((t) => <div><dt>{t.name}</dt><dd>{t.members.map((m) => <span>{m}</span>)}</dd></div>)}</dl>
+      <p class="cs-note">{members.note}</p>
+    </div>
+  </section>
+
+  <section class="container cs-faq">
+    <h2 class="dn-h">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      {faq.map(([q, a]) => <details class="faq-item"><summary><h3>{q}</h3></summary><div class="faq-a"><p>{a}</p></div></details>)}
+    </div>
+    <p class="cs-more"><strong>Have another question?</strong> We'd be happy to discuss it with you. Feel free to reach out at <a href={`tel:${site.phone}`}>{site.phone}</a> and we'll be in touch, G-d willing.</p>
+  </section>
+  <PageCta />
+</Base>

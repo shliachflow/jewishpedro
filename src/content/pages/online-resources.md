@@ -23,8 +23,6 @@ The weekly Torah reading - for all ages
 
 ## [Jewish Holidays and Festivals](https://www.chabad.org/holidays/default_cdo/jewish/Jewish-Holidays.htm)
 
-- [High Holidays 2026](https://www.chabad.org/holidays/JewishNewYear/template_cdo/aid/36130/jewish/High-Holidays-2026.htm)
-- [Sukkot & Simchat Torah 2026](https://www.chabad.org/library/article_cdo/aid/984606/jewish/Sukkot-Simchat-Torah-2026.htm)
 - [View All 16](https://www.chabad.org/holidays/default_cdo/jewish/Jewish-Holidays.htm)
 
 ## [Community & Family](https://www.chabad.org/society/default_cdo/aid/132514/jewish/Community-Family.htm)

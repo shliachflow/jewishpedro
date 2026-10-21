@@ -1,0 +1,9 @@
+{
+  "note": "Names listed with donor permission. Donors may choose to remain anonymous.",
+  "tiers": [
+    { "name": "Platinum", "members": ["Anonymous"] },
+    { "name": "Gold", "members": ["Anthony Rocha", "Rabbi Moshe & Mrs Chaya Katz"] },
+    { "name": "Silver", "members": ["Mikhail Strukov"] },
+    { "name": "Bronze", "members": ["Anonymous", "David Torres"] }
+  ]
+}

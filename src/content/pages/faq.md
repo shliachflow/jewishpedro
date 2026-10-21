@@ -59,7 +59,7 @@ No. Each Chabad center is independently funded by the community it serves. We do
 
 ### Where is your Shul/synagogue located?
 
-As of December 2024, we have secured a commercial space for our activities and services. The Chabad Center is located at 817 W 9th St, San Pedro, CA 90731.
+The Chabad Center is located at 817 W 9th St, San Pedro, CA 90731.
 
 [Back to top ↑](#)
 

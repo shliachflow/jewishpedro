@@ -31,7 +31,8 @@
   },
   "donate": {
     "label": "Donate",
-    "url": "https://secure.givelively.org/donate/san-pedro-jewish-center"
+    "url": "https://secure.givelively.org/donate/san-pedro-jewish-center",
+    "page": "/donate"
   },
   "deploy": {
     "site": "https://shliachflow.github.io",

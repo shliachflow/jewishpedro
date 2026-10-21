@@ -680,3 +680,40 @@ main:has(> .page-cta:last-child) + .site-footer { margin-top: 0; border-top: 0; 
 .mission-photo { max-width: 17rem; }
 .mission-text { font-size: clamp(1.9rem, 3.8vw, 3rem); }
 .mission { padding-block: clamp(3rem, 7vw, 5rem); }
+
+/* Donate + Chai Society */
+.btn-lg { padding: 1.05em 1.9em; font-size: 1.15rem; }
+.dn-top { display: grid; gap: 2.5rem; padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+@media (min-width: 62rem) { .dn-top { grid-template-columns: 1.3fr .7fr; gap: 5rem; align-items: start; } }
+.dn-h { font: 400 clamp(2rem, 4.6vw, 3.4rem)/1.03 var(--font-display); letter-spacing: -.02em; max-width: 18em; }
+.dn-actions { margin: 2rem 0 1.5rem; }
+.dn-trust { color: var(--ink-soft); font-size: .95rem; margin: 0; }
+.dn-chai { background: var(--primary); color: #fff; padding: 1.75rem; border-radius: 14px; }
+.dn-chai h3 { color: #fff; font: 400 1.9rem/1.1 var(--font-display); margin-bottom: .6rem; }
+.dn-chai .eyebrow { color: var(--accent); } .dn-chai p { color: color-mix(in oklab, #fff 88%, transparent); }
+.dn-chai .btn-brass { color: var(--ink); }
+.dn-ways { padding-bottom: clamp(3rem, 7vw, 6rem); }
+.dn-list { list-style: none; padding: 0; margin: 1rem 0 0; border-top: 2px solid var(--primary); }
+.dn-list li { display: grid; gap: .5rem 2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); align-items: center; }
+@media (min-width: 52rem) { .dn-list li { grid-template-columns: 10rem 1fr auto; } }
+.dn-list h3 { margin: 0; font: 400 1.8rem/1.1 var(--font-display); } .dn-list p { margin: 0; }
+.dn-tag { font: 700 1.2rem var(--font-ui); color: var(--primary); user-select: all; }
+.dn-act .btn { min-height: 2.75rem; display: inline-flex; align-items: center; }
+.cs-tiers { list-style: none; padding: 0; margin: 0; }
+.cs-tiers li { display: flex; justify-content: space-between; align-items: baseline; padding: .9rem 0; border-bottom: 1px solid color-mix(in oklab, #fff 18%, transparent); }
+.cs-tiers li:last-child { border: 0; } .cs-tiers span { font: 400 1.6rem var(--font-display); } .cs-tiers b { color: var(--accent); font: 700 1.1rem var(--font-ui); }
+.cs-reasons { display: grid; gap: 2rem; padding-block: 1rem clamp(3rem, 7vw, 5rem); }
+@media (min-width: 52rem) { .cs-reasons { grid-template-columns: repeat(3, 1fr); gap: 3rem; } }
+.cs-reasons article { border-top: 3px solid var(--accent); padding-top: 1rem; } .cs-reasons h3 { font: 400 1.8rem/1.1 var(--font-display); }
+.cs-quote { background: var(--deep); color: #fff; padding-block: clamp(3rem, 8vw, 6rem); }
+.cs-quote .eyebrow { color: var(--accent); } .cs-quote p { max-width: 40rem; color: color-mix(in oklab, #fff 85%, transparent); }
+.cs-quote .cs-q { font: 400 clamp(1.8rem, 4vw, 3rem)/1.1 var(--font-display); color: #fff; max-width: 30ch; } .cs-quote .btn { color: var(--ink); }
+.cs-members { display: grid; gap: 2.5rem; padding-block: clamp(3rem, 8vw, 5.5rem); }
+@media (min-width: 62rem) { .cs-members { grid-template-columns: 1fr 1fr; gap: 5rem; } }
+.cs-h3 { font: 400 2rem var(--font-display); }
+.cs-roll { margin: 1.5rem 0; border-top: 2px solid var(--primary); }
+.cs-roll > div { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.cs-roll dt { font: 700 .8rem var(--font-ui); letter-spacing: .12em; text-transform: uppercase; color: var(--brass-text); padding-top: .35rem; }
+.cs-roll dd { margin: 0; display: grid; gap: .2rem; font: 400 1.3rem var(--font-display); }
+.cs-note { color: var(--ink-soft); font-size: .95rem; }
+.cs-faq { padding-bottom: clamp(3rem, 7vw, 6rem); } .cs-more { max-width: 42rem; margin-top: 2rem; }

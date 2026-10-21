@@ -19,7 +19,7 @@ const year = new Date().getFullYear();
       <p class="footer-head">{ui.footerConnect}</p>
       <ul>
         {Object.entries(site.social).map(([name, href]) => <li><a href={href}>{ui.socialLabels[name] ?? name}</a></li>)}
-        <li><a href={site.donate.url}>{site.donate.label}</a></li>
+        <li><a href={url(site.donate.page)}>{site.donate.label}</a></li>
       </ul>
     </div>
   </div>

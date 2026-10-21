@@ -37,7 +37,7 @@ const suffix = site.name.replace(site.shortName, '').trim();
             <li><a href={url(item.href)}>{item.label}</a></li>
           )
         ))}
-        <li class="nav-donate"><a class="btn btn-sm" href={site.donate.url}>{site.donate.label}</a></li>
+        <li class="nav-donate"><a class="btn btn-sm" href={url(site.donate.page)}>{site.donate.label}</a></li>
       </ul>
     </nav>
   </div>

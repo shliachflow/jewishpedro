@@ -6,7 +6,7 @@ description: Saturday, Shabbat, kiddush
 
 ## Deep Dive into the Chassidic teachings
 
-We are excited to invite you to explore the profound depths of Jewish wisdom found in the Chassidic works. These foundational Chassidic texts offers transformative insights into life's big questions, such as the nature of the soul and our purpose in the world.
+We are excited to invite you to explore the profound depths of Jewish wisdom found in the Chassidic works. These foundational Chassidic texts offer transformative insights into life's big questions, such as the nature of the soul and our purpose in the world.
 
 Join us weekly as we uncover inspirational guidance on serving G-d with joy and aligning our lives with greater meaning.
 
@@ -37,4 +37,4 @@ Kiddush Luncheon
 
 Whether you are a seasoned prayer-goer or new to the concept, we believe there is something special and transformative about coming together as a community to connect with G-d and with each other.
 
-[Learn More About Our Services](/contact)
+[Learn More About Our Services](/synagogue-services)

@@ -24,7 +24,7 @@ Before services, we learn from Tanya, the foundational Chassidic work by Rabbi S
 
 Part of the Shabbat Experience
 
-Explore Shabbat Morning
+[Explore Shabbat Morning](/shabbat-experience)
 
 ## Holiday Learning
 
