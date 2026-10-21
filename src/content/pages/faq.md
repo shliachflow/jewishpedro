@@ -209,7 +209,7 @@ We have two weekly classes and one-on-one learning. Contact the Rabbi for more d
 
 ### Are there community social events?
 
-Yes, we have a Men's and Women's Club once a month, along with other events.
+Yes, we have a Men's Club once a month and a Women's Circle from time to time, along with other events.
 
 [Back to top ↑](#)
 

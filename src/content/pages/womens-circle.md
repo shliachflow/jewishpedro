@@ -18,9 +18,9 @@ Ready to join our vibrant community? Reach out to Rebbetzin Bassie to get involv
 
 [Contact Rebbetzin Bassie](/contact)
 
-### Monthly Gatherings
+### Gatherings
 
-We typically meet on the second Sunday of each month for special programs, discussions, and community building activities.
+We gather from time to time throughout the year for special programs, discussions, and community building activities.
 
 ### Monthly Planner
 
