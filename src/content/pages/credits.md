@@ -4,6 +4,7 @@ description: Where the photographs on this site come from.
 ---
 Photos of the Rabbi, Rebbetzin, family, and the center belong to Chabad S. Pedro Jewish Center.
 
-Other photos used under open licenses:
+Other photos are free to use under the Pexels and Unsplash licenses:
 
-- **Point Fermin Lighthouse, San Pedro, California** by [Doug Kerr](https://www.flickr.com/photos/dougtone/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Point_Fermin_Lighthouse_-_San_Pedro,_California_(11400371665).jpg), licensed [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Cropped for layout.
+- **Harbor breakwater lighthouse at sunset**, photo by James Lee, via [Pexels](https://www.pexels.com/photo/sunset-view-of-point-fermin-lighthouse-in-california-38842630/).
+- **Korean Bell of Friendship, San Pedro**, photo by Andrea Qoqonga, via [Unsplash](https://unsplash.com/photos/a-tall-building-with-a-bell-in-front-of-it-FW8gRGpiP0g).

@@ -1,20 +1,17 @@
 ---
 title: Welcome to Chabad S. Pedro
-heroImage: /images/about-family.jpg
-heroAlt: Rabbi Yisroel and Rebbetzin Bassie Shuchat with their children outside the center
+heroImage: /images/hero-harbor-sunset.jpg
+heroAlt: A lighthouse at the end of the harbor breakwater at sunset
 feature:
   title: The Shabbat Experience
   text: "Learning, Prayer, community, and a delicious kiddush lunch every Saturday morning."
   href: /shabbat-experience
-  image: /images/move-to-pedro-shul.jpg
-  alt: The shul at 817 W 9th St, tables set for a meal, with the menorah
-heroExtras:
-  - image: /images/rabbi-rebbetzin.jpg
-    alt: Rabbi Yisroel and Rebbetzin Bassie Shuchat
-  - image: /images/move-to-pedro-shul.jpg
-    alt: The shul at 817 W 9th St, set for a meal
+  image: /images/shul-room.jpg
+  alt: The shul at 817 W 9th St with its lit menorah, lectern, and tables set with white linens
 peoplePhoto: /images/rabbi-rebbetzin.jpg
 peoplePhotoAlt: Rabbi Yisroel and Rebbetzin Bassie Shuchat
+communityPhoto: /images/community-class.jpg
+communityAlt: A speaker addressing a smiling audience at a class at the center
 mission: "Our mission is to create a vibrant Jewish community where everyone, regardless of background or level of observance, feels welcome, valued, and inspired."
 people:
   - name: Rabbi Yisroel Shuchat
@@ -25,8 +22,8 @@ featured:
   - title: "Move to Pedro!"
     text: "Are you looking for a more affordable Jewish community in SoCal? Check out this page to see we are a good fit!"
     href: /move-to-pedro
-    image: /images/point-fermin-lighthouse.jpg
-    alt: Point Fermin Lighthouse in San Pedro
+    image: /images/bell-of-friendship.jpg
+    alt: The Korean Bell of Friendship pavilion at Angels Gate Park in San Pedro
   - title: JNet
     text: "Sign up to study one-on-one with a volunteer for half an hour a week. You choose the topic and time. JNet makes the connection."
     href: https://www.jnet.org/

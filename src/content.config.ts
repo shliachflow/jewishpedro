@@ -13,9 +13,10 @@ const pages = defineCollection({
     heroImage: z.string().optional(),
     heroAlt: z.string().optional(),
     feature: z.object({ title: z.string(), text: z.string(), href: z.string(), image: z.string(), alt: z.string() }).optional(),
-    heroExtras: z.array(z.object({ image: z.string(), alt: z.string() })).optional(),
     peoplePhoto: z.string().optional(),
     peoplePhotoAlt: z.string().optional(),
+    communityPhoto: z.string().optional(),
+    communityAlt: z.string().optional(),
     mission: z.string().optional(),
     people: z.array(z.object({ name: z.string(), role: z.string() })).optional(),
     featured: z
