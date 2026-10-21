@@ -3,7 +3,7 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import FormEmbed from '../../components/FormEmbed.astro';
 import { getUpcomingEvents, formatDate } from '../../lib/events';
-import { url } from '../../lib/site';
+import { url, site } from '../../lib/site';
 
 export async function getStaticPaths() {
   return (await getUpcomingEvents()).map((e) => ({ params: { id: e.id }, props: { event: e } }));
@@ -11,8 +11,17 @@ export async function getStaticPaths() {
 const { event } = Astro.props;
 const { Content } = await render(event);
 const { title, date, time, location, image, rsvpUrl } = event.data;
+const a = site.address;
+const eventLd = {
+  '@context': 'https://schema.org', '@type': 'Event', name: title,
+  startDate: date.toISOString().slice(0, 10),
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: { '@type': 'Place', name: location ?? site.name, address: { '@type': 'PostalAddress', streetAddress: a.street, addressLocality: a.city, addressRegion: a.state, postalCode: site.zip, addressCountry: 'US' } },
+  organizer: { '@type': 'Organization', name: site.name },
+};
 ---
-<Base title={title}>
+<Base title={title} description={`${title}, ${formatDate(date)}${time ? ', ' + time : ''}.`}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(eventLd)} />
   <div class="page-head"><div class="container">
     <p><a href={url('/events')}>← All events</a></p>
     <h1>{title}</h1>

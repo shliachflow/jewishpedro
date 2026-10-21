@@ -2,7 +2,7 @@
 title: Bassie's Challah Shoppe
 description: From Bassie's San Pedro kitchen
 ---
-![Bassie's Challah Shoppe banner](/images/challah-shoppe-banner.png)
+![Bassie's Challah Shoppe banner](/images/challah-shoppe-banner.jpg)
 
 ## Welcome to the Challah Shoppe
 
@@ -26,7 +26,7 @@ Thank you for your order — we appreciate your support and hope you enjoy the c
 
 | Plain Challah | Everything But The Bagel Challah | Sugar Crumb Challah |
 |---|---|---|
-| ![Plain Challah](/images/challah-plain.png) | ![Everything But The Bagel Challah](/images/challah-everything-but-the-bagel.png) | ![Sugar Crumb Challah](/images/challah-sugar-crumb.png) |
+| ![Plain Challah](/images/challah-plain.png) | ![Everything But The Bagel Challah](/images/challah-everything-but-the-bagel.png) | ![Sugar Crumb Challah](/images/challah-sugar-crumb.jpg) |
 
 ## Place Your Order
 

@@ -2,7 +2,7 @@
 title: Chai Society
 description: Monthly giving · $18 / $36 / $180
 ---
-![Chai Society Banner](/images/chai-society-banner.png)
+![Chai Society Banner](/images/chai-society-banner.jpg)
 
 ## Chai Society — Monthly Giving at Chabad S. Pedro
 

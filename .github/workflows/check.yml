@@ -1,0 +1,25 @@
+name: Check
+
+# Validates content before it reaches main: the build runs the content schema
+# (bad frontmatter, bad dates, missing images fail it), then we lint wording.
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Wording lint (G-d, never the full word)
+        run: |
+          if grep -rniw "god" src/content README.md; then
+            echo "Use \"G-d\", never \"God\"."; exit 1
+          fi

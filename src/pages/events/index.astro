@@ -2,13 +2,26 @@
 import Base from '../../layouts/Base.astro';
 import EventRow from '../../components/EventRow.astro';
 import { getUpcomingEvents } from '../../lib/events';
+import { site } from '../../lib/site';
 const events = await getUpcomingEvents();
+const first = events.slice(0, 8);
+const rest = events.slice(8);
 ---
 <Base title="Events">
   <div class="page-head"><div class="container"><h1>Upcoming events</h1></div></div>
   <div class="container page">
     {events.length === 0
-      ? <p>No events scheduled right now. Check back soon.</p>
-      : <div class="event-rows">{events.map((e) => <EventRow event={e} />)}</div>}
+      ? <p>{site.ui.noEvents}</p>
+      : (
+        <>
+          <div class="event-rows">{first.map((e) => <EventRow event={e} level={2} />)}</div>
+          {rest.length > 0 && (
+            <details class="more-events">
+              <summary>Show the other {rest.length} upcoming events</summary>
+              <div class="event-rows">{rest.map((e) => <EventRow event={e} level={2} />)}</div>
+            </details>
+          )}
+        </>
+      )}
   </div>
 </Base>

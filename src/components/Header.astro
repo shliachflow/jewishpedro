@@ -9,7 +9,7 @@ const suffix = site.name.replace(site.shortName, '').trim();
       <span>{site.address.street}, {site.address.city}</span>
       <span class="topbar-links">
         <a href={`tel:${site.phone}`}>{site.phone}</a>
-        <a href={site.social.whatsapp}>WhatsApp</a>
+        <a href={site.social.whatsapp}>{site.ui.socialLabels.whatsapp}</a>
       </span>
     </div>
   </div>
@@ -44,21 +44,29 @@ const suffix = site.name.replace(site.shortName, '').trim();
 </header>
 <script>
   const header = document.querySelector<HTMLElement>('.site-header');
-  const btn = document.querySelector('.menu-toggle');
+  const btn = document.querySelector<HTMLButtonElement>('.menu-toggle');
   const nav = document.getElementById('main-nav');
-  btn?.addEventListener('click', () => {
-    const open = nav?.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(!!open));
-    header?.classList.toggle('menu-open', !!open);
-  });
+  const all = [...document.querySelectorAll<HTMLDetailsElement>('.main-nav details')];
+  const setMenu = (open: boolean) => {
+    nav?.classList.toggle('open', open);
+    btn?.setAttribute('aria-expanded', String(open));
+    header?.classList.toggle('menu-open', open);
+    document.documentElement.classList.toggle('nav-open', open);
+  };
+  btn?.addEventListener('click', () => setMenu(!nav?.classList.contains('open')));
   if (header?.classList.contains('over-hero')) {
     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
     onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
   }
-  const all = [...document.querySelectorAll<HTMLDetailsElement>('.main-nav details')];
   all.forEach((d) => d.addEventListener('toggle', () => d.open && all.filter((o) => o !== d).forEach((o) => (o.open = false))));
+  // Close a submenu when focus moves out of it, or on a click elsewhere.
+  all.forEach((d) => d.addEventListener('focusout', (e) => { if (!d.contains((e as FocusEvent).relatedTarget as Node)) d.open = false; }));
   document.addEventListener('click', (e) => {
     if (!(e.target as HTMLElement).closest('.main-nav details')) all.forEach((o) => (o.open = false));
   });
-  document.addEventListener('keydown', (e) => e.key === 'Escape' && all.forEach((o) => (o.open = false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    all.forEach((o) => (o.open = false));
+    if (nav?.classList.contains('open')) { setMenu(false); btn?.focus(); }
+  });
 </script>

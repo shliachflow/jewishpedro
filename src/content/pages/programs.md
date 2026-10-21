@@ -1,5 +1,6 @@
 ---
 title: Programs
+layout: index
 description: "Shabbat · Holidays · Learning · Kids · More"
 ---
 - [Every Jewish Holiday](/holidays)  

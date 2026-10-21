@@ -1,4 +1,5 @@
 ---
+expires: 2026-07-31
 title: Summer Raffle
 description: Every entry supports Chabad S. Pedro. Drawing July 30th.
 ---
@@ -44,7 +45,7 @@ HOW IT WORKS
 
 Choose the contribution level in the GiveLively form below. The form handles the payment securely on this page.
 
-🎟️ENTRY LEVELS
+ENTRY LEVELS
 
 $36 = 1 entry … up to $1,800 = 180 entries.
 

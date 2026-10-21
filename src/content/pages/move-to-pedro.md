@@ -14,17 +14,15 @@ San Pedro is LA's affordable coastal town — and home to a growing Jewish commu
 
 CHABAD S. PEDRO JEWISH CENTER · 817 W 9TH ST
 
-![Wide San Pedro photo](/images/move-to-pedro.png)
+![Wide San Pedro photo](/images/move-to-pedro.jpg)
 
 | | | |
 |---|---|---|
-| 🏠 **~$800K** MEDIAN SP HOME | 💰 **$700K+** SAVED VS. PICO | ⏱ **~35 min** TO PICO, OFF-PEAK |
+| **~$800K** MEDIAN SP HOME | **$700K+** SAVED VS. PICO | **~35 min** TO PICO, OFF-PEAK |
 
 <span id="learn-more"></span>
 
-01
-
-📍 01 · THE REPUTATION
+THE REPUTATION
 
 ## Wait, San Pedro?
 
@@ -34,7 +32,7 @@ San Pedro is a collection of genuinely beautiful neighborhoods — ocean views, 
 
 Our shul sits in the Vista del Oro neighborhood — a centrally located, welcoming area that makes a natural hub for the growing community. We're happy to walk you through the different neighborhoods and help you find the right fit — the Rabbi can also connect you with a local real estate agent who knows the area well.
 
-☀ FUN FACT
+FUN FACT
 
 ### Did you know? San Pedro is officially part of the City of LA.
 
@@ -51,9 +49,7 @@ A lot of new investment, new housing, and a reimagined waterfront — plus a fre
 
 Most people who come visit come away surprised — there's genuinely more here than they expected. And for the last few years, a small but growing Jewish community has been putting down roots in San Pedro. That's why this page exists.
 
-02
-
-⏱ 02 · THE DISTANCE
+THE DISTANCE
 
 ## Close Enough to LA Family
 
@@ -72,9 +68,7 @@ San Pedro is its own town, not a suburb — but it's within easy driving distanc
 
 Traffic adds 15-30 min during rush hour. Plan accordingly, like every Angeleno does.
 
-03
-
-🏠 03 · THE NUMBERS
+THE NUMBERS
 
 ## What You Get for Your Money
 
@@ -82,7 +76,7 @@ San Pedro isn't dirt cheap — nowhere in California is. But compared to the LA 
 
 | Neighborhood | Median Home Price (2026) |
 |---|---|
-| ★ San Pedro | ~$800,000 |
+| San Pedro | ~$800,000 |
 | Tarzana | ~$1.1M — $1.3M |
 | Pico-Robertson | ~$1.3M — $1.8M |
 | Sherman Oaks | ~$1.3M — $1.7M |
@@ -113,7 +107,7 @@ Renting a 3BR in San Pedro runs noticeably less than the LA Jewish neighborhoods
 
 | Neighborhood | Median 3BR Rent (2026) |
 |---|---|
-| ★ San Pedro | ~$3,800 / mo |
+| San Pedro | ~$3,800 / mo |
 | Hancock Park (apartments) | ~$4,000 / mo |
 | Pico-Robertson | ~$4,600 / mo |
 | Tarzana | ~$4,600 / mo |
@@ -129,15 +123,13 @@ THE PRACTICAL DIFFERENCE
 
 saved vs. Pico-Robertson — and much more vs. Beverlywood or Hancock Park. That's a down payment for a second property, the cushion that makes a single-income family viable, or tuition for Jewish day school for years.
 
-04
-
-🏝 04 · THE LIFESTYLE
+THE LIFESTYLE
 
 ## Life Outside the House
 
 San Pedro and the Palos Verdes peninsula are one of the most underrated outdoor corners of Los Angeles. Most of this is free, public, and minutes from home.
 
-🥾 TRAILS
+TRAILS
 
 ### Hikes & Views
 
@@ -146,7 +138,7 @@ San Pedro and the Palos Verdes peninsula are one of the most underrated outdoor 
 - Point Fermin Park at the southern tip of LA — historic lighthouse included
 - Korean Friendship Bell & Angels Gate Park — panoramic harbor views, right in town
 
-🏝 COAST
+COAST
 
 ### Beaches & Harbor
 
@@ -156,7 +148,7 @@ San Pedro and the Palos Verdes peninsula are one of the most underrated outdoor 
 - West Harbor (replacing the old Ports O'Call): harbor-side walks, ship-watching, a family park, a Ferris wheel, more on the way
 - Quiet channel walks with real working-port views
 
-🧭 NEARBY
+NEARBY
 
 ### Worth the Drive
 
@@ -166,9 +158,7 @@ San Pedro and the Palos Verdes peninsula are one of the most underrated outdoor 
 
 Plenty to do every weekend — no traffic needed.
 
-05
-
-👥 05 · THE COMMUNITY
+THE COMMUNITY
 
 ## The Community Today
 
@@ -178,7 +168,7 @@ Here's what exists on the ground right now:
 
 ![Chabad S. Pedro shul](/images/move-to-pedro-shul.jpg)
 
-🕯 EVERY SHABBAT
+EVERY SHABBAT
 
 ### Shabbat at Our Shul
 
@@ -187,7 +177,7 @@ Here's what exists on the ground right now:
 - Shabbat morning Torah class, open to all
 - Shabbat meals with the Rabbi and Rebbetzin — call ahead, you'll be hosted
 
-📖 EVERY WEEK
+EVERY WEEK
 
 ### Learning & Connection
 
@@ -197,7 +187,7 @@ Here's what exists on the ground right now:
 - Women's Jewish Circle — monthly gatherings for women
 - Jewish Men's Club — monthly gathering for Men.
 
-✡ ALL YEAR
+ALL YEAR
 
 ### Lifecycle & Care
 
@@ -239,15 +229,13 @@ Before you decide anything, come spend a Shabbat. Walk the neighborhoods, see th
 
 [Plan a Shabbat Visit →](#contact)
 
-06
-
-🗺 06 · THE INFRASTRUCTURE
+THE INFRASTRUCTURE
 
 ## What's Nearby, What's a Drive
 
 Being honest about the infrastructure is important — so you know what you're signing up for.
 
-📍 IN SAN PEDRO · 0 MIN
+IN SAN PEDRO · 0 MIN
 
 - Weekly Shabbat morning services with a Torah scroll, plus Kiddush
 - Shabbat meals at the Rabbi's home
@@ -256,21 +244,21 @@ Being honest about the infrastructure is important — so you know what you're s
 - Trader Joe's on Western Ave — surprisingly wide kosher selection, including pas yisroel breads. Plus access to all the major supermarkets nearby (Vons, Smart & Final, Ralphs, Albertsons), and a bit further out Whole Foods, Costco, and Sam's Club
 - Beaches, harbor, hiking, parks, the new West Harbor promenade
 
-⏱ WITHIN ~20 MIN
+WITHIN ~20 MIN
 
 - Kaiser Permanente Harbor City (~13-15 min) — a major Kaiser campus with a full hospital, medical offices, pharmacy, lab, and specialty care. If you're a Kaiser member, everything you need is a short drive away
 - Mikvah options in Lomita and Redondo Beach
 - Jewish preschool at Chabad of South Bay (Lomita)
 - Palos Verdes cliffs and additional beaches
 
-🛒 WITHIN ~20-25 MIN
+WITHIN ~20-25 MIN
 
 - Long Beach Chabad (Congregation Lubavitch) — the closest full Chabad community with daily prayer services (minyan)
 - Long Beach has a women's mikvah, a men's mikvah, and a keilim mikvah (for new utensils)
 - Smart & Final Long Beach — carries a broader kosher selection than a typical supermarket (milk, yogurts, cold cuts, cheeses) for a quick last-minute run; not a full kosher supermarket, but bigger than most
 - Emunah (Hawthorne) — a kosher catering / takeout option in the South Bay; check them out for more details
 
-🚌 WITHIN 40-60 MIN
+WITHIN 40-60 MIN
 
 - LA Jewish day schools (elementary and high school) — a daily shuttle bus leaves from Lomita, stops in Redondo Beach, then continues to the LA schools
 - Hebrew Academy of Huntington Beach (~40+ min) — a strong Jewish day school option in Orange County
@@ -280,9 +268,7 @@ Being honest about the infrastructure is important — so you know what you're s
 
 The honest trade: you drive a bit further for some things, and you save a lot on where you live.
 
-07
-
-❓ 07 · THE QUESTIONS
+THE QUESTIONS
 
 ## Questions We Hear Often
 
@@ -351,7 +337,7 @@ TALK STRAIGHT · NO SALES PITCH
 
 Moving is a big decision. We'd rather answer your questions straight than sell you on anything. Reach out anytime.
 
-[☎ Call 310-935-5236](tel:310-935-5236) [Email the Rabbi](mailto:rabbi@jewishpedro.org) [Send a Message](/contact)
+[ · Call 310-935-5236](tel:310-935-5236) [Email the Rabbi](mailto:rabbi@jewishpedro.org) [Send a Message](/contact)
 
 **Chabad S. Pedro Jewish Center**
 

@@ -2,7 +2,7 @@
 title: Shabbat Experience
 description: Saturday, Shabbat, kiddush
 ---
-![Shabbat Experience @ Chabad S. Pedro Jewish Center: Learn, Pray, Kiddush Luncheon, Warm Atmosphere](/images/shabbat-experience-banner.png)
+![Shabbat Experience @ Chabad S. Pedro Jewish Center: Learn, Pray, Kiddush Luncheon, Warm Atmosphere](/images/shabbat-experience-banner.jpg)
 
 ## Deep Dive into the Chassidic teachings
 

@@ -20,6 +20,6 @@ Feel free to reach out @ [310-935-5236](tel:310-935-5236) with any questions!
 
 ## This Month's Programs
 
-[![Program flyer: Purim in Mexico](/images/planner-purim-flyer.png)](https://secure.givelively.org/event/san-pedro-jewish-center/purim-in-mexico)
+[![Program flyer: Purim in Mexico](/images/planner-purim-flyer.jpg)](https://secure.givelively.org/event/san-pedro-jewish-center/purim-in-mexico)
 
-[![Program flyer: Passover Seder](/images/planner-seder-flyer.png)](https://secure.givelively.org/event/san-pedro-jewish-center/passover-seder)
+[![Program flyer: Passover Seder](/images/planner-seder-flyer.jpg)](https://secure.givelively.org/event/san-pedro-jewish-center/passover-seder)

@@ -8,7 +8,7 @@ Join us every Tuesday at 7:00 PM for Jewish Insights, a weekly Torah class that 
 
 This week's flyer will be updated here.
 
-![Jewish Insights weekly flyer](/images/insights-flyer.png)
+![Jewish Insights weekly flyer](/images/insights-flyer.jpg)
 
 ## Join the Class
 

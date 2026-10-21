@@ -2,7 +2,7 @@
 title: Purim Minisite
 description: Megillah · Costumes · Hamantaschen
 ---
-![Purim in Mexico 2026 · Chabad S. Pedro](/images/purim-in-mexico-banner.png)
+![Purim in Mexico 2026 · Chabad S. Pedro](/images/purim-in-mexico-banner.jpg)
 
 [Welcome](#welcome-to-the-purim-minisite) · [The Event](#an-unforgettable-night) · [About Purim](#what-is-purim) · [The 4 Mitzvot](#the-four-mitzvot-of-purim) · [Recipes](#traditional-purim-foods) · [Details & RSVP](#event-details)
 
@@ -14,7 +14,7 @@ This is your complete guide to celebrating Purim 2026 with Chabad S. Pedro — t
 
 Whether you are celebrating Purim for the first time or the fiftieth, we are so glad you are here. Scroll down, learn something new, and come join the party.
 
-📅 Tuesday, March 3, 2026 🕐 5:15 PM 📍 817 W 9th St, San Pedro 🎭 Costumes Welcome
+Tuesday, March 3, 2026 · 5:15 PM · 817 W 9th St, San Pedro · Costumes Welcome
 
 [RSVP for Purim in Mexico](https://secure.givelively.org/event/san-pedro-jewish-center/purim-in-mexico) [Learn About Purim ↓](#what-is-purim)
 
@@ -26,19 +26,19 @@ THE EVENING — MARCH 3, 2026
 
 Ancient Jewish tradition meets the warmth and color of Mexico. Join us for Purim exactly as it was meant to be celebrated.
 
-### 📚 Animated Megillah Reading
+### Animated Megillah Reading
 
 A lively, fully animated reading of the Scroll of Esther — fulfilling Purim’s central mitzvah, brought to life for the whole family with a fun video.
 
-### 🌾 Mexican Cuisine & Live Mariachi
+### Mexican Cuisine & Live Mariachi
 
 Enjoy the traditional Purim Seudah reimagined with authentic Mexican flavors and the joy of live mariachi — because Purim deserves a real celebration.
 
-### 🍰 Hamantaschen & L’Chaim Bar
+### Hamantaschen & L’Chaim Bar
 
 Taste the iconic three-cornered pastry alongside our festive drinks bar. Haman may be gone, but his pockets live on — deliciously.
 
-### 🎭 Masquerade & All-Ages Fun
+### Masquerade & All-Ages Fun
 
 Costumes, games, and prizes for everyone. The mask is a Purim tradition rooted in the holiday’s deepest theme: what is hidden is what matters most.
 
@@ -58,7 +58,7 @@ The word “Purim” means “lots” — referring to the lots cast by the vill
 |---|---|
 | Fast of Esther | Monday, March 2, 2026 |
 | Purim Begins | Monday Night, March 2 |
-| 🎭 Purim Day — Our Event | Tuesday, March 3, 2026 |
+| Purim Day — Our Event | Tuesday, March 3, 2026 |
 | Shushan Purim | Wednesday, March 4 |
 
 THE ANCIENT STORY

@@ -6,27 +6,31 @@ import EventRow from '../components/EventRow.astro';
 import { getUpcomingEvents } from '../lib/events';
 import { site, url } from '../lib/site';
 
-const home = (await getEntry('pages', 'home'))!;
+const home = await getEntry('pages', 'home');
+if (!home) throw new Error('src/content/pages/home.md is missing. The homepage is built from it; do not delete or rename it.');
 const { Content } = await render(home);
 const upcoming = (await getUpcomingEvents()).slice(0, 3);
-const { heroImage, heroAlt, heroFocus, heroFocusMobile, visitPhoto, visitAlt, peoplePhoto, peoplePhotoAlt, communityPhoto, communityAlt, feature, mission, people, featured } = home.data;
+const { heroImage, heroAlt, heroFocus, heroFocusMobile, visitPhoto, visitAlt, peoplePhoto, peoplePhotoAlt, communityPhoto, communityAlt, feature, mission, people, featured, accent } = home.data;
+const ui = site.ui;
 const style = site.theme.hero ?? 'split';
-const h1 = home.data.title.replace('S. Pedro', '<span class="accent">S. Pedro</span>');
+const h1 = accent && home.data.title.includes(accent) ? home.data.title.replace(accent, `<span class="accent">${accent}</span>`) : home.data.title;
 const lead = featured?.find((f) => f.image);
 const rest = featured?.filter((f) => f !== lead) ?? [];
 const a = site.address;
-const fullAddress = `${a.street}, ${a.city}, ${a.state} ${a.zip}`;
+const fullAddress = `${a.street}, ${a.city}, ${a.state} ${site.zip}`;
 const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
+const sv = site.shabbos.services;
 ---
-<Base description={site.description} overHero>
+<Base description={site.description} overHero jsonLd>
+  {style === 'photo' && heroImage && <link slot="head" rel="preload" as="image" href={url(heroImage)} fetchpriority="high" />}
   <section class:list={['hero', `hero-${style}`]} style={style === 'photo' && heroImage ? `--hero-img:url('${url(heroImage)}');--hero-pos:${heroFocus ?? '40% 42%'};--hero-pos-m:${heroFocusMobile ?? '17% 46%'}` : undefined}>
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1 set:html={h1} />
         <div class="hero-text"><Content /></div>
         <p class="hero-actions">
-          <a class="btn btn-brass" href={url('/shabbat-experience')}>Join us Saturday morning</a>
-          <a class="btn btn-ghost" href={url('/contact')}>Say hello</a>
+          <a class="btn btn-brass" href={url(ui.primaryCta.href)}>{ui.primaryCta.label}</a>
+          <a class="btn btn-ghost" href={url(ui.secondaryCta.href)}>{ui.secondaryCta.label}</a>
         </p>
       </div>
       {style === 'split' && heroImage && <img class="hero-split-photo" src={url(heroImage)} alt={heroAlt ?? ''} />}
@@ -39,11 +43,11 @@ const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIC
   {feature && (
     <section class="feature-band">
       <div class="container feature-grid">
-        <img src={url(feature.image)} alt={feature.alt} loading="lazy" />
+        <img src={url(feature.image)} alt={feature.alt} loading="lazy" decoding="async" />
         <div>
           <h2>{feature.title}</h2>
           <p>{feature.text}</p>
-          <p><a class="btn" href={url(feature.href)}>Plan your visit</a></p>
+          <p><a class="btn" href={url(feature.href)}>{ui.featureCta}</a></p>
         </div>
       </div>
     </section>
@@ -51,11 +55,11 @@ const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIC
 
   {featured && (
     <section class="container section">
-      <h2>Explore</h2>
+      <h2>{ui.exploreHeading}</h2>
       <div class="explore">
         {lead && (
           <a class="explore-lead" href={url(lead.href)}>
-            <img src={url(lead.image!)} alt={lead.alt ?? ''} loading="lazy" />
+            <img src={url(lead.image!)} alt={lead.alt ?? ''} loading="lazy" decoding="async" />
             <span class="explore-cap"><strong>{lead.title}</strong><span>{lead.text}</span></span>
           </a>
         )}
@@ -76,14 +80,14 @@ const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIC
 
   {communityPhoto && (
     <section class="container community">
-      <img src={url(communityPhoto)} alt={communityAlt ?? ''} loading="lazy" />
+      <img src={url(communityPhoto)} alt={communityAlt ?? ''} loading="lazy" decoding="async" />
     </section>
   )}
 
   {mission && (
     <section class="mission">
       <div class:list={['container', 'mission-grid', peoplePhoto && 'has-photo']}>
-        {peoplePhoto && <img class="mission-photo" src={url(peoplePhoto)} alt={peoplePhotoAlt ?? ''} loading="lazy" />}
+        {peoplePhoto && <img class="mission-photo" src={url(peoplePhoto)} alt={peoplePhotoAlt ?? ''} loading="lazy" decoding="async" />}
         <div>
           <p class="mission-text">{mission}</p>
           {people && (
@@ -91,7 +95,7 @@ const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIC
               {people.map((p) => (<li><strong>{p.name}</strong><span>{p.role}</span></li>))}
             </ul>
           )}
-          <p class="more"><a href={url('/about')}>Our story →</a></p>
+          <p class="more"><a href={url(ui.storyLink.href)}>{ui.storyLink.label}</a></p>
         </div>
       </div>
     </section>
@@ -99,26 +103,24 @@ const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIC
 
   <section class="band">
     <div class="container">
-      <h2>Coming up</h2>
+      <h2>{ui.comingUpHeading}</h2>
       {upcoming.length === 0
-        ? <p>No events scheduled right now. Check back soon.</p>
+        ? <p>{ui.noEvents}</p>
         : <div class="event-rows">{upcoming.map((e) => <EventRow event={e} />)}</div>}
-      <p class="more"><a href={url('/events')}>All upcoming events →</a></p>
+      <p class="more"><a href={url('/events')}>{ui.allEvents}</a></p>
     </div>
   </section>
 
   <section class="visit">
     <div class="container visit-grid">
       <div>
-        <h2>Come visit</h2>
-        <p class="visit-addr">{a.street}<br />{a.city}, {a.state} {a.zip}</p>
-        <p><a class="btn btn-brass" href={directions}>Get directions</a></p>
-        {site.shabbos.services && (
-          <p class="visit-times"><strong>Every Saturday</strong> {site.shabbos.services.replace(/^Saturday morning at [^:]*:\s*/, '')}</p>
-        )}
-        <p class="visit-contact"><a href={`tel:${site.phone}`}>{site.phone}</a> · <a href={site.social.whatsapp}>WhatsApp</a> · <a href={`mailto:${site.email}`}>{site.email}</a></p>
+        <h2>{ui.visitHeading}</h2>
+        <p class="visit-addr">{a.street}<br />{a.city}, {a.state} {site.zip}</p>
+        <p><a class="btn btn-brass" href={directions}>{ui.directionsLabel}</a></p>
+        {sv && <p class="visit-times"><strong>{ui.weeklyLabel}</strong> {sv.detail}</p>}
+        <p class="visit-contact"><a href={`tel:${site.phone}`}>{site.phone}</a> · <a href={site.social.whatsapp}>{ui.socialLabels.whatsapp}</a> · <a href={`mailto:${site.email}`}>{site.email}</a></p>
       </div>
-      {visitPhoto && <img class="visit-photo" src={url(visitPhoto)} alt={visitAlt ?? ''} loading="lazy" />}
+      {visitPhoto && <img class="visit-photo" src={url(visitPhoto)} alt={visitAlt ?? ''} loading="lazy" decoding="async" />}
     </div>
   </section>
 </Base>

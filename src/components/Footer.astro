@@ -1,23 +1,24 @@
 ---
 import { site, url } from '../lib/site';
 const a = site.address;
+const ui = site.ui;
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>
       <p class="footer-name">{site.name}</p>
-      <p>{a.street}<br />{a.city}, {a.state} {a.zip}</p>
+      <p>{a.street}<br />{a.city}, {a.state} {site.zip}</p>
       <p><a href={`tel:${site.phone}`}>{site.phone}</a><br /><a href={`mailto:${site.email}`}>{site.email}</a></p>
     </div>
     <nav aria-label="Footer">
-      <p class="footer-head">Explore</p>
+      <p class="footer-head">{ui.footerExplore}</p>
       <ul>{site.footerLinks.map((i) => <li><a href={url(i.href)}>{i.label}</a></li>)}</ul>
     </nav>
     <div>
-      <p class="footer-head">Connect</p>
+      <p class="footer-head">{ui.footerConnect}</p>
       <ul>
-        {Object.entries(site.social).map(([name, href]) => <li><a href={href}>{name[0].toUpperCase() + name.slice(1)}</a></li>)}
+        {Object.entries(site.social).map(([name, href]) => <li><a href={href}>{ui.socialLabels[name] ?? name}</a></li>)}
         <li><a href={site.donate.url}>{site.donate.label}</a></li>
       </ul>
     </div>

@@ -2,7 +2,7 @@
 title: Chanukah
 description: Menorahs · Latkes · Donuts · Dreidels
 ---
-![Large Menorah illuminated at night](/images/chanukah-menorah.png)
+![Large Menorah illuminated at night](/images/chanukah-menorah.jpg)
 
 ## Chanukah 2025
 

@@ -2,7 +2,7 @@
 title: Passover Minisite
 description: Community Seder · Services · Learning
 ---
-![Passover Seder 2026 · Chabad S. Pedro](/images/passover-seder-banner.png)
+![Passover Seder 2026 · Chabad S. Pedro](/images/passover-seder-banner.jpg)
 
 [Welcome](#welcome-to-the-passover-minisite) · [The Seder](#the-passover-seder) · [Seder Plate](#the-seder-plate) · [Meaning](#the-heart-of-passover) · [Recipes](#passover-recipes) · [Details & RSVP](#event-details)
 
@@ -14,7 +14,7 @@ This is your complete guide to Passover 2026 with Chabad S. Pedro — the story 
 
 Whether this is your first Seder or your fiftieth, we are so glad you are here. Everyone is welcome. No one will be turned away due to a lack of funds.
 
-📅 Wednesday, April 1, 2026 🕐 6:45 PM 📍 817 W 9th St, San Pedro 🍽️ Gourmet Catered Cuisine
+Wednesday, April 1, 2026 · 6:45 PM · 817 W 9th St, San Pedro · Gourmet Catered Cuisine
 
 [Reserve Your Seat](https://secure.givelively.org/event/san-pedro-jewish-center/passover-seder) [Explore the Seder ↓](#the-passover-seder)
 
@@ -33,7 +33,7 @@ Passover begins on the 15th of Nissan. In 2026, the Seder is Wednesday night, Ap
 | | |
 |---|---|
 | Fast of the Firstborn | Wednesday morning, April 1 |
-| 🍽️ First Seder — Our Event | Wednesday night, April 1 |
+| First Seder — Our Event | Wednesday night, April 1 |
 | Second Seder | Thursday night, April 2 |
 | Passover ends | Wednesday night, April 8 |
 
@@ -43,19 +43,19 @@ THE FESTIVE MEAL
 
 A 15-step ritual journey that retells the Exodus story — through food, prayer, song, and conversation
 
-### 📖 The Haggadah
+### The Haggadah
 
 The word Haggadah means “telling.” It is the book that guides us through all 15 steps of the Seder — from the opening Kiddush to the closing songs. At our Seder, we provide Haggadahs and walk through it together.
 
-### 🍳 The Seder Plate
+### The Seder Plate
 
 Six symbolic items sit at the center of the table, each representing a different aspect of the Exodus story. Every item is tasted or referenced at specific moments during the Seder. See the full guide below.
 
-### 🍷 Wine & the Four Cups
+### Wine & the Four Cups
 
 We drink four cups of wine throughout the Seder — each corresponding to one of G-d's four expressions of redemption in the Torah. Grape juice is always available for those who prefer it.
 
-### ❓ The Four Questions
+### The Four Questions
 
 The youngest child at the table asks Mah Nishtanah — “Why is this night different from all other nights?” — and the entire Seder is the answer. It is one of the most beloved moments of the evening.
 
@@ -67,27 +67,27 @@ SIX SYMBOLS
 
 Each of the six items on the Seder plate tells a different chapter of the Exodus story. Here is what each one means.
 
-### 🌶 Maror / Bitter Herbs
+### Maror / Bitter Herbs
 
 Horseradish or bitter lettuce representing the bitterness and harshness of slavery in Egypt. We taste it to remember.
 
-### 🥆 Charoset / Sweet Paste
+### Charoset / Sweet Paste
 
 A sweet mixture of apples, nuts, and wine symbolizing the mortar used by Jewish slaves to build Pharaoh's cities.
 
-### 🌿 Karpas / Vegetable
+### Karpas / Vegetable
 
 Parsley or potato dipped in salt water — the salt water evokes tears shed in slavery; the green vegetable represents spring and hope.
 
-### 🥑 Zeroa / Shankbone
+### Zeroa / Shankbone
 
 A roasted bone symbolizing the Paschal lamb offered as a sacrifice in the Holy Temple in Jerusalem.
 
-### 🠐 Beitzah / Egg
+### Beitzah / Egg
 
 A hard-boiled egg representing the festival offering brought to the Temple — and a symbol of rebirth and renewal.
 
-### 🥬 Chazeret / Bitter Lettuce
+### Chazeret / Bitter Lettuce
 
 Romaine lettuce used as a second bitter herb, especially for the Hillel Sandwich — matzah, maror, and charoset together.
 

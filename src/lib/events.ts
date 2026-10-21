@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 import { site } from './site';
 
 // Today's date (YYYY-MM-DD) in the center's timezone, evaluated at build time.
-function today(): string {
+export function today(): string {
   return new Intl.DateTimeFormat('en-CA', { timeZone: site.timezone }).format(new Date());
 }
 

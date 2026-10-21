@@ -1,8 +1,11 @@
 ---
-import { url } from '../lib/site';
-interface Props { event: any }
-const { event } = Astro.props;
+import { url, site } from '../lib/site';
+interface Props { event: any; level?: 2 | 3 }
+const { event, level = 3 } = Astro.props;
 const { title, date, time, location } = event.data;
+// Don't repeat the center's own address on every row; show the location only when it is somewhere else.
+const place = location && !location.includes(site.address.street) ? location : '';
+const Heading = `h${level}` as 'h2' | 'h3';
 const d = (opts: Intl.DateTimeFormatOptions) => date.toLocaleDateString('en-US', { ...opts, timeZone: 'UTC' });
 ---
 <article class="event-row">
@@ -12,7 +15,7 @@ const d = (opts: Intl.DateTimeFormatOptions) => date.toLocaleDateString('en-US',
     <span class="event-month">{d({ month: 'short' })}</span>
   </time>
   <div class="event-what">
-    <h3><a href={url(`/events/${event.id}`)}>{title}</a></h3>
-    <p>{time}{time && location && ' · '}{location}</p>
+    <Heading><a href={url(`/events/${event.id}`)}>{title}</a></Heading>
+    <p>{time}{time && place && ' · '}{place}</p>
   </div>
 </article>

@@ -1,5 +1,6 @@
 ---
 title: Welcome to Chabad S. Pedro
+accent: S. Pedro
 heroImage: /images/hero-harbor-sunset.jpg
 heroFocus: "40% 42%"
 heroFocusMobile: "17% 46%"

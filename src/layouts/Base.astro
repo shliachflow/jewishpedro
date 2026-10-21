@@ -6,9 +6,23 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site, url } from '../lib/site';
 
-interface Props { title?: string; description?: string; overHero?: boolean }
-const { title, description = site.description, overHero = false } = Astro.props;
+interface Props { title?: string; description?: string; overHero?: boolean; jsonLd?: boolean }
+const { title, description = site.description, overHero = false, jsonLd = false } = Astro.props;
 const fullTitle = title ? `${title} | ${site.shortName}` : site.name;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const ogImage = Astro.site ? new URL(url(site.seo.ogImage), Astro.site).href : undefined;
+const a = site.address;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': site.seo.schemaType,
+  name: site.name,
+  url: Astro.site ? new URL(url('/'), Astro.site).href : undefined,
+  telephone: site.phone,
+  email: site.email,
+  image: ogImage,
+  address: { '@type': 'PostalAddress', streetAddress: a.street, addressLocality: a.city, addressRegion: a.state, postalCode: site.zip, addressCountry: 'US' },
+  sameAs: Object.values(site.social),
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -18,8 +32,19 @@ const fullTitle = title ? `${title} | ${site.shortName}` : site.name;
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content={site.theme.primary} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href={url(site.logo)} />
+    <link rel="sitemap" href={url('/sitemap-index.xml')} />
     <style is:global set:html={`:root{--primary:${site.theme.primary};--accent:${site.theme.accent}}`} />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+    <slot name="head" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>

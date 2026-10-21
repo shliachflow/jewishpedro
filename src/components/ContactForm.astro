@@ -5,6 +5,8 @@ import { site } from '../lib/site';
 const { endpoint, hiddenFields, successMessage } = site.contactForm;
 ---
 {endpoint && (
+  <>
+  <h2 class="contact-heading">{site.ui.contactHeading}</h2>
   <form class="contact-form" method="post" action={endpoint} data-success={successMessage}
         data-fallback={`Sorry, something went wrong. Please call ${site.phone} or email ${site.email}.`}>
     <div class="field-row">
@@ -17,9 +19,11 @@ const { endpoint, hiddenFields, successMessage } = site.contactForm;
       I would like to receive news and updates from {site.name} by email.</label>
     {Object.entries(hiddenFields ?? {}).map(([k, v]) => <input type="hidden" name={k} value={String(v)} />)}
     <input type="text" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
     <button class="btn" type="submit">Send message</button>
     <p class="form-status" role="status" aria-live="polite"></p>
   </form>
+  </>
 )}
 <script>
   const form = document.querySelector<HTMLFormElement>('.contact-form');

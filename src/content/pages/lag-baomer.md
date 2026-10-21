@@ -10,15 +10,13 @@ Home · About · Traditions · Our Event · Omer · Rabbi Shimon · Q&A
 
 Celebrating Unity, Joy & the Eternal Flame
 
-📅 Tuesday, May 5, 2026 🕐 5:15 PM 📍Albert Family Backyard 🔥 BBQ & Fire Pit
+Tuesday, May 5, 2026 · 5:15 PM · Albert Family Backyard · BBQ & Fire Pit
 
-[RSVP Now 🔥](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq) [Learn About Lag BaOmer ↓](#what-is-lag-baomer)
+[RSVP Now](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq) [Learn About Lag BaOmer ↓](#what-is-lag-baomer)
 
 CHABAD S. PEDRO
 
-01
-
-📖 THE HOLIDAY
+THE HOLIDAY
 
 ## What Is Lag BaOmer?
 
@@ -26,75 +24,73 @@ Between the redemption of Passover and the revelation of Shavuot lies a 49‑day
 
 לּג בּעומֶר — Lag BaOmer — takes its name from the Hebrew letters לּ (Lamed = 30) and ג (Gimel = 3), totaling 33. It is a day of bonfires, music, dancing, and deep joy.
 
-### ⚒︎ The End of a Plague
+### ︎ The End of a Plague
 
 According to the Talmud, 24,000 students of Rabbi Akiva perished during the Omer period because they did not treat one another with sufficient honor and respect. On Lag BaOmer — the 33rd day — the plague ceased. Their story is a timeless reminder that the way we treat each other is the very heart of Torah.
 
-### 🔥 The Yahrtzeit of Rabbi Shimon
+### The Yahrtzeit of Rabbi Shimon
 
 Lag BaOmer is also the anniversary of the passing of Rabbi Shimon Bar Yochai, author of the Zohar — the foundational text of Jewish mysticism. Before leaving this world, he revealed the deepest secrets of Torah and instructed his students to celebrate this day as a hillula — a joyful festival of light.
 
-### 🕐 When Is It?
+### When Is It?
 
 Lag BaOmer falls on the 18th of Iyar. In 2026 this is Tuesday, May 5th. Celebrations traditionally begin the evening before — Monday night, May 4th — with bonfires lit as soon as the prior day ends.
 
-### 🔆 The Meron Celebration
+### The Meron Celebration
 
 Every Lag BaOmer, hundreds of thousands of Jews make a pilgrimage to Meron, Israel — where Rabbi Shimon Bar Yochai is buried — for an enormous celebration of fire, song, and prayer. It is one of the largest single gatherings of Jewish people in the world.
 
 [Read More on Chabad.org ↗](https://www.chabad.org/holidays/lagbomer)
 
-🎩 CUSTOMS & PRACTICES
+CUSTOMS & PRACTICES
 
 ## Traditions of Lag BaOmer
 
 Five beautiful customs that fill this joyful day with fire, music, and meaning — each one connecting us to the soul of Rabbi Shimon and the unity of the Jewish people.
 
-### 🔥 Bonfires
+### Bonfires
 
 Bonfires blaze across cities and fields on Lag BaOmer night, symbolizing the radiant spiritual light of Rabbi Shimon's Torah — an illumination no darkness can extinguish.
 
-### ✄ Haircuts (Upsherin)
+### Haircuts (Upsherin)
 
 Boys who turn three during the Omer receive their first haircut on Lag BaOmer. This ceremony — called upsherin — marks the beginning of formal Torah education.
 
-### 🏹 Bows & Arrows
+### Bows & Arrows
 
 Children play with bows and arrows. One reason: no rainbow appeared during Rabbi Shimon's lifetime — his own merit protected his entire generation from Divine wrath.
 
-### 🎶 Singing & Dancing
+### Singing & Dancing
 
 Lag BaOmer is one of the only days in the Omer when music, dancing, and weddings are fully permitted. Communities erupt in joyful song from San Pedro to Meron.
 
-### 🌿 Carob & Fruits
+### Carob & Fruits
 
 Rabbi Shimon survived 13 years in a cave sustained by a miraculous carob tree. Carob and fruits are enjoyed on Lag BaOmer in his memory.
 
-🎯 JOIN US IN SAN PEDRO
+JOIN US IN SAN PEDRO
 
 ## Our Lag BaOmer Celebration
 
 CHABAD S. PEDRO
 
-🔥
-
 ## Lag BaOmer
 
 BBQ & Fire Pit
 
-📅 Tuesday, May 5, 2026 • 18 Iyar 5786
+Tuesday, May 5, 2026 • 18 Iyar 5786
 
-🕐 5:15 PM
+5:15 PM
 
-📍 Albert Family Residence - Backyard
+Albert Family Residence - Backyard
 
-🍔 BBQ · 🔥 Fire pit · 🎶 Music · 🏹 Kids' Activities · 👨‍👩‍👧 Family Friendly · ✡︎ All Are Welcome
+BBQ · Fire pit · Music · Kids' Activities · Family Friendly · ︎ All Are Welcome
 
-[RSVP Now 🔥](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq)
+[RSVP Now](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq)
 
 All are welcome
 
-✏︎ COUNTING THE DAYS
+︎ COUNTING THE DAYS
 
 ## The Omer & Lag BaOmer
 
@@ -112,11 +108,9 @@ We count 49 days from the second night of Passover to the eve of Shavuot — a j
 
 RS
 
-📖 THE SOUL OF THE DAY
+THE SOUL OF THE DAY
 
 ## Rabbi Shimon Bar Yochai
-
-🕊
 
 C. 80–160 CE
 
@@ -136,7 +130,7 @@ Rashbi's key works: The Zohar (זוהַר), Tikkunei Zohar, Idra Rabba, Idra Zut
 
 [Learn More About Rashbi ↗](https://www.chabad.org/library/article_cdo/aid/112996/jewish/Rabbi-Shimon-Bar-Yochai.htm)
 
-❓ QUESTIONS & ANSWERS
+QUESTIONS & ANSWERS
 
 ## Lag BaOmer Q&A
 
@@ -166,18 +160,16 @@ The word upsherin comes from Yiddish, meaning “to shear.” It refers to the j
 
 Absolutely — and we mean it. Our Lag BaOmer BBQ & Bonfire at Chabad of San Pedro is open to everyone. Whether you're Jewish, curious, a longtime community friend, or simply looking for a warm evening with good food and good people — you are welcome at our table. Come for the BBQ, stay for the bonfire, and leave knowing a little more about this beautiful holiday.
 
-🔥
-
 **Chabad S. Pedro**
 
 Jewish Center
 
-📍 817 W 9th St, San Pedro, CA 90731
+817 W 9th St, San Pedro, CA 90731
 
 [jewishpedro.org](https://www.jewishpedro.org)
 
-[RSVP for the BBQ & Bonfire 🔥](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq)
+[RSVP for the BBQ & Bonfire](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq)
 
-Brought to you with ❤️ by Chabad S. Pedro
+Brought to you with · by Chabad S. Pedro
 
-✡︎ Chabad S. Pedro • Lag BaOmer 5786 • [jewishpedro.org](https://www.jewishpedro.org)
+︎ Chabad S. Pedro • Lag BaOmer 5786 • [jewishpedro.org](https://www.jewishpedro.org)

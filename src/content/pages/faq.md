@@ -1,5 +1,6 @@
 ---
 title: FAQ
+layout: faq
 description: Frequently asked questions about Chabad S. Pedro
 ---
 ## Frequently Asked Questions

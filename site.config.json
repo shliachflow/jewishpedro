@@ -5,10 +5,8 @@
   "address": {
     "street": "817 W 9th St",
     "city": "San Pedro",
-    "state": "CA",
-    "zip": "90731"
+    "state": "CA"
   },
-  "mailingAddress": "1536 W 25th St #614, San Pedro, CA 90732",
   "phone": "310-935-5236",
   "email": "info@jewishpedro.org",
   "zip": "90731",
@@ -21,7 +19,10 @@
       "minutes": 50
     },
     "zemanimUrl": "https://www.chabad.org/zemanim",
-    "services": "Saturday morning at 817 W 9th St: 9:45 class, 10:15 services, kiddush lunch"
+    "services": {
+      "label": "Saturday morning",
+      "detail": "9:45 class, 10:15 services, kiddush lunch"
+    }
   },
   "social": {
     "facebook": "https://www.facebook.com/jewishspedro",
@@ -195,5 +196,45 @@
     "endpoint": "",
     "hiddenFields": {},
     "successMessage": "Thank you! Your message was sent. We will get back to you soon."
+  },
+  "seo": {
+    "ogImage": "/images/hero-harbor-sunset.jpg",
+    "schemaType": "Synagogue"
+  },
+  "ui": {
+    "primaryCta": {
+      "label": "Join us Saturday morning",
+      "href": "/shabbat-experience"
+    },
+    "secondaryCta": {
+      "label": "Say hello",
+      "href": "/contact"
+    },
+    "featureCta": "Plan your visit",
+    "exploreHeading": "Explore",
+    "storyLink": {
+      "label": "Our story →",
+      "href": "/about"
+    },
+    "comingUpHeading": "Coming up",
+    "noEvents": "No events scheduled right now. Check back soon.",
+    "allEvents": "All upcoming events →",
+    "visitHeading": "Come visit",
+    "directionsLabel": "Get directions",
+    "weeklyLabel": "Every Saturday",
+    "shabbatHeading": "This Shabbat",
+    "candleLabel": "Candle lighting",
+    "havdalahLabel": "Shabbat ends",
+    "parshaPrefix": "Parshat ",
+    "zemanimLabel": "Full daily times on Chabad.org",
+    "timesUnavailable": "Times unavailable right now.",
+    "footerExplore": "Explore",
+    "footerConnect": "Connect",
+    "contactHeading": "Send us a message",
+    "socialLabels": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp"
+    }
   }
 }

@@ -9,21 +9,12 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shliachflow/jewishpedro.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shliachflow/jewishpedro/issues"
-  },
-  "homepage": "https://github.com/shliachflow/jewishpedro#readme",
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@fontsource-variable/figtree": "^5.3.0",
-    "@fontsource-variable/fraunces": "^5.3.0",
-    "@fontsource-variable/inter": "^5.3.0",
     "@fontsource/instrument-serif": "^5.3.0",
     "astro": "^5.18.2",
     "unist-util-visit": "^5.1.0"

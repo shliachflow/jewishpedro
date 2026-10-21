@@ -2,7 +2,7 @@
 title: Adult Education
 description: Tuesday Insights · Shabbat Class · One-on-one
 ---
-![Adult Education banner](/images/adult-education-banner.png)
+![Adult Education banner](/images/adult-education-banner.jpg)
 
 ## Adult Education at Chabad
 
