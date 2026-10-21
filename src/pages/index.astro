@@ -42,45 +42,35 @@ const sv = site.shabbos.services;
   <div class="container board-wrap"><ShabbosBox /></div>
 
   {feature && (
-    <section class="feature-band">
-      <div class="container feature-grid">
-        <img src={url(feature.image)} alt={feature.alt} loading="lazy" decoding="async" />
-        <div>
-          <h2>{feature.title}</h2>
-          <p>{feature.text}</p>
-          <p><a class="btn" href={url(feature.href)}>{ui.featureCta}</a></p>
-        </div>
+    <section class="feature-hero" style={`--feat-img:url('${url(feature.image)}')`} data-reveal>
+      <div class="container feature-hero-inner">
+        {sv && <p class="eyebrow">{ui.weeklyLabel}: {sv.detail}</p>}
+        <h2>{feature.title}</h2>
+        <p>{feature.text}</p>
+        <p><a class="btn btn-brass" href={url(feature.href)}>{ui.featureCta}</a></p>
       </div>
     </section>
   )}
 
   {featured && (
-    <section class="container section">
-      <h2>{ui.exploreHeading}</h2>
-      <div class="explore">
-        {lead && (
-          <a class="explore-lead" href={url(lead.href)}>
-            <img src={url(lead.image!)} alt={lead.alt ?? ''} loading="lazy" decoding="async" />
-            <span class="explore-cap"><strong>{lead.title}</strong><span>{lead.text}</span></span>
+    <section class="container section explore-section">
+      <p class="eyebrow">{ui.exploreHeading}</p>
+      <h2 class="big-h">{ui.exploreTitle}</h2>
+      <div class="tiles">
+        {featured.map((f, i) => (
+          <a class:list={['tile', { 'tile-lead': f === lead, 'tile-dark': i % 3 === 1, 'tile-brass': i % 3 === 2 }]} href={url(f.href)} data-reveal>
+            {f.image && <img src={url(f.image)} alt={f.alt ?? ''} loading="lazy" decoding="async" />}
+            <span class="tile-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <span class="tile-body"><strong>{f.title}</strong><span>{f.text}</span></span>
+            <span class="tile-arrow" aria-hidden="true">→</span>
           </a>
-        )}
-        <ul class="directory">
-          {rest.map((f) => (
-            <li>
-              <a href={url(f.href)}>
-                <span class="dir-title">{f.title}</span>
-                <span class="dir-text">{f.text}</span>
-                <span class="dir-arrow" aria-hidden="true">→</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        ))}
       </div>
     </section>
   )}
 
   {communityPhoto && (
-    <section class="container community">
+    <section class="community-bleed" data-reveal>
       <img src={url(communityPhoto)} alt={communityAlt ?? ''} loading="lazy" decoding="async" />
     </section>
   )}
@@ -104,24 +94,37 @@ const sv = site.shabbos.services;
 
   <section class="band">
     <div class="container">
-      <h2>{ui.comingUpHeading}</h2>
+      <p class="eyebrow">{ui.comingUpHeading}</p>
+      <h2 class="big-h">{ui.comingUpTitle}</h2>
       {upcoming.length === 0
         ? <p>{ui.noEvents}</p>
         : <div class="event-rows">{upcoming.map((e) => <EventRow occ={e} />)}</div>}
-      <p class="more"><a href={url('/events')}>{ui.allEvents}</a></p>
+      <p class="more"><a href={url('/events')}>{ui.allEvents}</a> <a href={url('/calendar')}>Month calendar →</a> <a href={url('/planner')}>Printable planner →</a></p>
     </div>
   </section>
 
   <section class="visit">
     <div class="container visit-grid">
       <div>
-        <h2>{ui.visitHeading}</h2>
+        <p class="eyebrow">{ui.visitHeading}</p>
+        <h2 class="big-h">{ui.visitTitle}</h2>
         <p class="visit-addr">{a.street}<br />{a.city}, {a.state} {site.zip}</p>
         <p><a class="btn btn-brass" href={directions}>{ui.directionsLabel}</a></p>
         {sv && <p class="visit-times"><strong>{ui.weeklyLabel}</strong> {sv.detail}</p>}
         <p class="visit-contact"><a href={`tel:${site.phone}`}>{site.phone}</a> · <a href={site.social.whatsapp}>{ui.socialLabels.whatsapp}</a> · <a href={`mailto:${site.email}`}>{site.email}</a></p>
       </div>
-      {visitPhoto && <img class="visit-photo" src={url(visitPhoto)} alt={visitAlt ?? ''} loading="lazy" decoding="async" />}
+      <div class="visit-map">
+        <iframe title={`Map: ${fullAddress}`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://maps.google.com/maps?q=${encodeURIComponent(fullAddress)}&z=15&output=embed`}></iframe>
+      </div>
     </div>
   </section>
+  <script is:inline>
+    (function () {
+      var els = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.documentElement.classList.add('reveal-on');
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </Base>

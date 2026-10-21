@@ -257,7 +257,10 @@
       "facebook": "Facebook",
       "instagram": "Instagram",
       "whatsapp": "WhatsApp"
-    }
+    },
+    "exploreTitle": "Find your place at Chabad S. Pedro",
+    "comingUpTitle": "What's happening at the center",
+    "visitTitle": "We would love to see you"
   },
   "location": {
     "latitude": 33.743297,
