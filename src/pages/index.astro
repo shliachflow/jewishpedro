@@ -107,7 +107,7 @@ const sv = site.shabbos.services;
       <h2>{ui.comingUpHeading}</h2>
       {upcoming.length === 0
         ? <p>{ui.noEvents}</p>
-        : <div class="event-rows">{upcoming.map((e) => <EventRow event={e} />)}</div>}
+        : <div class="event-rows">{upcoming.map((e) => <EventRow occ={e} />)}</div>}
       <p class="more"><a href={url('/events')}>{ui.allEvents}</a></p>
     </div>
   </section>

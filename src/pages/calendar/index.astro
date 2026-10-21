@@ -1,0 +1,8 @@
+---
+import Month from './[month].astro';
+import { buildMonth, monthRange } from '../../lib/month';
+import { site } from '../../lib/site';
+const months = monthRange(site.calendar.horizonMonths);
+const props = { model: await buildMonth(months[0].y, months[0].m0), prev: undefined, next: months[1]?.key, all: months.map((x) => x.key) };
+---
+<Month {...props} />

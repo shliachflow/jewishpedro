@@ -1,21 +1,25 @@
 ---
 import { url, site } from '../lib/site';
-interface Props { event: any; level?: 2 | 3 }
-const { event, level = 3 } = Astro.props;
-const { title, date, time, location } = event.data;
+import { repeatLabel } from '../lib/events';
+interface Props { occ: { event: any; date: string }; level?: 2 | 3 }
+const { occ, level = 3 } = Astro.props;
+const event = occ.event;
+const { title, time, location } = event.data;
+const date = new Date(`${occ.date}T00:00:00Z`);
+const every = repeatLabel(event);
 // Don't repeat the center's own address on every row; show the location only when it is somewhere else.
 const place = location && !location.includes(site.address.street) ? location : '';
 const Heading = `h${level}` as 'h2' | 'h3';
 const d = (opts: Intl.DateTimeFormatOptions) => date.toLocaleDateString('en-US', { ...opts, timeZone: 'UTC' });
 ---
 <article class="event-row">
-  <time class="event-when" datetime={date.toISOString().slice(0, 10)}>
+  <time class="event-when" datetime={occ.date}>
     <span class="event-dow">{d({ weekday: 'short' })}</span>
     <span class="event-day">{d({ day: 'numeric' })}</span>
     <span class="event-month">{d({ month: 'short' })}</span>
   </time>
   <div class="event-what">
     <Heading><a href={url(`/events/${event.id}`)}>{title}</a></Heading>
-    <p>{time}{time && place && ' · '}{place}</p>
+    <p>{[every, time, place].filter(Boolean).join(' · ')}</p>
   </div>
 </article>

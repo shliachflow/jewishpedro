@@ -374,3 +374,76 @@ html { scroll-padding-top: 6rem; }
 .prose-index li a { display: flex; margin-bottom: 0; }
 .site-footer li { margin-bottom: 0; }
 .site-footer ul a { padding-block: .35rem; }
+
+/* Calendar, planner, add-to-calendar, holidays */
+.btn-line { background: transparent; color: var(--primary); border-color: var(--primary); }
+.btn-line:hover { background: color-mix(in oklab, var(--primary) 8%, transparent); filter: none; }
+.add-cal { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-block: 1.5rem; }
+.add-cal-label { font-family: var(--font-ui); font-weight: 600; margin-right: .25rem; }
+.next-dates { color: var(--ink-soft); }
+.cal-nav { display: flex; justify-content: space-between; align-items: center; gap: .75rem; margin-bottom: 1rem; }
+.cal { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); font-family: var(--font-ui); }
+.cal-head, .cal-week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.cal-head { background: var(--primary); color: var(--paper); font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.cal-head > div { padding: .55rem .6rem; }
+.cal-head .short, .cal-dow { display: none; }
+.cal-cell { min-height: 7.5rem; padding: .4rem .5rem .5rem; border-top: 1px solid var(--line); border-left: 1px solid var(--line); font-size: .8rem; line-height: 1.3; }
+.cal-cell:first-child { border-left: 0; }
+.cal-cell.out { background: var(--sand); }
+.cal-cell.sat { background: color-mix(in oklab, var(--accent) 9%, var(--paper)); }
+.cal-cell.past { opacity: .55; }
+.cal-dates { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .25rem; }
+.cal-greg { font-weight: 800; font-size: 1.05rem; color: var(--primary); }
+.cal-heb { color: var(--brass-text); font-size: .75rem; }
+.cal-items { list-style: none; margin: 0; padding: 0; display: grid; gap: .2rem; }
+.cal-items li { color: var(--ink-soft); }
+.cal-items .j-holiday { font-weight: 700; color: var(--ink); }
+.cal-items .j-parsha { font-style: italic; color: var(--primary); }
+.cal-items .j-roshchodesh, .cal-items .j-fast { color: var(--brass-text); }
+.cal-items .ev { background: var(--primary); border-radius: 4px; }
+.cal-items .ev a { display: block; padding: .2rem .35rem; color: var(--paper); text-decoration: none; }
+.cal-items .ev-time { opacity: .85; font-variant-numeric: tabular-nums; }
+.cal-key { color: var(--ink-soft); font-size: .9rem; margin-top: 1rem; }
+.cal-months { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+.cal-months a[aria-current] { font-weight: 700; }
+@media (max-width: 760px) {
+  .cal-head { display: none; }
+  .cal-week { display: block; }
+  .cal-cell { min-height: 0; border-left: 0; padding: .6rem .75rem; }
+  .cal-cell.out, .cal-cell:not(.has) { display: none; }
+  .cal-cell.has { display: grid; grid-template-columns: 4.5rem 1fr; gap: .75rem; align-items: start; font-size: .95rem; }
+  .cal-dates { display: grid; justify-items: start; margin: 0; }
+  .cal-dow { display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; color: var(--brass-text); }
+  .cal-greg { font-size: 1.6rem; line-height: 1; }
+  .cal-cell.past { display: none; }
+}
+.hol-list { list-style: none; padding: 0; margin: 1.25rem 0 0; border-top: 2px solid var(--primary); }
+.hol { padding: 1.25rem 0; border-bottom: 1px solid var(--line); max-width: 46rem; }
+.hol h3 { margin: 0; font-size: 1.5rem; color: var(--primary); }
+.hol-when { margin: .15rem 0 .5rem; font-family: var(--font-ui); font-weight: 600; color: var(--brass-text); }
+.hol-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: .75rem 0 0; }
+.hol-note { color: var(--ink-soft); font-size: .9rem; }
+.planner-head, .planner-org { display: none; }
+
+@media print {
+  @page { size: landscape; margin: .5in; }
+  .site-header, .site-footer, .topbar, .no-print, .shabbos-box { display: none !important; }
+  body { background: #fff !important; color: #000; font-size: 11pt; }
+  .planner .container { max-width: none; padding: 0; }
+  .planner-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .25rem 1rem; margin-bottom: .4rem; }
+  .planner-head h2 { margin: 0; font-size: 26pt; } .planner-head p { margin: 0; }
+  .planner-org { display: block !important; width: 100%; font-size: 9pt; color: #444; }
+  .page { padding: 0; }
+  .cal { border: 1px solid #000; border-radius: 0; }
+  .cal-head { display: grid !important; background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cal-head .long { display: inline; } .cal-head .short { display: none; }
+  .cal-week { display: grid !important; break-inside: avoid; }
+  .cal-cell, .cal-cell.out, .cal-cell:not(.has), .cal-cell.past { display: block !important; opacity: 1; min-height: 1.15in; border-color: #999; font-size: 8pt; background: #fff !important; }
+  .cal-cell.out { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cal-dates { display: flex !important; margin-bottom: .1rem; }
+  .cal-dow { display: none !important; }
+  .cal-greg { font-size: 12pt; color: #000; } .cal-heb, .cal-items li, .cal-items .j-parsha { color: #222; }
+  .cal-items .ev { background: none; border: 1px solid #000; border-radius: 2px; }
+  .cal-items .ev a { color: #000; padding: 0 .2rem; }
+  .cal-key { font-size: 8pt; color: #333; }
+}

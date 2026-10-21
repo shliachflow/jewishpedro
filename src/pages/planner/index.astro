@@ -1,0 +1,8 @@
+---
+import Planner from './[month].astro';
+import { buildMonth, monthRange } from '../../lib/month';
+import { site } from '../../lib/site';
+// "Next month's" planner: the month after the one we're in.
+const m = monthRange(site.calendar.horizonMonths)[1];
+---
+<Planner model={await buildMonth(m.y, m.m0)} />

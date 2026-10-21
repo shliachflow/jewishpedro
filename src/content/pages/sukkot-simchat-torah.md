@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Sukkot & Simchat Torah
 description: Sukkah meals · Lulav · Hakafot dancing
 ---

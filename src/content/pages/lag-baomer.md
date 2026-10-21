@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Lag BaOmer
 description: Celebrating Unity, Joy & the Eternal Flame
 ---

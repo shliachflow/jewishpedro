@@ -1,0 +1,36 @@
+---
+import { url } from '../lib/site';
+import type { MonthModel } from '../lib/month';
+interface Props { month: MonthModel }
+const { month } = Astro.props;
+const dows = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const quiet = (c: any) => !c.jewish?.items.some((i: any) => i.kind !== 'parsha') && !c.events.length && !c.jewish?.items.length;
+---
+<div class="cal" role="table" aria-label={month.title}>
+  <div class="cal-head" role="row">{dows.map((d) => <div role="columnheader"><span class="long">{d}</span><span class="short">{d.slice(0, 3)}</span></div>)}</div>
+  {month.weeks.map((w) => (
+    <div class="cal-week" role="row">
+      {w.map((c, i) => (
+        <div role="cell" class:list={['cal-cell', { 'out': !c.inMonth, 'has': c.inMonth && (c.events.length > 0 || (c.jewish?.items.length ?? 0) > 0), 'past': c.past, 'sat': i === 6 }]}>
+          {c.inMonth && (
+            <>
+              <div class="cal-dates">
+                <span class="cal-dow">{dows[i].slice(0, 3)}</span>
+                <span class="cal-greg">{c.day}</span>
+                <span class="cal-heb">{c.jewish?.hday === 1 ? c.jewish.hebrew : c.jewish?.hday}</span>
+              </div>
+              <ul class="cal-items">
+                {c.jewish?.items.map((it) => (
+                  <li class={`j-${it.kind}`}>{it.kind === 'parsha' ? it.text.replace('Parashat ', '') : it.kind === 'candles' || it.kind === 'havdalah' ? `${it.text} ${it.time}` : it.text}</li>
+                ))}
+                {c.events.map((o) => (
+                  <li class="ev"><a href={url(`/events/${o.event.id}`)}>{o.event.data.time && <span class="ev-time">{o.event.data.time.split(/\s*[-–]\s*/)[0]}</span>} {o.event.data.title}</a></li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      ))}
+    </div>
+  ))}
+</div>

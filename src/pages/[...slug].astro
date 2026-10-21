@@ -8,7 +8,7 @@ import { url } from '../lib/site';
 
 export async function getStaticPaths() {
   const pages = await getLivePages();
-  return pages.filter((p) => p.id !== 'home').map((p) => ({ params: { slug: p.id }, props: { page: p } }));
+  return pages.filter((p) => p.id !== 'home' && p.id !== 'holidays').map((p) => ({ params: { slug: p.id }, props: { page: p } }));
 }
 const { page } = Astro.props;
 const { Content, headings } = await render(page);

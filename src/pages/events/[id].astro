@@ -2,20 +2,25 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import FormEmbed from '../../components/FormEmbed.astro';
-import { getUpcomingEvents, formatDate } from '../../lib/events';
+import { getUpcomingEvents, getOccurrences, formatDate, repeatLabel, horizon, today } from '../../lib/events';
+import { googleLink } from '../../lib/ics';
+import AddToCalendar from '../../components/AddToCalendar.astro';
 import { url, site } from '../../lib/site';
 
 export async function getStaticPaths() {
-  return (await getUpcomingEvents()).map((e) => ({ params: { id: e.id }, props: { event: e } }));
+  return (await getUpcomingEvents()).map((o) => ({ params: { id: o.event.id }, props: { event: o.event, date: o.date } }));
 }
-const { event } = Astro.props;
+const { event, date } = Astro.props;
 const { Content } = await render(event);
-const { title, date, time, location, image, rsvpUrl } = event.data;
+const { title, time, location, image, rsvpUrl, repeat } = event.data;
+const every = repeatLabel(event);
+const pageUrl = new URL(url(`/events/${event.id}`), site.deploy.site).href;
+const more = repeat ? (await getOccurrences(today(), horizon())).filter((o) => o.event.id === event.id).slice(1, 5) : [];
 const a = site.address;
 const atCenter = !location || location.includes(a.street);
 const eventLd = {
   '@context': 'https://schema.org', '@type': 'Event', name: title,
-  startDate: date.toISOString().slice(0, 10),
+  startDate: date,
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   location: atCenter
     ? { '@type': 'Place', name: site.name, address: { '@type': 'PostalAddress', streetAddress: a.street, addressLocality: a.city, addressRegion: a.state, postalCode: site.zip, addressCountry: 'US' } }
@@ -28,11 +33,13 @@ const eventLd = {
   <div class="page-head"><div class="container">
     <p><a href={url('/events')}>← All events</a></p>
     <h1>{title}</h1>
-    <p class="page-sub">{formatDate(date)}{time && ` · ${time}`}{location && ` · ${location}`}</p>
+    <p class="page-sub">{every ? `${every} · ` : ''}{formatDate(date)}{time && ` · ${time}`}{location && ` · ${location}`}</p>
   </div></div>
   <article class="container page prose">
     {image && <img src={url(image)} alt="" />}
     <Content />
+    <AddToCalendar google={googleLink(event, date, pageUrl)} ics={url(`/events/${event.id}.ics`)} series={!!repeat} />
+    {more.length > 0 && <p class="next-dates"><strong>Next dates:</strong> {more.map((o) => formatDate(o.date).replace(/, \d{4}$/, '')).join(' · ')}</p>}
     {rsvpUrl && <FormEmbed url={rsvpUrl} title={`RSVP: ${title}`} />}
   </article>
 </Base>

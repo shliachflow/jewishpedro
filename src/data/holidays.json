@@ -1,0 +1,92 @@
+[
+  {
+    "key": "rosh-hashanah",
+    "title": "Rosh Hashanah",
+    "description": "The Jewish New Year, a time of reflection, renewal, and sweet beginnings as we welcome a fresh start with hope and intention.",
+    "learnMore": "https://www.chabad.org/rosh-hashanah",
+    "starts": "^Rosh Hashana \\d",
+    "ends": "^Rosh Hashana II",
+    "eveBefore": true
+  },
+  {
+    "key": "yom-kippur",
+    "title": "Yom Kippur",
+    "description": "The Day of Atonement, our holiest day of spiritual cleansing, forgiveness, and reconnection with our highest purpose.",
+    "learnMore": "https://www.chabad.org/yom-kippur",
+    "starts": "^Yom Kippur$",
+    "ends": "^Yom Kippur$",
+    "eveBefore": true
+  },
+  {
+    "key": "sukkot",
+    "title": "Sukkot",
+    "description": "The Festival of Booths, celebrating gratitude, harvest, and the divine protection that surrounds us throughout life's journey.",
+    "learnMore": "https://www.chabad.org/sukkot",
+    "starts": "^Sukkot I$",
+    "ends": "^Sukkot VII",
+    "eveBefore": true
+  },
+  {
+    "key": "simchat-torah",
+    "title": "Shemini Atzeret & Simchat Torah",
+    "description": "Rejoicing with the Torah as we complete and begin anew the annual cycle of reading, celebrating our eternal connection to wisdom.",
+    "learnMore": "https://www.chabad.org/simchat-torah",
+    "starts": "^Shmini Atzeret",
+    "ends": "^Simchat Torah",
+    "eveBefore": true
+  },
+  {
+    "key": "chanukah",
+    "title": "Chanukah",
+    "description": "The Festival of Lights, eight nights of celebrating miracles, dedication, and the triumph of light over darkness.",
+    "learnMore": "https://www.chabad.org/chanukah",
+    "starts": "^Chanukah: 1 Candle",
+    "ends": "^Chanukah: 8th Day",
+    "eveBefore": false
+  },
+  {
+    "key": "tu-bshevat",
+    "title": "Tu B'Shvat",
+    "description": "The New Year of the Trees, honoring our connection to nature and celebrating renewal, growth, and environmental stewardship.",
+    "learnMore": "https://www.chabad.org/tu-bshevat",
+    "starts": "^Tu BiShvat",
+    "ends": "^Tu BiShvat",
+    "eveBefore": true
+  },
+  {
+    "key": "purim",
+    "title": "Purim",
+    "description": "A joyous celebration of hidden miracles and divine providence, filled with costumes, storytelling, and community festivities.",
+    "learnMore": "https://www.chabad.org/purim",
+    "starts": "^Purim$",
+    "ends": "^Purim$",
+    "eveBefore": true
+  },
+  {
+    "key": "passover",
+    "title": "Passover (Pesach)",
+    "description": "The Festival of Freedom, commemorating liberation from bondage and celebrating the eternal journey toward spiritual and personal freedom.",
+    "learnMore": "https://www.chabad.org/passover",
+    "starts": "^Pesach I$",
+    "ends": "^Pesach VIII",
+    "eveBefore": true
+  },
+  {
+    "key": "lag-baomer",
+    "title": "Lag BaOmer",
+    "description": "A day of celebration during the counting period, honoring learning, joy, and the light of wisdom that brightens our lives.",
+    "learnMore": "https://www.chabad.org/lag-baomer",
+    "starts": "^Lag BaOmer",
+    "ends": "^Lag BaOmer",
+    "eveBefore": true
+  },
+  {
+    "key": "shavuot",
+    "title": "Shavuot",
+    "description": "The Festival of Weeks, celebrating the giving of the Torah and our eternal commitment to wisdom, learning, and spiritual growth.",
+    "learnMore": "https://www.chabad.org/shavuot",
+    "starts": "^Shavuot I$",
+    "ends": "^Shavuot II",
+    "eveBefore": true
+  }
+]

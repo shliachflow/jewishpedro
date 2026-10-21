@@ -1,0 +1,57 @@
+---
+import { getEntry, render } from 'astro:content';
+import { HebrewCalendar } from '@hebcal/core';
+import Base from '../layouts/Base.astro';
+import holidays from '../data/holidays.json';
+import { getUpcomingEvents, today, addDays } from '../lib/events';
+import { url } from '../lib/site';
+
+const page = (await getEntry('pages', 'holidays'))!;
+const { Content } = await render(page);
+
+// Next occurrence of each holiday, computed from the Hebrew calendar (no dates to maintain).
+const t = today();
+// Hebcal returns local-midnight dates; read them through the local calendar.
+const ymd = (g: Date) => `${g.getFullYear()}-${String(g.getMonth() + 1).padStart(2, '0')}-${String(g.getDate()).padStart(2, '0')}`;
+const evs = HebrewCalendar.calendar({ start: new Date(`${t}T12:00:00`), end: new Date(`${addDays(t, 800)}T12:00:00`), noModern: true, noRoshChodesh: true, noSpecialShabbat: true, sedrot: false } as any)
+  .map((e) => ({ desc: e.getDesc(), date: ymd(e.getDate().greg()) }));
+const fmt = (s: string, withYear = false) => new Date(`${s}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', ...(withYear ? { year: 'numeric' } : {}), timeZone: 'UTC' });
+
+const upcoming = await getUpcomingEvents();
+const rows = holidays.map((h) => {
+  const starts = evs.filter((e) => new RegExp(h.starts).test(e.desc));
+  const start = starts.find((s) => {
+    const end = evs.find((e) => e.date >= s.date && new RegExp(h.ends).test(e.desc) && e.date <= addDays(s.date, 10));
+    return (end?.date ?? s.date) >= t;
+  });
+  const first = start?.date ?? '';
+  const last = [...evs].reverse().find((e) => e.date >= first && e.date <= addDays(first, 10) && new RegExp(h.ends).test(e.desc))?.date ?? first;
+  const begin = first && h.eveBefore ? addDays(first, -1) : first;
+  const range = !first ? '' : begin === last ? fmt(last, true) : `${fmt(begin)} (evening) – ${fmt(last, true)}`;
+  const offer = upcoming.find((o) => o.event.data.holiday === h.key);
+  return { ...h, range, first, offer };
+}).sort((a, b) => a.first.localeCompare(b.first));
+---
+<Base title="Holidays" description={page.data.description}>
+  <div class="page-head"><div class="container"><h1>{page.data.title}</h1><p class="page-sub">{page.data.description}</p></div></div>
+  <div class="container page">
+    <div class="prose"><Content /></div>
+    <h2 class="hol-h">Celebrate with us</h2>
+    <ol class="hol-list">
+      {rows.map((h) => (
+        <li class="hol">
+          <h3>{h.title}</h3>
+          {h.range && <p class="hol-when">{h.range}</p>}
+          <p>{h.description}</p>
+          <p class="hol-actions">
+            {h.offer && <a class="btn btn-sm" href={url(`/events/${h.offer.event.id}`)}>Join us</a>}
+            <a class="btn btn-sm btn-line" href={h.learnMore} target="_blank" rel="noopener">Learn more on Chabad.org</a>
+          </p>
+        </li>
+      ))}
+    </ol>
+    <p class="hol-note">Holidays begin at sundown on the evening before the first date listed. Dates are calculated automatically.</p>
+    <h2>Stay connected</h2>
+    <p>Never miss an upcoming holiday celebration or special program. See everything on the <a href={url('/calendar')}>calendar</a> or in <a href={url('/events')}>upcoming events</a>.</p>
+  </div>
+</Base>

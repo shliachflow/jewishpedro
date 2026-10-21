@@ -133,7 +133,29 @@
     },
     {
       "label": "Events",
-      "href": "/events"
+      "href": "/events",
+      "children": [
+        {
+          "label": "Upcoming Events",
+          "href": "/events",
+          "desc": "What's coming up"
+        },
+        {
+          "label": "Calendar",
+          "href": "/calendar",
+          "desc": "Hebrew and English, month by month"
+        },
+        {
+          "label": "Printable Planner",
+          "href": "/planner",
+          "desc": "Next month, ready to print"
+        },
+        {
+          "label": "Holidays",
+          "href": "/holidays",
+          "desc": "Guides and celebrations all year"
+        }
+      ]
     },
     {
       "label": "About",
@@ -236,5 +258,13 @@
       "instagram": "Instagram",
       "whatsapp": "WhatsApp"
     }
+  },
+  "location": {
+    "latitude": 33.743297,
+    "longitude": -118.275432
+  },
+  "calendar": {
+    "googleCalendarIcsUrl": "",
+    "horizonMonths": 12
   }
 }

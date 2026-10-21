@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import MonthGrid from '../../components/MonthGrid.astro';
+import { buildMonth, monthRange } from '../../lib/month';
+import { site, url } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const months = monthRange(site.calendar.horizonMonths);
+  return Promise.all(months.map(async (m) => ({ params: { month: m.key }, props: { model: await buildMonth(m.y, m.m0) } })));
+}
+const { model } = Astro.props;
+---
+<Base title={`${model.title} planner`} description={`Printable monthly planner for ${model.title}, with Hebrew dates, holidays and events.`}>
+  <div class="page-head no-print"><div class="container">
+    <h1>Monthly planner</h1>
+    <p class="page-sub">A one-page printable calendar for {model.title}. It updates itself every day.</p>
+    <p><button class="btn" type="button" onclick="window.print()">Print this page</button> <a class="btn btn-line" href={url(`/calendar/${model.key}`)}>Back to calendar</a></p>
+  </div></div>
+  <div class="container page planner">
+    <header class="planner-head">
+      <h2>{model.title}</h2>
+      <p>{model.hebrew}</p>
+      <p class="planner-org">{site.name} · {site.phone} · {site.email}</p>
+    </header>
+    <MonthGrid month={model} />
+    <p class="cal-key">Candle lighting is {site.shabbos.candleLightingMinutes} minutes before sunset, for {site.address.city}.</p>
+  </div>
+</Base>

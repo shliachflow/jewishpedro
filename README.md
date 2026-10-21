@@ -75,3 +75,13 @@ Local preview: `npm install`, then `npm run dev` (live) or `npm run build && npm
 - Write "G-d", never "God" (CI checks this).
 - Images: keep them under about 300 KB (resize to about 1600px wide, JPEG) and use real photos, the logo, or flyers. See `DESIGN.md` for the image policy.
 - Check the Actions tab after a push; if the build fails, read the error: it names the file and field.
+
+
+## Recurring events, calendar, planner
+
+- **One file per event.** A weekly event is one file: set `date` (first occurrence), `repeat: weekly` (or `biweekly`), optional `until: YYYY-MM-DD` and `skip: [YYYY-MM-DD, ...]` for dates it doesn't happen. See `src/content/events/shabbat-experience.md`.
+- **Times** in `time:` like `9:45am - 12:15pm` are read for calendar files; with no time the event is all-day.
+- **Holiday tie-in:** add `holiday: purim` (key from `src/data/holidays.json`) to an event and a "Join us" button appears under that holiday on `/holidays/`. No tagged event means no button.
+- **Calendar** (`/calendar/`): Hebrew and English month view with candle lighting, havdalah, parsha, holidays and events, built automatically (Hebcal data, location in `site.config.json`). Phones get an agenda list.
+- **Planner** (`/planner/`): next month, print-ready (landscape). Any month: `/planner/YYYY-MM/`.
+- **Add to calendar:** per-event Google link and `.ics`; whole-site feed at `/calendar.ics` (subscribe from iPhone/Google/Outlook). The daily deploy keeps "next month" current.

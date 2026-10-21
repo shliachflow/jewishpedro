@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import MonthGrid from '../../components/MonthGrid.astro';
+import { buildMonth, monthRange } from '../../lib/month';
+import { url, site } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const months = monthRange(site.calendar.horizonMonths);
+  return Promise.all(months.map(async (m, i) => ({
+    params: { month: m.key },
+    props: { model: await buildMonth(m.y, m.m0), prev: months[i - 1]?.key, next: months[i + 1]?.key, all: months.map((x) => x.key) },
+  })));
+}
+const { model, prev, next, all } = Astro.props;
+---
+<Base title={`${model.title} calendar`} description={`Hebrew and English calendar for ${model.title}: holidays, Shabbos times and events at ${site.shortName}.`}>
+  <div class="page-head"><div class="container">
+    <p><a href={url('/events')}>← Upcoming events</a></p>
+    <h1>{model.title}</h1>
+    <p class="page-sub">{model.hebrew}</p>
+  </div></div>
+  <div class="container page cal-page">
+    <nav class="cal-nav" aria-label="Months">
+      {prev ? <a class="btn btn-line btn-sm" href={url(`/calendar/${prev}`)}>← Previous</a> : <span></span>}
+      <a class="btn btn-line btn-sm" href={url(`/planner/${model.key}`)}>Print this month</a>
+      {next ? <a class="btn btn-line btn-sm" href={url(`/calendar/${next}`)}>Next →</a> : <span></span>}
+    </nav>
+    <MonthGrid month={model} />
+    <p class="cal-key">Candle lighting is {site.shabbos.candleLightingMinutes} minutes before sunset, for {site.address.city}. Dates and times are calculated automatically.</p>
+    <div class="add-cal">
+      <span class="add-cal-label">Follow our events in your own calendar:</span>
+      <a class="btn btn-line" href={`webcal://${new URL(site.deploy.site).host}${url('/calendar.ics')}`}>Subscribe (iPhone, Outlook)</a>
+      <a class="btn btn-line" href={`https://calendar.google.com/calendar/render?cid=${encodeURIComponent(`webcal://${new URL(site.deploy.site).host}${url('/calendar.ics')}`)}`} target="_blank" rel="noopener">Subscribe in Google Calendar</a>
+    </div>
+    <details class="more-events"><summary>Jump to another month</summary>
+      <p class="cal-months">{all.map((k) => <a href={url(`/calendar/${k}`)} aria-current={k === model.key ? 'page' : undefined}>{k}</a>)}</p>
+    </details>
+  </div>
+</Base>

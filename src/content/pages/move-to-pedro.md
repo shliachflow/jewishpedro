@@ -12,7 +12,7 @@ San Pedro is LA's affordable coastal town — and home to a growing Jewish commu
 
 CHABAD S. PEDRO JEWISH CENTER · 817 W 9TH ST
 
-![Wide San Pedro photo](/images/move-to-pedro.jpg)
+![Cabrillo Beach, San Pedro, in a vintage postcard](/images/cabrillo-postcard.jpg)
 
 | | | |
 |---|---|---|

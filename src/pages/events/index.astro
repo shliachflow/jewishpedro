@@ -2,23 +2,24 @@
 import Base from '../../layouts/Base.astro';
 import EventRow from '../../components/EventRow.astro';
 import { getUpcomingEvents } from '../../lib/events';
-import { site } from '../../lib/site';
+import { site, url } from '../../lib/site';
 const events = await getUpcomingEvents();
 const first = events.slice(0, 8);
 const rest = events.slice(8);
 ---
 <Base title="Events">
-  <div class="page-head"><div class="container"><h1>Upcoming events</h1></div></div>
+  <div class="page-head"><div class="container"><h1>Upcoming events</h1>
+    <p class="page-sub"><a href={url('/calendar')}>Month calendar</a> · <a href={url('/planner')}>Printable planner</a> · <a href={`webcal://${new URL(site.deploy.site).host}${url('/calendar.ics')}`}>Subscribe</a></p></div></div>
   <div class="container page">
     {events.length === 0
       ? <p>{site.ui.noEvents}</p>
       : (
         <>
-          <div class="event-rows">{first.map((e) => <EventRow event={e} level={2} />)}</div>
+          <div class="event-rows">{first.map((e) => <EventRow occ={e} level={2} />)}</div>
           {rest.length > 0 && (
             <details class="more-events">
               <summary>Show the other {rest.length} upcoming events</summary>
-              <div class="event-rows">{rest.map((e) => <EventRow event={e} level={2} />)}</div>
+              <div class="event-rows">{rest.map((e) => <EventRow occ={e} level={2} />)}</div>
             </details>
           )}
         </>

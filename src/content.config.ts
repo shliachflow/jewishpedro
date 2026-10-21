@@ -64,6 +64,12 @@ const events = defineCollection({
       location: z.string().optional(),
       image: imagePath.optional(),
       rsvpUrl: z.string().url().optional(),
+      // Recurring events: one file, many dates. `date` is the first one.
+      repeat: z.enum(['weekly', 'biweekly']).optional(),
+      until: dateStr.optional(),
+      skip: z.array(dateStr).default([]),
+      // Ties the event to a holiday on the Holidays page (key from src/data/holidays.json).
+      holiday: z.string().optional(),
     })
     .strict(),
 });

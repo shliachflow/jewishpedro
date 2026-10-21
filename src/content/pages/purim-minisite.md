@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Purim Minisite
 description: Megillah · Costumes · Hamantaschen
 ---
