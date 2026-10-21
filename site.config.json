@@ -261,7 +261,11 @@
     "exploreTitle": "Find your place at Chabad S. Pedro",
     "comingUpTitle": "What's happening at the center",
     "visitTitle": "We would love to see you",
-    "pageCtaHeading": "Come say hello"
+    "pageCtaHeading": "Come say hello",
+    "galleryLabel": "Gallery",
+    "galleryTitle": "Life at the center",
+    "galleryCta": "See the gallery →",
+    "followHeading": "Follow along on social media"
   },
   "location": {
     "latitude": 33.743297,

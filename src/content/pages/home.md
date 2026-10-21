@@ -28,11 +28,8 @@ featured:
   - title: "Move to Pedro!"
     text: "Are you looking for a more affordable Jewish community in SoCal? Check out this page to see we are a good fit!"
     href: /move-to-pedro
-    image: /images/cabrillo-postcard.jpg
-    alt: A vintage postcard view of Cabrillo Beach in San Pedro
-  - title: JNet
-    text: "Sign up to study one-on-one with a volunteer for half an hour a week. You choose the topic and time. JNet makes the connection."
-    href: https://www.jnet.org/
+    image: /images/hero-vtb-containership.jpg
+    alt: A container ship passing under the Vincent Thomas Bridge in San Pedro
   - title: Join Chai Society
     text: "Be part of a circle of monthly givers keeping Jewish life in San Pedro thriving."
     href: /chai-society
@@ -42,9 +39,6 @@ featured:
   - title: "Bassie's Challah Shoppe"
     text: "Pre-order by Wednesday and pick up fresh, homemade challah for Shabbat."
     href: /bassies-challah-shoppe
-  - title: Support Jewish Life
-    text: "Keep Jewish life thriving in S. Pedro — every gift makes a difference."
-    href: /donate
 ---
 An open home for timeless, joyful Judaism - where every Jew is family.
 

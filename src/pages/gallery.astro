@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { getGallery } from '../lib/gallery';
+const photos = await getGallery();
+---
+<Base title="Gallery" description="Photos from Chabad S. Pedro: classes, Shabbat, holidays, and community.">
+  <div class="page-head"><div class="container"><h1>Gallery</h1><p class="page-sub">Moments from around the center.</p></div></div>
+  <div class="container page">
+    <ul class="gallery">
+      {photos.map((p, i) => (
+        <li><button type="button" data-i={i} aria-label={`Open photo: ${p.caption}`}>
+          <img src={p.src} alt={p.caption} width={p.width} height={p.height} loading={i < 4 ? 'eager' : 'lazy'} decoding="async" />
+        </button></li>
+      ))}
+    </ul>
+    <dialog class="lightbox" aria-label="Photo viewer">
+      <button type="button" class="lb-close" aria-label="Close">×</button>
+      <button type="button" class="lb-prev" aria-label="Previous photo">‹</button>
+      <figure><img alt="" /><figcaption></figcaption></figure>
+      <button type="button" class="lb-next" aria-label="Next photo">›</button>
+    </dialog>
+  </div>
+  <script define:vars={{ photos }}>
+    const dlg = document.querySelector('.lightbox'), img = dlg.querySelector('img'), cap = dlg.querySelector('figcaption');
+    let cur = 0;
+    const show = (i) => { cur = (i + photos.length) % photos.length; img.src = photos[cur].src; img.alt = photos[cur].caption; cap.textContent = photos[cur].caption; };
+    document.querySelectorAll('.gallery button').forEach((b) => b.addEventListener('click', () => { show(+b.dataset.i); dlg.showModal(); }));
+    dlg.querySelector('.lb-close').addEventListener('click', () => dlg.close());
+    dlg.querySelector('.lb-prev').addEventListener('click', () => show(cur - 1));
+    dlg.querySelector('.lb-next').addEventListener('click', () => show(cur + 1));
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+  </script>
+</Base>

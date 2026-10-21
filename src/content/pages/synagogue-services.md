@@ -34,12 +34,6 @@ Every Tuesday
 
 Join us for in-depth Torah study and discussion relating to that week's Torah portion.
 
-Every Wednesday
-
-8:00pm
-
-Join us for an Ein Yaakov study, exploring the Talmud's stories and ethical teachings—rich with wisdom, meaning, and insight for everyday life. Open, engaging, and beginner-friendly.
-
 [Learn more about our Torah classes](/jewish-insights-class)
 
 ## Questions About Services?

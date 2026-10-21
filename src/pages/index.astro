@@ -4,12 +4,14 @@ import Base from '../layouts/Base.astro';
 import ShabbosBox from '../components/ShabbosBox.astro';
 import EventRow from '../components/EventRow.astro';
 import { getUpcomingEvents } from '../lib/events';
+import { getGallery } from '../lib/gallery';
 import { site, url } from '../lib/site';
 
 const home = await getEntry('pages', 'home');
 if (!home) throw new Error('src/content/pages/home.md is missing. The homepage is built from it; do not delete or rename it.');
 const { Content } = await render(home);
 const upcoming = (await getUpcomingEvents()).slice(0, 3);
+const gallery = await getGallery();
 const { heroImage, heroImageMobile, heroAlt, heroFocus, heroFocusMobile, visitPhoto, visitAlt, peoplePhoto, peoplePhotoAlt, communityPhoto, communityAlt, feature, mission, people, featured, accent } = home.data;
 const ui = site.ui;
 const style = site.theme.hero ?? 'split';
@@ -52,13 +54,24 @@ const sv = site.shabbos.services;
     </section>
   )}
 
+  <section class="band">
+    <div class="container">
+      <p class="eyebrow">{ui.comingUpHeading}</p>
+      <h2 class="big-h">{ui.comingUpTitle}</h2>
+      {upcoming.length === 0
+        ? <p>{ui.noEvents}</p>
+        : <div class="event-rows">{upcoming.map((e) => <EventRow occ={e} />)}</div>}
+      <p class="more"><a href={url('/events')}>{ui.allEvents}</a> <a href={url('/calendar')}>Month calendar →</a> <a href={url('/planner')}>Printable planner →</a></p>
+    </div>
+  </section>
+
   {featured && (
     <section class="container section explore-section">
       <p class="eyebrow">{ui.exploreHeading}</p>
       <h2 class="big-h">{ui.exploreTitle}</h2>
       <div class="tiles">
         {featured.map((f, i) => (
-          <a class:list={['tile', { 'tile-lead': f === lead, 'tile-dark': i % 3 === 1, 'tile-brass': i % 3 === 2 }]} href={url(f.href)} data-reveal>
+          <a class:list={['tile', { 'tile-lead': f === lead, 'tile-dark': i % 2 === 1 }]} href={url(f.href)} data-reveal>
             {f.image && <img src={url(f.image)} alt={f.alt ?? ''} loading="lazy" decoding="async" />}
             <span class="tile-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
             <span class="tile-body"><strong>{f.title}</strong><span>{f.text}</span></span>
@@ -66,12 +79,7 @@ const sv = site.shabbos.services;
           </a>
         ))}
       </div>
-    </section>
-  )}
-
-  {communityPhoto && (
-    <section class="community-bleed" data-reveal>
-      <img src={url(communityPhoto)} alt={communityAlt ?? ''} loading="lazy" decoding="async" />
+      <p class="more"><a href={url('/programs')}>All programs →</a></p>
     </section>
   )}
 
@@ -92,14 +100,20 @@ const sv = site.shabbos.services;
     </section>
   )}
 
-  <section class="band">
-    <div class="container">
-      <p class="eyebrow">{ui.comingUpHeading}</p>
-      <h2 class="big-h">{ui.comingUpTitle}</h2>
-      {upcoming.length === 0
-        ? <p>{ui.noEvents}</p>
-        : <div class="event-rows">{upcoming.map((e) => <EventRow occ={e} />)}</div>}
-      <p class="more"><a href={url('/events')}>{ui.allEvents}</a> <a href={url('/calendar')}>Month calendar →</a> <a href={url('/planner')}>Printable planner →</a></p>
+  {gallery.length > 0 && (
+    <section class="container section gal-section" data-reveal>
+      <div class="gal-head">
+        <div><p class="eyebrow">{ui.galleryLabel}</p><h2 class="big-h">{ui.galleryTitle}</h2></div>
+        <a class="btn btn-line" href={url('/gallery')}>{ui.galleryCta}</a>
+      </div>
+      <div class="gal-strip">{gallery.slice(0, 4).map((g) => <a href={url('/gallery')} aria-label={g.caption}><img src={g.src} alt={g.caption} width={g.width} height={g.height} loading="lazy" decoding="async" /></a>)}</div>
+    </section>
+  )}
+
+  <section class="follow">
+    <div class="container follow-inner">
+      <h2>{ui.followHeading}</h2>
+      <p><a class="btn btn-line" href={site.social.facebook}>{ui.socialLabels.facebook}</a> <a class="btn btn-line" href={site.social.instagram}>{ui.socialLabels.instagram}</a></p>
     </div>
   </section>
 
