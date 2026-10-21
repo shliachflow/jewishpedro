@@ -1,11 +1,27 @@
 ---
 title: Welcome to Chabad S. Pedro
-# heroImage: /images/your-hero-photo.jpg   # optional real photo for the hero
-# heroAlt: Describe the photo
+heroImage: /images/about-family.jpg
+heroAlt: Rabbi Yisroel and Rebbetzin Bassie Shuchat with their children outside the center
+feature:
+  title: The Shabbat Experience
+  text: "Learning, Prayer, community, and a delicious kiddush lunch every Saturday morning."
+  href: /shabbat-experience
+  image: /images/move-to-pedro-shul.jpg
+  alt: The shul at 817 W 9th St, tables set for a meal, with the menorah
+mission: "Our mission is to create a vibrant Jewish community where everyone, regardless of background or level of observance, feels welcome, valued, and inspired."
+people:
+  - name: Rabbi Yisroel Shuchat
+    role: Founder, Director, and Spiritual Leader
+    image: /images/about-rabbi-yisroel.png
+  - name: Rebbetzin Bassie Shuchat
+    role: Co-Founder and Program Director
+    image: /images/about-rebbetzin-bassie.png
 featured:
   - title: "Move to Pedro!"
     text: "Are you looking for a more affordable Jewish community in SoCal? Check out this page to see we are a good fit!"
     href: /move-to-pedro
+    image: /images/san-pedro-aerial.jpg
+    alt: Aerial view of San Pedro and the harbor
   - title: JNet
     text: "Sign up to study one-on-one with a volunteer for half an hour a week. You choose the topic and time. JNet makes the connection."
     href: https://www.jnet.org/
@@ -18,9 +34,6 @@ featured:
   - title: "Bassie's Challah Shoppe"
     text: "Pre-order by Wednesday and pick up fresh, homemade challah for Shabbat."
     href: /bassies-challah-shoppe
-  - title: The Shabbat Experience
-    text: "Learning, Prayer, community, and a delicious kiddush lunch every Saturday morning."
-    href: /shabbat-experience
   - title: Support Jewish Life
     text: "Keep Jewish life thriving in S. Pedro — every gift makes a difference."
     href: /donate

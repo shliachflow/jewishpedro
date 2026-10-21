@@ -2,6 +2,12 @@
 
 Visual world for Chabad S. Pedro Jewish Center. Edit styles only in `src/styles/global.css`; colors come from `site.config.json` -> `theme`.
 
+## Homepage (v3)
+People first. A big wide-set headline beside a real family photo; the Shabbat timetable as a horizontal board overlapping the hero; a full brass band for the flagship Saturday program with a photo of the shul; Explore (one place photo plus a plain index); the mission statement set large with the Rabbi and Rebbetzin; events on a sand band; a teal "Come visit" band with directions. All photos are set in `src/content/pages/home.md` (heroImage, feature, people, featured[].image), so swapping a photo is a one-line edit.
+
+## What the reference sites taught us
+Seen in a real browser: IKAR (calm teal field, this week's events up front), Romemu (a bold graphic device taken from its own logo, "what's happening" column), Sixth & I (saturated color blocks, events as the main event), MemGlobal (collage of real faces), Passion City (huge confident type). Common thread: real people, big type, events first, color used boldly. A flat block with a list is what reads as boring.
+
 ## Intent
 A warm, modern home for every Jew in a working port town. Clean structure, personal voice. No single thing is pushed on the visitor: the homepage opens with a welcome and a plain timetable for this Shabbat, then an index of everything else.
 

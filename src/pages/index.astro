@@ -9,10 +9,15 @@ import { site, url } from '../lib/site';
 const home = (await getEntry('pages', 'home'))!;
 const { Content } = await render(home);
 const upcoming = (await getUpcomingEvents()).slice(0, 3);
-const { heroImage, heroAlt, featured } = home.data;
+const { heroImage, heroAlt, feature, mission, people, featured } = home.data;
+const lead = featured?.find((f) => f.image);
+const rest = featured?.filter((f) => f !== lead) ?? [];
+const a = site.address;
+const fullAddress = `${a.street}, ${a.city}, ${a.state} ${a.zip}`;
+const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
 ---
 <Base description={site.description}>
-  <section class:list={['hero', heroImage && 'has-photo']} style={heroImage ? `--hero-img:url('${url(heroImage)}')` : undefined}>
+  <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1>{home.data.title}</h1>
@@ -22,25 +27,66 @@ const { heroImage, heroAlt, featured } = home.data;
           <a class="btn btn-ghost" href={url('/contact')}>Say hello</a>
         </p>
       </div>
-      <ShabbosBox />
+      {heroImage && <img class="hero-photo" src={url(heroImage)} alt={heroAlt ?? ''} />}
     </div>
-    {heroImage && <span class="sr-only">{heroAlt}</span>}
   </section>
+
+  <div class="container board-wrap"><ShabbosBox /></div>
+
+  {feature && (
+    <section class="feature-band">
+      <div class="container feature-grid">
+        <img src={url(feature.image)} alt={feature.alt} loading="lazy" />
+        <div>
+          <h2>{feature.title}</h2>
+          <p>{feature.text}</p>
+          <p><a class="btn" href={url(feature.href)}>Plan your visit</a></p>
+        </div>
+      </div>
+    </section>
+  )}
 
   {featured && (
     <section class="container section">
       <h2>Explore</h2>
-      <ul class="directory">
-        {featured.map((f) => (
-          <li>
-            <a href={url(f.href)}>
-              <span class="dir-title">{f.title}</span>
-              <span class="dir-text">{f.text}</span>
-              <span class="dir-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div class="explore">
+        {lead && (
+          <a class="explore-lead" href={url(lead.href)}>
+            <img src={url(lead.image!)} alt={lead.alt ?? ''} loading="lazy" />
+            <span class="explore-cap"><strong>{lead.title}</strong><span>{lead.text}</span></span>
+          </a>
+        )}
+        <ul class="directory">
+          {rest.map((f) => (
+            <li>
+              <a href={url(f.href)}>
+                <span class="dir-title">{f.title}</span>
+                <span class="dir-text">{f.text}</span>
+                <span class="dir-arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {mission && (
+    <section class="mission">
+      <div class="container">
+        <p>{mission}</p>
+        {people && (
+          <ul class="people">
+            {people.map((p) => (
+              <li>
+                <img src={url(p.image)} alt="" loading="lazy" />
+                <span><strong>{p.name}</strong>{p.role}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        <p class="more"><a href={url('/about')}>Our story →</a></p>
+      </div>
     </section>
   )}
 
@@ -51,6 +97,23 @@ const { heroImage, heroAlt, featured } = home.data;
         ? <p>No events scheduled right now. Check back soon.</p>
         : <div class="event-rows">{upcoming.map((e) => <EventRow event={e} />)}</div>}
       <p class="more"><a href={url('/events')}>All upcoming events →</a></p>
+    </div>
+  </section>
+
+  <section class="visit">
+    <div class="container visit-grid">
+      <div>
+        <h2>Come visit</h2>
+        <p class="visit-addr">{a.street}<br />{a.city}, {a.state} {a.zip}</p>
+        <p><a class="btn btn-brass" href={directions}>Get directions</a></p>
+        <p class="visit-contact"><a href={`tel:${site.phone}`}>{site.phone}</a> · <a href={site.social.whatsapp}>WhatsApp</a> · <a href={`mailto:${site.email}`}>{site.email}</a></p>
+      </div>
+      {site.shabbos.services && (
+        <div class="visit-times">
+          <h3>Every Saturday</h3>
+          <p>{site.shabbos.services.replace(/^Saturday morning at [^:]*:\s*/, '')}</p>
+        </div>
+      )}
     </div>
   </section>
 </Base>
