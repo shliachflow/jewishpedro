@@ -258,7 +258,7 @@ main:has(> .visit:last-child) + .site-footer { margin-top: 0; border-top: 0; }
 .hero-photo { min-height: min(88svh, 54rem); display: flex; align-items: flex-end; position: relative; overflow: hidden;
   background:
     linear-gradient(0deg, color-mix(in oklab, var(--deep) 96%, transparent) 0%, color-mix(in oklab, var(--deep) 70%, transparent) 28%, transparent 62%),
-    var(--hero-img) 40% 42% / cover no-repeat, var(--deep);
+    var(--hero-img) var(--hero-pos, 40% 42%) / cover no-repeat, var(--deep);
   padding-block: clamp(3rem, 8vw, 5rem) clamp(5.5rem, 10vw, 7.5rem); }
 .hero-photo .hero-grid { grid-template-columns: 1fr; width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
 .hero-photo h1 { font-size: clamp(2.6rem, 6.2vw, 5.4rem); line-height: .94; letter-spacing: -.04em; max-width: 6.2em; margin-bottom: .4em; }
@@ -300,9 +300,12 @@ h2 { font-size: clamp(2.1rem, 5vw, 3.2rem); }
 /* Logo reads as a white mark while the header floats over the photo */
 .site-header.over-hero:not(.scrolled):not(.menu-open) .brand img { filter: brightness(0) invert(1); }
 /* Mobile: keep the lighthouse clear of the headline */
-@media (max-width: 40rem) { .hero-photo { background-position: 0 0, 17% 46%, 0 0; } }
+@media (max-width: 40rem) { .hero-photo { background-position: 0 0, var(--hero-pos-m, 17% 46%), 0 0; } }
 /* Feature band: deep teal with brass accents (gold stays for buttons and rules) */
 .feature-band { background: var(--deep); color: #fff; }
 .feature-band h2 { color: #fff; }
 .feature-band p { color: color-mix(in oklab, var(--accent) 14%, white); }
 .feature-band .btn { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+
+.visit-photo { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; display: block; }
+.visit-times { margin: 1.5rem 0 0; font-size: 1.15rem; line-height: 1.45; } .visit-times strong { display: block; color: var(--accent); font-weight: 600; font-size: .95rem; margin-bottom: .2rem; }

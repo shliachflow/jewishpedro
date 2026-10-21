@@ -12,6 +12,10 @@ const pages = defineCollection({
     // home page only
     heroImage: z.string().optional(),
     heroAlt: z.string().optional(),
+    heroFocus: z.string().optional(),
+    heroFocusMobile: z.string().optional(),
+    visitPhoto: z.string().optional(),
+    visitAlt: z.string().optional(),
     feature: z.object({ title: z.string(), text: z.string(), href: z.string(), image: z.string(), alt: z.string() }).optional(),
     peoplePhoto: z.string().optional(),
     peoplePhotoAlt: z.string().optional(),

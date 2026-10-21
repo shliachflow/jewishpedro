@@ -1,13 +1,17 @@
 ---
 title: Welcome to Chabad S. Pedro
 heroImage: /images/hero-harbor-sunset.jpg
+heroFocus: "40% 42%"
+heroFocusMobile: "17% 46%"
+visitPhoto: /images/shul-room.jpg
+visitAlt: The shul at 817 W 9th St with its lit menorah, lectern, and tables set with white linens
 heroAlt: A lighthouse at the end of the harbor breakwater at sunset
 feature:
   title: The Shabbat Experience
   text: "Learning, Prayer, community, and a delicious kiddush lunch every Saturday morning."
   href: /shabbat-experience
-  image: /images/shul-room.jpg
-  alt: The shul at 817 W 9th St with its lit menorah, lectern, and tables set with white linens
+  image: /images/shabbat-kiddush-cup.jpg
+  alt: A silver kiddush cup and a decanter of wine on a table
 peoplePhoto: /images/rabbi-rebbetzin.jpg
 peoplePhotoAlt: Rabbi Yisroel and Rebbetzin Bassie Shuchat
 communityPhoto: /images/community-class.jpg
@@ -22,8 +26,8 @@ featured:
   - title: "Move to Pedro!"
     text: "Are you looking for a more affordable Jewish community in SoCal? Check out this page to see we are a good fit!"
     href: /move-to-pedro
-    image: /images/bell-of-friendship.jpg
-    alt: The Korean Bell of Friendship pavilion at Angels Gate Park in San Pedro
+    image: /images/cabrillo-postcard.jpg
+    alt: A vintage postcard view of Cabrillo Beach in San Pedro
   - title: JNet
     text: "Sign up to study one-on-one with a volunteer for half an hour a week. You choose the topic and time. JNet makes the connection."
     href: https://www.jnet.org/
