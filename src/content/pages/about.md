@@ -1,4 +1,6 @@
 ---
+heroImage: /images/about-family.jpg
+heroAlt: The Shuchat family
 title: About Us
 description: Founders of Chabad S. Pedro
 ---

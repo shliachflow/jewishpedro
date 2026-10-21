@@ -5,8 +5,22 @@
 const isH2 = (n) => n.type === 'element' && n.tagName === 'h2';
 const el = (tagName, properties, children) => ({ type: 'element', tagName, properties, children });
 
+// A paragraph that is only links (e.g. "[Join on Zoom] [Download]") becomes a row of buttons.
+function markLinkRows(nodes) {
+  for (const n of nodes) {
+    if (n.type !== 'element') continue;
+    if (n.tagName === 'p') {
+      const parts = n.children.filter((c) => !(c.type === 'text' && !c.value.trim()));
+      if (parts.length && parts.every((c) => c.type === 'element' && c.tagName === 'a')) {
+        n.properties = { ...n.properties, className: [...(n.properties?.className ?? []), 'cta-row'] };
+      }
+    } else if (n.children) markLinkRows(n.children);
+  }
+}
+
 export function rehypeSections() {
   return (tree, file) => {
+    markLinkRows(tree.children);
     const layout = file.data?.astro?.frontmatter?.layout;
     if (layout === 'index') return;
     const kids = tree.children;
@@ -30,6 +44,7 @@ export function rehypeSections() {
       out.push(el('div', { className: ['faq-list'] }, items));
     } else {
       for (const g of groups) {
+        if (!g.body.some((n) => n.type === 'element')) continue; // a heading with nothing under it
         out.push(el('section', { className: ['pg-sec'] }, [
           el('div', { className: ['pg-sec-head'] }, [g.head]),
           el('div', { className: ['pg-sec-body'] }, g.body),

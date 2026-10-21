@@ -1,4 +1,6 @@
 ---
+heroImage: /images/community-class.jpg
+heroAlt: A class at the center
 title: Programs
 layout: index
 description: "Shabbat · Holidays · Learning · Kids · More"

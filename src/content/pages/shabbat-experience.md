@@ -1,9 +1,9 @@
 ---
+heroImage: /images/shul-room.jpg
+heroAlt: The shul at 817 W 9th St
 title: Shabbat Experience
 description: Saturday, Shabbat, kiddush
 ---
-![Shabbat Experience @ Chabad S. Pedro Jewish Center: Learn, Pray, Kiddush Luncheon, Warm Atmosphere](/images/shabbat-experience-banner.jpg)
-
 ## Deep Dive into the Chassidic teachings
 
 Join us to explore the Chassidic works. These foundational texts take up life's big questions, such as the nature of the soul and our purpose in the world.

@@ -24,6 +24,8 @@ Thank you for your order, and enjoy the challah!
 
 ## Our Fresh Challahs
 
+$8 for one challah, or 2 for $10.
+
 | Plain Challah | Everything But The Bagel Challah | Sugar Crumb Challah |
 |---|---|---|
 | ![Plain Challah](/images/challah-plain.png) | ![Everything But The Bagel Challah](/images/challah-everything-but-the-bagel.png) | ![Sugar Crumb Challah](/images/challah-sugar-crumb.jpg) |

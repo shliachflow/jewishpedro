@@ -737,3 +737,20 @@ main:has(> .page-cta:last-child) + .site-footer { margin-top: 0; border-top: 0; 
 .goal-band p { margin: 0; max-width: 40rem; font-size: 1.1rem; }
 .goal-band .btn { background: var(--primary); border-color: var(--primary); color: var(--paper); }
 .tile-lead img { object-position: 48% 62%; }
+
+/* Page polish round: link rows as buttons, header buttons, portraits */
+.prose p.cta-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-block: 1.1rem; }
+.prose p.cta-row a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .55em 1.2em; border: 2px solid var(--primary); border-radius: var(--radius); background: transparent; color: var(--primary); font: 600 1rem var(--font-ui); text-decoration: none; }
+.prose p.cta-row a:hover { background: var(--primary); color: var(--paper); }
+.page-head .btn { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+.page-head .btn-line { background: transparent; border-color: color-mix(in oklab, #fff 70%, transparent); color: #fff; }
+.pg-sec-body img[src*="about-rabbi"], .pg-sec-body img[src*="about-rebbetzin"] { border-radius: 50%; width: 12rem; height: 12rem; object-fit: cover; }
+.page-image { max-width: min(100%, 22rem); }
+.contact-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
+@media (min-width: 40rem) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+.contact-tile { display: grid; gap: .15rem; padding: 1.4rem 1.5rem; border-radius: 14px; background: var(--sand); color: var(--ink); text-decoration: none; }
+.contact-tile span { font: 700 .8rem var(--font-ui); letter-spacing: .12em; text-transform: uppercase; color: var(--brass-text); }
+.contact-tile strong { font: 400 clamp(1.5rem, 3vw, 2rem)/1.15 var(--font-display); color: var(--primary); }
+.contact-tile:hover { background: var(--primary); } .contact-tile:hover strong, .contact-tile:hover span { color: #fff; }
+.contact-map { border-radius: 14px; overflow: hidden; min-height: 20rem; background: var(--mist); margin-top: 1rem; } .contact-map iframe { width: 100%; height: 100%; min-height: 20rem; border: 0; display: block; }
+.events-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }

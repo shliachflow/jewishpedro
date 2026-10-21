@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { site } from '../lib/site';
+const a = site.address;
+const full = `${a.street}, ${a.city}, ${a.state} ${site.zip}`;
+const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(full)}`;
+---
+<Base title="Contact Us" description="Get in touch with Rabbi Yisroel and Rebbetzin Bassie. Call, text, WhatsApp, or email Chabad S. Pedro Jewish Center.">
+  <div class="page-head"><div class="container">
+    <h1>Contact Us</h1>
+    <p class="page-sub">Get in touch with Rabbi Yisroel and Rebbetzin Bassie</p>
+  </div></div>
+  <div class="container page">
+    <p class="dn-h">We're here to help. Reach out by phone, text, WhatsApp, or email.</p>
+    <div class="contact-grid">
+      <a class="contact-tile" href={`tel:${site.phone}`}><span>Phone / text</span><strong>{site.phone}</strong></a>
+      <a class="contact-tile" href={site.social.whatsapp}><span>WhatsApp</span><strong>Message us</strong></a>
+      <a class="contact-tile" href={`mailto:${site.email}`}><span>Email</span><strong>{site.email}</strong></a>
+      <a class="contact-tile" href={directions}><span>Visit</span><strong>{a.street}, {a.city}, {a.state} {site.zip}</strong></a>
+    </div>
+    <p class="cs-note">Mailing address: 1536 W 25th St #614, San Pedro, CA 90732</p>
+    <div class="contact-map"><iframe title={`Map: ${full}`} loading="lazy" referrerpolicy="no-referrer" src={`https://maps.google.com/maps?q=${encodeURIComponent(full)}&z=15&output=embed`}></iframe></div>
+    <ContactForm />
+    <h2 class="cs-h3" style="margin-top:3rem">Our team</h2>
+    <ul class="prose" style="padding-left:1.2em">
+      <li><strong>Rabbi Yisroel Shuchat</strong> — Founder, Director, and Spiritual Leader</li>
+      <li><strong>Rebbetzin Bassie Shuchat</strong> — Co-Founder and Program Director</li>
+    </ul>
+  </div>
+</Base>

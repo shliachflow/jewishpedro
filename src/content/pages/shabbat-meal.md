@@ -1,4 +1,6 @@
 ---
+heroImage: /images/shabbat-kiddush-cup.jpg
+heroAlt: A kiddush cup and wine decanter
 title: Shabbat Meals
 description: Homemade food · Songs · Warmth
 ---

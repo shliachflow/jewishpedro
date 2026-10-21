@@ -41,7 +41,7 @@ const eventLd = {
   <div class="page-head"><div class="container">
     <p><a href={url('/events')}>← All events</a></p>
     <h1>{title}</h1>
-    <p class="page-sub">{every ? `${every} · ` : ''}{formatDate(date)}{time && ` · ${time}`}{location && ` · ${location}`}</p>
+    <p class="page-sub">{every ? `${every} · ` : ''}{formatDate(date)}{time && ` · ${time}`}{!atCenter && location && ` · ${location}`}</p>
   </div></div>
   <article class="container page prose">
     {image && <img src={url(image)} alt="" />}

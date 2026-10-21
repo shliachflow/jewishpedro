@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import PageCta from '../../components/PageCta.astro';
 import EventRow from '../../components/EventRow.astro';
 import { getUpcomingEvents } from '../../lib/events';
 import { site, url } from '../../lib/site';
@@ -9,7 +10,7 @@ const rest = events.slice(8);
 ---
 <Base title="Events">
   <div class="page-head"><div class="container"><h1>Upcoming events</h1>
-    <p class="page-sub"><a href={url('/calendar')}>Month calendar</a> · <a href={url('/planner')}>Printable planner</a> · <a href={`webcal://${new URL(site.deploy.site).host}${url('/calendar.ics')}`}>Subscribe</a></p></div></div>
+    <p class="page-sub">What's coming up at the center</p></div></div>
   <div class="container page">
     {events.length === 0
       ? <p>{site.ui.noEvents}</p>
@@ -24,5 +25,11 @@ const rest = events.slice(8);
           )}
         </>
       )}
+      <p class="events-actions">
+      <a class="btn" href={url('/calendar')}>Month calendar</a>
+      <a class="btn btn-line" href={url('/planner')}>Printable planner</a>
+      <a class="btn btn-line" href={`webcal://${new URL(site.deploy.site).host}${url('/calendar.ics')}`}>Subscribe on your phone</a>
+    </p>
   </div>
+  <PageCta />
 </Base>

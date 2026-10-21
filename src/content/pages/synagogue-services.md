@@ -1,4 +1,6 @@
 ---
+heroImage: /images/shul-room.jpg
+heroAlt: The shul at 817 W 9th St
 title: Synagogue Services
 description: Every Jew welcome
 ---
@@ -16,7 +18,6 @@ We currently do not offer Friday Night Services at the synagogue.
 
 Want to make it happen? Feel free to reach out if you're visiting or a local that wants to organize Friday night services!
 
-Featured
 
 ### Shabbat Day
 
