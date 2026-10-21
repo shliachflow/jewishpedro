@@ -14,7 +14,7 @@ Each week we look at practical guidance on serving G-d with joy and living with 
 
 We spend time praying and singing some of the best-loved songs in Jewish prayer.
 
-Scientific Benefits of Prayer: Studies have shown that prayer can have a profound impact on our physical, emotional, and spiritual well-being - from reducing stress and anxiety to increasing feelings of happiness and connection to others.
+Benefits of Prayer: Research has linked prayer and religious practice with lower stress and greater well-being ([Koenig, 2012, review](https://pubmed.ncbi.nlm.nih.gov/23762764/)).
 
 ## Community Connection
 

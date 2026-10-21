@@ -3,16 +3,16 @@
 import Base from '../layouts/Base.astro';
 import { url } from '../lib/site';
 
-const stats = [['~$800K', 'Median SP home'], ['$700K+', 'Saved vs. Pico'], ['~35 min', 'To Pico, off-peak']];
+const stats = [['~$800K', 'Median SP home'], ['$600K+', 'Saved vs. Pico'], ['~35 min', 'To Pico, off-peak']];
 const chapters = [['reputation', 'The reputation'], ['distance', 'The distance'], ['numbers', 'The numbers'], ['lifestyle', 'The lifestyle'], ['community', 'The community'], ['infrastructure', 'Infrastructure'], ['questions', 'The questions']];
 const drives = [['Pico-Robertson', '~35-45 min'], ['Hancock Park / La Brea', '~45-55 min'], ['Beverly Hills', '~45-55 min'], ['Sherman Oaks / Encino (Valley)', '~60-80 min'], ['Long Beach Chabad (daily minyan community)', '~20-25 min'], ['Kaiser Permanente Harbor City (hospital & medical offices)', '~13-15 min'], ['LAX Airport', '~25 min'], ['Long Beach Airport (LGB)', '~25-30 min']];
 // [name, low, high, label] in $K. San Pedro is a single figure.
-const homes = [['San Pedro', 780, 820, '~$800,000', true], ['Tarzana', 1100, 1300, '~$1.1M — $1.3M'], ['Pico-Robertson', 1300, 1800, '~$1.3M — $1.8M'], ['Sherman Oaks', 1300, 1700, '~$1.3M — $1.7M'], ['Encino', 1400, 2100, '~$1.4M — $2.1M'], ['Beverlywood', 2300, 3300, '~$2.3M — $3.3M'], ['Hancock Park', 2300, 4200, '~$2.3M — $4.2M']] as const;
+const homes = [['San Pedro', 780, 820, '~$800,000', true], ['Tarzana', 1000, 1200, '~$1.0M — $1.2M'], ['Pico-Robertson', 1100, 1800, '~$1.1M — $1.8M'], ['Sherman Oaks', 1300, 1700, '~$1.3M — $1.7M'], ['Encino', 1400, 1700, '~$1.4M — $1.7M'], ['Beverlywood', 2100, 3300, '~$2.1M — $3.3M'], ['Hancock Park', 2800, 4200, '~$2.8M — $4.2M']] as const;
 const rents = [['1 bedroom', '~$1,900 / mo'], ['2 bedroom', '~$2,700 / mo'], ['3 bedroom', '~$3,800 / mo'], ['4+ bedroom (single-family)', '~$7,300 / mo']];
-const rent3 = [['San Pedro', 3800, '~$3,800 / mo', true], ['Hancock Park (apartments)', 4000, '~$4,000 / mo'], ['Pico-Robertson', 4600, '~$4,600 / mo'], ['Tarzana', 4600, '~$4,600 / mo'], ['Encino', 5000, '~$5,000 / mo'], ['Sherman Oaks', 5200, '~$5,200 / mo'], ['Beverlywood', 5300, '~$5,300 / mo']] as const;
+const rent3 = [['San Pedro', 3800, '~$3,800 / mo', true], ['Hancock Park (apartments)', 4000, '~$4,000 / mo'], ['Pico-Robertson', 4600, '~$4,600 / mo'], ['Tarzana', 4750, '~$4,750 / mo'], ['Encino', 5000, '~$5,000 / mo'], ['Sherman Oaks', 5200, '~$5,200 / mo'], ['Beverlywood', 5300, '~$5,300 / mo']] as const;
 const lifestyle = [
   ['Trails', 'Hikes & Views', ['Trail networks through San Pedro and Palos Verdes — cliffs, canyons, and ocean overlooks', 'White Point Nature Preserve, Sunken City, PV coastal trails, Portuguese Bend', 'Point Fermin Park at the southern tip of LA — historic lighthouse included', 'Korean Friendship Bell & Angels Gate Park — panoramic harbor views, right in town']],
-  ['Coast', 'Beaches & Harbor', ['Cabrillo Beach — the sandy, calm, family-friendly one, with the historic fishing pier', 'White Point / Royal Palm Beach — a rocky beach with tide pools and a more dramatic coastline', 'Cabrillo Marine Aquarium — free, kid-favorite outing', 'West Harbor (replacing the old Ports O\'Call): harbor-side walks, ship-watching, a family park, a Ferris wheel, more on the way', 'Quiet channel walks with real working-port views']],
+  ['Coast', 'Beaches & Harbor', ['Cabrillo Beach — the sandy, calm, family-friendly one, with the historic fishing pier', 'White Point / Royal Palm Beach — a rocky beach with tide pools and a more dramatic coastline', 'Cabrillo Marine Aquarium — free, kid-favorite outing', 'West Harbor (replacing the old Ports O\'Call): harbor-side walks, ship-watching, a family park, with more on the way', 'Quiet channel walks with real working-port views']],
   ['Nearby', 'Worth the Drive', ['~10 min to Trump National Golf Club (RPV) — some of the best coastal views in the region, with free public access to the grounds and overlooks', '~20 min to Terranea Resort — free public beach access via the coastal trail, walkable grounds, dramatic cliffside views', 'Redondo Beach pier & King Harbor, Torrance & Manhattan Beach boardwalks — all a short coastal drive']],
 ];
 const today = [
@@ -76,9 +76,9 @@ const pct = (n: number, max: number) => `${(n / max) * 100}%`;
       <blockquote class="mv-quote">“San Pedro is changing fast.”</blockquote>
       <p>New investment, new housing, and a reimagined waterfront. A sample of what's underway:</p>
       <ul class="mv-list">
-        <li>West Harbor — the reimagined waterfront replacing the old Ports O'Call — opens in 2026 with a mile-long promenade, a 175-ft Ferris wheel (the tallest in California), a carousel, harbor-side walks, a family park, and ship-watching</li>
-        <li>New mixed-use buildings going up in the old downtown — projects like Jules San Pedro (281 apartments + ground-floor retail on Beacon &amp; 6th) are reshaping the streets</li>
-        <li>The Rancho San Pedro redevelopment — a 20-year, ~$1 billion plan — will replace WWII-era housing with over 1,500 new homes and 5+ acres of public open space</li>
+        <li>West Harbor — the reimagined waterfront replacing the old Ports O'Call — is opening in phases. The promenade, park, and first eateries are open, with a 175-ft Ferris wheel (the tallest in California), a carousel, and more restaurants still to come</li>
+        <li>New mixed-use buildings going up in the old downtown — projects like Jules San Pedro (281 apartments + ground-floor retail, now in development) are reshaping the streets</li>
+        <li>The Rancho San Pedro redevelopment — a multi-year plan — will replace WWII-era housing with over 1,500 new homes and 5+ acres of public open space</li>
         <li>Averill Park, Point Fermin, Angels Gate &amp; the Korean Friendship Bell, Friendship Park, the working-port channels — all already here</li>
       </ul>
       <p>Most visitors are surprised by how much is here. For the last few years, a small but growing Jewish community has been putting down roots in San Pedro, and that's why this page exists.</p>
@@ -119,7 +119,7 @@ const pct = (n: number, max: number) => `${(n / max) * 100}%`;
       </div>
       <p class="mv-src">Sources: Redfin, Zillow, Homes.com (2026 medians). Prices vary by source and property type.</p>
 
-      <div class="mv-save"><p class="mv-label">The practical difference</p><p class="mv-big">$700,000+</p><p>saved vs. Pico-Robertson — and much more vs. Beverlywood or Hancock Park. That's a down payment for a second property, the cushion that makes a single-income family viable, or tuition for Jewish day school for years.</p></div>
+      <div class="mv-save"><p class="mv-label">The practical difference</p><p class="mv-big">$600,000+</p><p>saved vs. Pico-Robertson — and much more vs. Beverlywood or Hancock Park. That's a down payment for a second property, the cushion that makes a single-income family viable, or tuition for Jewish day school for years.</p></div>
 
       <p class="mv-num mv-sub">If you're renting</p>
       <div class="mv-two">
