@@ -1,0 +1,42 @@
+---
+// Native contact form. Posts to any form-handling service (Formspree, Web3Forms, Basin, ...) set in
+// site.config.json -> contactForm.endpoint. Renders nothing until an endpoint is configured.
+import { site } from '../lib/site';
+const { endpoint, hiddenFields, successMessage } = site.contactForm;
+---
+{endpoint && (
+  <form class="contact-form" method="post" action={endpoint} data-success={successMessage}
+        data-fallback={`Sorry, something went wrong. Please call ${site.phone} or email ${site.email}.`}>
+    <div class="field-row">
+      <label>First name<input name="first_name" autocomplete="given-name" required /></label>
+      <label>Last name<input name="last_name" autocomplete="family-name" required /></label>
+    </div>
+    <label>Email address<input type="email" name="email" autocomplete="email" required /></label>
+    <label>Message<textarea name="message" rows="6" required></textarea></label>
+    <label class="check"><input type="checkbox" name="subscribe" value="yes" />
+      I would like to receive news and updates from {site.name} by email.</label>
+    {Object.entries(hiddenFields ?? {}).map(([k, v]) => <input type="hidden" name={k} value={String(v)} />)}
+    <input type="text" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <button class="btn" type="submit">Send message</button>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form>
+)}
+<script>
+  const form = document.querySelector<HTMLFormElement>('.contact-form');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = form.querySelector<HTMLElement>('.form-status')!;
+    const btn = form.querySelector<HTMLButtonElement>('button')!;
+    btn.disabled = true;
+    status.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      status.textContent = form.dataset.success ?? 'Sent.';
+    } catch {
+      status.textContent = form.dataset.fallback ?? 'Something went wrong.';
+    }
+    btn.disabled = false;
+  });
+</script>

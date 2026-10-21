@@ -16,13 +16,13 @@ From the reflection of the High Holy Days to the joy of festival celebrations, t
 
 The Jewish New Year, a time of reflection, renewal, and sweet beginnings as we welcome a fresh start with hope and intention.
 
-[Learn More](/high-holidays-2026-home-page)
+[Learn More](https://www.chabad.org/holidays/default_cdo/jewish/Jewish-Holidays.htm)
 
 ### Yom Kippur
 
 The Day of Atonement, our holiest day of spiritual cleansing, forgiveness, and reconnection with our highest purpose.
 
-[Learn More](/high-holidays-2026-home-page)
+[Learn More](https://www.chabad.org/holidays/default_cdo/jewish/Jewish-Holidays.htm)
 
 ### Sukkot
 

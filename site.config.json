@@ -167,5 +167,10 @@
       "label": "Contact",
       "href": "/contact"
     }
-  ]
+  ],
+  "contactForm": {
+    "endpoint": "",
+    "hiddenFields": {},
+    "successMessage": "Thank you! Your message was sent. We will get back to you soon."
+  }
 }

@@ -1,6 +1,7 @@
 ---
 title: Contact Us
 description: Get in touch with Rabbi Yisroel and Rebbetzin Bassie.
+contactForm: true
 ---
 We're here to help. Reach out by phone, text, WhatsApp, or email, or use the form below.
 

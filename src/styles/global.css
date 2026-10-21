@@ -136,3 +136,14 @@ h3 { font-size: 1.25rem; }
 @media (min-width: 48rem) { .footer-inner { grid-template-columns: repeat(3, 1fr); } }
 .site-footer ul { list-style: none; padding: 0; margin: .5rem 0 0; }
 .copyright { color: rgb(255 255 255 / .6); margin-top: 2rem; }
+
+/* Contact form */
+.contact-form { display: grid; gap: 1rem; margin-top: 2rem; max-width: var(--measure); }
+.contact-form label { display: grid; gap: .3rem; font-weight: 500; }
+.contact-form input:not([type=checkbox]), .contact-form textarea { font: inherit; padding: .7rem .8rem; border: 1px solid #a9b6c0; border-radius: 8px; width: 100%; }
+.contact-form .field-row { display: grid; gap: 1rem; }
+@media (min-width: 40rem) { .contact-form .field-row { grid-template-columns: 1fr 1fr; } }
+.contact-form .check { display: flex; gap: .6rem; align-items: flex-start; font-weight: 400; }
+.contact-form .hp { position: absolute; left: -9999px; }
+.contact-form .btn { justify-self: start; cursor: pointer; font-size: 1rem; }
+.form-status { margin: 0; color: var(--muted); }

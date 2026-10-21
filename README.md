@@ -42,6 +42,10 @@ Edit `site.config.json`, then commit. Key settings:
 - `shabbos.havdalah`: `{ "method": "degrees" }` uses nightfall (Hebcal default, 8.5° below the horizon). `{ "method": "minutes", "minutes": 50 }` uses a fixed number of minutes after sunset.
 - `deploy.site` / `deploy.base`: GitHub Pages origin and sub-path. With a custom domain, set `site` to it and `base` to `""`.
 
+## Contact form
+
+`/contact` has a built-in form that works on a static site by posting to a form service. One-time setup: create a free form at a service such as [Formspree](https://formspree.io) or [Web3Forms](https://web3forms.com) that emails the center, then put its URL in `site.config.json` -> `contactForm.endpoint`. If the service needs a key, add it under `contactForm.hiddenFields` (Web3Forms: `{ "access_key": "..." }`). Until an endpoint is set the form is hidden and only the phone/email details show.
+
 ## Deploy
 
 Pushing to `main` builds and deploys through GitHub Actions (`.github/workflows/deploy.yml`). It also rebuilds daily. One-time setup: in the repo, **Settings → Pages → Source: GitHub Actions**.

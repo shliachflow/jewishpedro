@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import FormEmbed from '../components/FormEmbed.astro';
+import ContactForm from '../components/ContactForm.astro';
 import { url } from '../lib/site';
 
 export async function getStaticPaths() {
@@ -10,13 +11,14 @@ export async function getStaticPaths() {
 }
 const { page } = Astro.props;
 const { Content } = await render(page);
-const { title, description, image, formUrl } = page.data;
+const { title, description, image, formUrl, contactForm } = page.data;
 ---
 <Base title={title} description={description}>
   <article class="container page prose">
     <h1>{title}</h1>
     {image && <img class="page-image" src={url(image)} alt="" />}
     <Content />
+    {contactForm && <ContactForm />}
     {formUrl && <FormEmbed url={formUrl} title={title} />}
   </article>
 </Base>

@@ -8,6 +8,7 @@ const pages = defineCollection({
     description: z.string().optional(),
     image: z.string().optional(),
     formUrl: z.string().url().optional(),
+    contactForm: z.boolean().optional(),
     // home page only
     start: z.array(z.object({ title: z.string(), text: z.string(), href: z.string() })).optional(),
     featured: z
