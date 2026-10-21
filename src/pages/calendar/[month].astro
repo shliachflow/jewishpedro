@@ -33,7 +33,7 @@ const { model, prev, next, all } = Astro.props;
       <a class="btn btn-line" href={`https://calendar.google.com/calendar/render?cid=${encodeURIComponent(`webcal://${new URL(site.deploy.site).host}${url('/calendar.ics')}`)}`} target="_blank" rel="noopener">Subscribe in Google Calendar</a>
     </div>
     <details class="more-events"><summary>Jump to another month</summary>
-      <p class="cal-months">{all.map((k) => <a href={url(`/calendar/${k}`)} aria-current={k === model.key ? 'page' : undefined}>{k}</a>)}</p>
+      <p class="cal-months">{all.map((k) => <a href={url(`/calendar/${k}`)} aria-current={k === model.key ? 'page' : undefined}>{new Date(`${k}-01T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' })}</a>)}</p>
     </details>
   </div>
 </Base>

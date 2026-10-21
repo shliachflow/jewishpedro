@@ -28,6 +28,6 @@ Ready to join us for our next gathering? Text us to RSVP and get all the details
 
 Check out our monthly planner to see what's coming up next. From game nights to BBQs, community service to holiday celebrations, there's always something happening.
 
-[View Monthly Planner](/monthly-planner)
+[View Monthly Planner](/planner)
 
 We meet every 4th Sunday of the month (subject to change). Text 310-935-5236 to RSVP and stay updated on our latest gatherings!

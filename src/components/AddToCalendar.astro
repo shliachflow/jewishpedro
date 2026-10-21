@@ -1,9 +1,12 @@
 ---
+import { url } from '../lib/site';
 interface Props { google: string; ics: string; series?: boolean }
 const { google, ics, series = false } = Astro.props;
+const cal = url('/calendar');
 ---
 <div class="add-cal">
-  <span class="add-cal-label">Add to calendar{series ? ' (all dates)' : ''}:</span>
-  <a class="btn btn-line" href={google} target="_blank" rel="noopener">Google Calendar</a>
-  <a class="btn btn-line" href={ics}>Apple / Outlook (.ics)</a>
+  <span class="add-cal-label">Add to calendar:</span>
+  <a class="btn btn-line" href={google} target="_blank" rel="noopener">{series ? 'Google (next date)' : 'Google Calendar'}</a>
+  <a class="btn btn-line" href={ics}>{series ? 'Apple / Outlook (every date)' : 'Apple / Outlook (.ics)'}</a>
+  {series && <p class="add-cal-note">To follow every date in Google Calendar, use "Subscribe" on the <a href={cal}>calendar page</a>.</p>}
 </div>

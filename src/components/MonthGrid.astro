@@ -1,5 +1,7 @@
 ---
 import { url } from '../lib/site';
+import { today } from '../lib/events';
+const todayStr = today();
 import type { MonthModel } from '../lib/month';
 interface Props { month: MonthModel }
 const { month } = Astro.props;
@@ -11,7 +13,7 @@ const quiet = (c: any) => !c.jewish?.items.some((i: any) => i.kind !== 'parsha')
   {month.weeks.map((w) => (
     <div class="cal-week" role="row">
       {w.map((c, i) => (
-        <div role="cell" class:list={['cal-cell', { 'out': !c.inMonth, 'has': c.inMonth && (c.events.length > 0 || (c.jewish?.items.length ?? 0) > 0), 'past': c.past, 'sat': i === 6 }]}>
+        <div role="cell" class:list={['cal-cell', { 'out': !c.inMonth, 'has': c.inMonth && (c.events.length > 0 || (c.jewish?.items.length ?? 0) > 0), 'past': c.past, 'today': c.date === todayStr, 'sat': i === 6 }]}>
           {c.inMonth && (
             <>
               <div class="cal-dates">

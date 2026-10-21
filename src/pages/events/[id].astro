@@ -3,7 +3,7 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import FormEmbed from '../../components/FormEmbed.astro';
 import { getUpcomingEvents, getOccurrences, formatDate, repeatLabel, horizon, today } from '../../lib/events';
-import { googleLink } from '../../lib/ics';
+import { googleLink, parseTimes } from '../../lib/ics';
 import AddToCalendar from '../../components/AddToCalendar.astro';
 import { url, site } from '../../lib/site';
 
@@ -17,10 +17,16 @@ const every = repeatLabel(event);
 const pageUrl = new URL(url(`/events/${event.id}`), site.deploy.site).href;
 const more = repeat ? (await getOccurrences(today(), horizon())).filter((o) => o.event.id === event.id).slice(1, 5) : [];
 const a = site.address;
+const tt = parseTimes(time);
 const atCenter = !location || location.includes(a.street);
 const eventLd = {
   '@context': 'https://schema.org', '@type': 'Event', name: title,
-  startDate: date,
+  startDate: tt ? `${date}T${tt.start.slice(0, 2)}:${tt.start.slice(2, 4)}:00` : date,
+  ...(tt ? { endDate: `${date}T${tt.end.slice(0, 2)}:${tt.end.slice(2, 4)}:00` } : {}),
+  description: event.body?.replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[#*_`>-]/g, '').replace(/\s+/g, ' ').trim().slice(0, 300),
+  isAccessibleForFree: true,
+  eventStatus: 'https://schema.org/EventScheduled',
+  ...(image ? { image: new URL(url(image), site.deploy.site).href } : {}),
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   location: atCenter
     ? { '@type': 'Place', name: site.name, address: { '@type': 'PostalAddress', streetAddress: a.street, addressLocality: a.city, addressRegion: a.state, postalCode: site.zip, addressCountry: 'US' } }

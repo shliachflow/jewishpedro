@@ -26,6 +26,6 @@ We typically meet on the second Sunday of each month for special programs, discu
 
 Stay up-to-date with all our upcoming events, special programs, and activities. Check out our latest event flyers and announcements.
 
-[View Monthly Planner](/monthly-planner)
+[View Monthly Planner](/planner)
 
 Please Note: The exact date is subject to change. Check our Monthly Planner or reach out for the most current information.

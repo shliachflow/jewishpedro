@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Monthly Planner
 description: "Shabbat, classes, holidays, events"
 ---

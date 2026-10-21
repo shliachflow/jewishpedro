@@ -73,8 +73,5 @@ export function googleLink(e: EventEntry, date: string, pageUrl: string): string
   const t = parseTimes(e.data.time);
   const dates = t ? `${compact(date)}T${t.start}/${compact(date)}T${t.end}` : `${compact(date)}/${compact(addDays(date, 1))}`;
   const q = new URLSearchParams({ action: 'TEMPLATE', text: e.data.title, dates, ctz: site.timezone, location: place(e), details: pageUrl });
-  if (e.data.repeat && date === iso(e.data.date)) {
-    q.set('recur', `RRULE:FREQ=WEEKLY;INTERVAL=${e.data.repeat === 'weekly' ? 1 : 2}${e.data.until ? `;UNTIL=${compact(e.data.until)}` : ''}`);
-  }
   return `https://calendar.google.com/calendar/render?${q}`;
 }

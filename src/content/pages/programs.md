@@ -7,7 +7,7 @@ description: "Shabbat · Holidays · Learning · Kids · More"
   Celebrated together in San Pedro
 - [Fresh, Homemade Challah](/bassies-challah-shoppe)  
   From Bassie's San Pedro kitchen
-- [This Month at Chabad](/monthly-planner)  
+- [This Month at Chabad](/planner)  
   Shabbat, classes, holidays, events
 - [Upcoming Events](/events)
 - [Shabbat Morning, 10:15 AM](/synagogue-services)  

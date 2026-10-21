@@ -2,25 +2,32 @@
 // Swappable Shabbos box, laid out as a horizontal timetable board.
 // Times are fetched client-side from Hebcal. All settings come from site.config.json.
 import { site } from '../lib/site';
+import { jewishDays } from '../lib/jewish';
+import { today, addDays } from '../lib/events';
 const s = site.shabbos;
 const ui = site.ui;
 const params = new URLSearchParams({ cfg: 'json', zip: site.zip, b: String(s.candleLightingMinutes) });
 if (s.havdalah.method === 'minutes') params.set('m', String(s.havdalah.minutes));
 // method "degrees": Hebcal's default (nightfall at 8.5° below the horizon), so no "m" param.
 const api = `https://www.hebcal.com/shabbat?${params}`;
+// Build-time values, so the board is right with JS off or Hebcal unreachable. The live fetch refreshes them.
+const t0 = today();
+const days = [...jewishDays(new Date(`${t0}T12:00:00`), new Date(`${addDays(t0, 8)}T12:00:00`))];
+const find = (kind: string) => days.flatMap(([, d]) => d.items).find((i) => i.kind === kind);
+const built = { candles: find('candles')?.time, havdalah: find('havdalah')?.time, parsha: find('parsha')?.text.replace(/^Parashat\s+/, '') };
 ---
 <section class="shabbos-box" aria-labelledby="shabbos-h" data-api={api} data-tz={site.timezone} data-prefix={ui.parshaPrefix} data-unavailable={ui.timesUnavailable}>
   <div class="board-title">
     <h2 id="shabbos-h">{ui.shabbatHeading}</h2>
-    <p data-field="parsha">&nbsp;</p>
+    <p data-field="parsha">{built.parsha ? ui.parshaPrefix + built.parsha : '\u00a0'}</p>
   </div>
   <dl class="board-times">
-    <div><dt>{ui.candleLabel}</dt><dd data-field="candles">…</dd></div>
-    <div><dt>{ui.havdalahLabel}</dt><dd data-field="havdalah">…</dd></div>
+    <div><dt>{ui.candleLabel}</dt><dd data-field="candles">{built.candles ?? '…'}</dd></div>
+    <div><dt>{ui.havdalahLabel}</dt><dd data-field="havdalah">{built.havdalah ?? '…'}</dd></div>
   </dl>
   <div class="board-info">
     {s.services && <p>{s.services.label} at {site.address.street}: {s.services.detail}</p>}
-    <p class="shabbos-note" data-field="note" hidden>{ui.timesUnavailable}</p>
+    <p class="shabbos-note" data-field="note" hidden={!!built.candles}>{ui.timesUnavailable}</p>
     <a class="shabbos-link" href={s.zemanimUrl}>{ui.zemanimLabel}</a>
   </div>
 </section>
@@ -31,6 +38,8 @@ const api = `https://www.hebcal.com/shabbat?${params}`;
     const fmt = (iso: string) =>
       new Date(iso).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: box.dataset.tz });
     const fail = () => {
+      // Keep the build-time times when we have them; only show the fallback when there is nothing.
+      if (box.querySelector('[data-field="candles"]')?.textContent !== '…') return;
       ['candles', 'havdalah'].forEach((k) => set(k, '—'));
       box.querySelector<HTMLElement>('[data-field="note"]')!.hidden = false;
     };
