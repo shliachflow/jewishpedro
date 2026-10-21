@@ -74,4 +74,9 @@ const events = defineCollection({
     .strict(),
 });
 
-export const collections = { pages, events };
+const holidays = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/holidays' }),
+  schema: z.object({ key: z.string() }).strict(),
+});
+
+export const collections = { pages, events, holidays };

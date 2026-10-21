@@ -1,0 +1,47 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import EventRow from '../../components/EventRow.astro';
+import PageCta from '../../components/PageCta.astro';
+import { getHolidayRows } from '../../lib/holidays';
+import { url } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const rows = await getHolidayRows();
+  const guides = await getCollection('holidays');
+  return rows.map((h, i) => {
+    const guide = guides.find((g) => g.data.key === h.key);
+    if (!guide) throw new Error(`Missing guide: src/content/holidays/${h.key}.md`);
+    return { params: { key: h.key }, props: { h, guide, next: rows[(i + 1) % rows.length] } };
+  });
+}
+const { h, guide, next } = Astro.props;
+const { Content } = await render(guide);
+---
+<Base title={h.title} description={`${h.description}`}>
+  <div class="page-head"><div class="container">
+    <p><a href={url('/holidays')}>← All holidays</a></p>
+    <h1>{h.title}</h1>
+    <p class="page-sub">{h.range ? `${h.range}` : h.description}</p>
+  </div></div>
+  <div class="container page page-body">
+    <article class="prose">
+      <div class="pg-intro"><p>{h.description}</p></div>
+      <Content />
+      {h.offers.length > 0 && (
+        <section class="pg-sec">
+          <div class="pg-sec-head"><h2>Join us</h2></div>
+          <div class="pg-sec-body"><div class="event-rows">{h.offers.map((o) => <EventRow occ={o} level={3} />)}</div></div>
+        </section>
+      )}
+      <section class="pg-sec">
+        <div class="pg-sec-head"><h2>Learn more</h2></div>
+        <div class="pg-sec-body">
+          <p><a class="btn" href={h.learnMore} target="_blank" rel="noopener">{h.title} on Chabad.org</a></p>
+          <p>Next: <a href={url(`/holidays/${next.key}`)}>{next.title} →</a></p>
+        </div>
+      </section>
+    </article>
+  </div>
+  <PageCta />
+</Base>
