@@ -2,6 +2,15 @@
 import { site, url } from '../lib/site';
 ---
 <header class="site-header">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>{site.address.street}, {site.address.city}</span>
+      <span class="topbar-links">
+        <a href={`tel:${site.phone}`}>{site.phone}</a>
+        <a href={site.social.whatsapp}>WhatsApp</a>
+      </span>
+    </div>
+  </div>
   <div class="container header-inner">
     <a class="brand" href={url('/')}>
       <img src={url(site.logo)} alt="" width="44" height="44" />
@@ -11,16 +20,20 @@ import { site, url } from '../lib/site';
     <nav id="main-nav" class="main-nav" aria-label="Main">
       <ul>
         {site.nav.map((item) => (
-          <li class={item.children ? 'has-children' : ''}>
-            <a href={url(item.href)}>{item.label}</a>
-            {item.children && (
-              <ul class="submenu">
-                {item.children.map((c) => <li><a href={url(c.href)}>{c.label}</a></li>)}
-              </ul>
-            )}
-          </li>
+          item.children ? (
+            <li class="has-children">
+              <details>
+                <summary>{item.label}</summary>
+                <ul class="submenu">
+                  {item.children.map((c) => <li><a href={url(c.href)}>{c.label}</a></li>)}
+                </ul>
+              </details>
+            </li>
+          ) : (
+            <li><a href={url(item.href)}>{item.label}</a></li>
+          )
         ))}
-        <li><a class="btn" href={site.donate.url}>{site.donate.label}</a></li>
+        <li class="nav-donate"><a class="btn btn-sm" href={site.donate.url}>{site.donate.label}</a></li>
       </ul>
     </nav>
   </div>
@@ -31,5 +44,11 @@ import { site, url } from '../lib/site';
   btn?.addEventListener('click', () => {
     const open = nav?.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(!!open));
+  });
+  // Desktop: close other dropdowns when one opens or when clicking elsewhere.
+  const all = [...document.querySelectorAll<HTMLDetailsElement>('.main-nav details')];
+  all.forEach((d) => d.addEventListener('toggle', () => d.open && all.filter((o) => o !== d).forEach((o) => (o.open = false))));
+  document.addEventListener('click', (e) => {
+    if (!(e.target as HTMLElement).closest('.main-nav details')) all.forEach((o) => (o.open = false));
   });
 </script>

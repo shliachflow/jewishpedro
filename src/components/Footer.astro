@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
     <div>
       <strong>Explore</strong>
       <ul>
-        {site.nav.map((i) => <li><a href={url(i.href)}>{i.label}</a></li>)}
+        {site.footerLinks.map((i) => <li><a href={url(i.href)}>{i.label}</a></li>)}
       </ul>
     </div>
     <div>

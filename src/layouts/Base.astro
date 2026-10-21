@@ -1,4 +1,6 @@
 ---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/inter';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -15,12 +17,14 @@ const fullTitle = title ? `${title} | ${site.name}` : site.name;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content={site.theme.primary} />
     <link rel="icon" href={url(site.logo)} />
-    <style is:global set:html={`:root{--accent:${site.accentColor}}`} />
+    <style is:global set:html={`:root{--primary:${site.theme.primary};--accent:${site.theme.accent}}`} />
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
     <Header />
-    <main><slot /></main>
+    <main id="main"><slot /></main>
     <Footer />
   </body>
 </html>

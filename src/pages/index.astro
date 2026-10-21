@@ -24,6 +24,17 @@ const upcoming = (await getUpcomingEvents()).slice(0, 3);
 
   <div class="container"><ShabbosBox /></div>
 
+  {home.data.start && (
+    <section class="container section">
+      <h2>New here? Start here.</h2>
+      <ul class="start">
+        {home.data.start.map((s) => (
+          <li><a href={url(s.href)}><strong>{s.title}</strong><span>{s.text}</span></a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+
   <section class="container section">
     <h2>Upcoming events</h2>
     {upcoming.length === 0

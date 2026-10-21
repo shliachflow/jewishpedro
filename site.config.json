@@ -15,10 +15,12 @@
   "zip": "90731",
   "timezone": "America/Los_Angeles",
   "logo": "/images/logo.png",
-  "accentColor": "#b5542b",
   "shabbos": {
     "candleLightingMinutes": 18,
-    "havdalah": { "method": "degrees", "minutes": 50 },
+    "havdalah": {
+      "method": "degrees",
+      "minutes": 50
+    },
     "zemanimUrl": "https://www.chabad.org/zemanim"
   },
   "social": {
@@ -26,32 +28,144 @@
     "instagram": "https://www.instagram.com/jewishspedro",
     "whatsapp": "https://wa.me/13109355236"
   },
-  "donate": { "label": "Donate", "url": "https://secure.givelively.org/donate/san-pedro-jewish-center" },
-  "deploy": { "site": "https://shliachflow.github.io", "base": "/jewishpedro" },
+  "donate": {
+    "label": "Donate",
+    "url": "https://secure.givelively.org/donate/san-pedro-jewish-center"
+  },
+  "deploy": {
+    "site": "https://shliachflow.github.io",
+    "base": "/jewishpedro"
+  },
   "nav": [
-    { "label": "About", "href": "/about" },
     {
-      "label": "Programs",
-      "href": "/programs",
+      "label": "Shabbat",
+      "href": "/shabbat-experience",
       "children": [
-        { "label": "Shabbat Experience", "href": "/shabbat-experience" },
-        { "label": "Synagogue Services", "href": "/synagogue-services" },
-        { "label": "Shabbat Meals", "href": "/shabbat-meal" },
-        { "label": "Adult Education", "href": "/adult-education" },
-        { "label": "Jewish Insights Class", "href": "/jewish-insights-class" },
-        { "label": "Holidays", "href": "/holidays" },
-        { "label": "Bassie's Challah Shoppe", "href": "/bassies-challah-shoppe" },
-        { "label": "First Thursday Challah Booth", "href": "/challah-booth-first-thursday" },
-        { "label": "Men's Club", "href": "/mens-club" },
-        { "label": "Women's Circle", "href": "/womens-circle" },
-        { "label": "Kids & Youth", "href": "/kids-youth-programs" },
-        { "label": "Monthly Planner", "href": "/monthly-planner" }
+        {
+          "label": "Shabbat Experience",
+          "href": "/shabbat-experience"
+        },
+        {
+          "label": "Synagogue Services",
+          "href": "/synagogue-services"
+        },
+        {
+          "label": "Shabbat Meals",
+          "href": "/shabbat-meal"
+        },
+        {
+          "label": "Bassie's Challah Shoppe",
+          "href": "/bassies-challah-shoppe"
+        }
       ]
     },
-    { "label": "Events", "href": "/events" },
-    { "label": "Move to Pedro", "href": "/move-to-pedro" },
-    { "label": "Resources", "href": "/online-resources" },
-    { "label": "FAQ", "href": "/faq" },
-    { "label": "Contact", "href": "/contact" }
+    {
+      "label": "Learn",
+      "href": "/adult-education",
+      "children": [
+        {
+          "label": "Adult Education",
+          "href": "/adult-education"
+        },
+        {
+          "label": "Jewish Insights Class",
+          "href": "/jewish-insights-class"
+        },
+        {
+          "label": "Holidays",
+          "href": "/holidays"
+        },
+        {
+          "label": "Online Resources",
+          "href": "/online-resources"
+        }
+      ]
+    },
+    {
+      "label": "Community",
+      "href": "/programs",
+      "children": [
+        {
+          "label": "All Programs",
+          "href": "/programs"
+        },
+        {
+          "label": "Men's Club",
+          "href": "/mens-club"
+        },
+        {
+          "label": "Women's Circle",
+          "href": "/womens-circle"
+        },
+        {
+          "label": "Kids & Youth",
+          "href": "/kids-youth-programs"
+        },
+        {
+          "label": "First Thursday Challah Booth",
+          "href": "/challah-booth-first-thursday"
+        },
+        {
+          "label": "Move to Pedro",
+          "href": "/move-to-pedro"
+        },
+        {
+          "label": "Monthly Planner",
+          "href": "/monthly-planner"
+        }
+      ]
+    },
+    {
+      "label": "Events",
+      "href": "/events"
+    },
+    {
+      "label": "About",
+      "href": "/about",
+      "children": [
+        {
+          "label": "About Us",
+          "href": "/about"
+        },
+        {
+          "label": "FAQ",
+          "href": "/faq"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ]
+    }
+  ],
+  "theme": {
+    "primary": "#14394f",
+    "accent": "#bf4d17"
+  },
+  "footerLinks": [
+    {
+      "label": "Programs",
+      "href": "/programs"
+    },
+    {
+      "label": "Events",
+      "href": "/events"
+    },
+    {
+      "label": "Holidays",
+      "href": "/holidays"
+    },
+    {
+      "label": "Move to Pedro",
+      "href": "/move-to-pedro"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
   ]
 }

@@ -1,5 +1,15 @@
 ---
 title: A warm Jewish home in San Pedro
+start:
+  - title: Come to Shabbat
+    text: Saturday mornings at 10:15, with a kiddush lunch. No experience needed.
+    href: /shabbat-experience
+  - title: Join a class
+    text: Torah on Zoom every Tuesday at 7:00 PM, plus one-on-one learning.
+    href: /adult-education
+  - title: Talk to the Rabbi
+    text: Questions, a visit, or just hello. Call, text, or send a message.
+    href: /contact
 featured:
   - title: Move to Pedro
     text: Affordable housing, beaches, and a growing Jewish community. See why Jewish families are moving to San Pedro.
