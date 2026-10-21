@@ -1,5 +1,6 @@
 ---
-// Swappable Shabbos box. Fetches times client-side from Hebcal. All settings come from site.config.json.
+// Swappable Shabbos box (styled as a timetable). Times are fetched client-side from Hebcal.
+// All settings come from site.config.json.
 import { site } from '../lib/site';
 const s = site.shabbos;
 const params = new URLSearchParams({ cfg: 'json', zip: site.zip, b: String(s.candleLightingMinutes) });
@@ -7,15 +8,15 @@ if (s.havdalah.method === 'minutes') params.set('m', String(s.havdalah.minutes))
 // method "degrees": Hebcal's default (nightfall at 8.5° below the horizon), so no "m" param.
 const api = `https://www.hebcal.com/shabbat?${params}`;
 ---
-<section class="shabbos-box" data-api={api} data-tz={site.timezone}>
-  <h2>This Shabbos</h2>
+<section class="shabbos-box" aria-labelledby="shabbos-h" data-api={api} data-tz={site.timezone}>
+  <h2 id="shabbos-h">This Shabbat <span data-field="parsha"></span></h2>
   <dl>
-    <div><dt>Parsha</dt><dd data-field="parsha">…</dd></div>
     <div><dt>Candle lighting</dt><dd data-field="candles">…</dd></div>
-    <div><dt>Shabbos ends</dt><dd data-field="havdalah">…</dd></div>
+    <div><dt>Shabbat ends</dt><dd data-field="havdalah">…</dd></div>
   </dl>
+  {s.services && <p class="shabbos-services">{s.services}</p>}
   <p class="shabbos-note" data-field="note" hidden>Times unavailable right now.</p>
-  <a href={s.zemanimUrl}>Full daily times (Chabad.org)</a>
+  <a class="shabbos-link" href={s.zemanimUrl}>Full daily times on Chabad.org</a>
 </section>
 <script>
   const box = document.querySelector<HTMLElement>('.shabbos-box');
@@ -29,11 +30,11 @@ const api = `https://www.hebcal.com/shabbat?${params}`;
         for (const i of d.items) {
           if (i.category === 'candles') set('candles', fmt(i.date));
           if (i.category === 'havdalah') set('havdalah', fmt(i.date));
-          if (i.category === 'parashat') set('parsha', i.title.replace(/^Parashat\s+/, ''));
+          if (i.category === 'parashat') set('parsha', '· ' + i.title.replace(/^Parashat\s+/, ''));
         }
       })
       .catch(() => {
-        ['parsha', 'candles', 'havdalah'].forEach((k) => set(k, '—'));
+        ['candles', 'havdalah'].forEach((k) => set(k, '—'));
         box.querySelector<HTMLElement>('[data-field="note"]')!.hidden = false;
       });
   }

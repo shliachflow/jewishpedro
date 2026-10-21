@@ -1,0 +1,18 @@
+---
+import { url } from '../lib/site';
+interface Props { event: any }
+const { event } = Astro.props;
+const { title, date, time, location } = event.data;
+const d = (opts: Intl.DateTimeFormatOptions) => date.toLocaleDateString('en-US', { ...opts, timeZone: 'UTC' });
+---
+<article class="event-row">
+  <time class="event-when" datetime={date.toISOString().slice(0, 10)}>
+    <span class="event-dow">{d({ weekday: 'short' })}</span>
+    <span class="event-day">{d({ day: 'numeric' })}</span>
+    <span class="event-month">{d({ month: 'short' })}</span>
+  </time>
+  <div class="event-what">
+    <h3><a href={url(`/events/${event.id}`)}>{title}</a></h3>
+    <p>{time}{time && location && ' · '}{location}</p>
+  </div>
+</article>

@@ -1,5 +1,6 @@
 ---
 import { site, url } from '../lib/site';
+const suffix = site.name.replace(site.shortName, '').trim();
 ---
 <header class="site-header">
   <div class="topbar">
@@ -13,8 +14,8 @@ import { site, url } from '../lib/site';
   </div>
   <div class="container header-inner">
     <a class="brand" href={url('/')}>
-      <img src={url(site.logo)} alt="" width="44" height="44" />
-      <span>{site.name}</span>
+      <img src={url(site.logo)} alt="" width="40" height="40" />
+      <span>{site.shortName}{suffix && <small> {suffix}</small>}</span>
     </a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav id="main-nav" class="main-nav" aria-label="Main">
@@ -25,7 +26,9 @@ import { site, url } from '../lib/site';
               <details>
                 <summary>{item.label}</summary>
                 <ul class="submenu">
-                  {item.children.map((c) => <li><a href={url(c.href)}>{c.label}</a></li>)}
+                  {item.children.map((c) => (
+                    <li><a href={url(c.href)}><span>{c.label}</span>{c.desc && <small>{c.desc}</small>}</a></li>
+                  ))}
                 </ul>
               </details>
             </li>
@@ -45,10 +48,10 @@ import { site, url } from '../lib/site';
     const open = nav?.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(!!open));
   });
-  // Desktop: close other dropdowns when one opens or when clicking elsewhere.
   const all = [...document.querySelectorAll<HTMLDetailsElement>('.main-nav details')];
   all.forEach((d) => d.addEventListener('toggle', () => d.open && all.filter((o) => o !== d).forEach((o) => (o.open = false))));
   document.addEventListener('click', (e) => {
     if (!(e.target as HTMLElement).closest('.main-nav details')) all.forEach((o) => (o.open = false));
   });
+  document.addEventListener('keydown', (e) => e.key === 'Escape' && all.forEach((o) => (o.open = false)));
 </script>

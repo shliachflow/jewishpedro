@@ -10,9 +10,10 @@ const pages = defineCollection({
     formUrl: z.string().url().optional(),
     contactForm: z.boolean().optional(),
     // home page only
-    start: z.array(z.object({ title: z.string(), text: z.string(), href: z.string() })).optional(),
+    heroImage: z.string().optional(),
+    heroAlt: z.string().optional(),
     featured: z
-      .array(z.object({ title: z.string(), text: z.string(), href: z.string(), image: z.string().optional() }))
+      .array(z.object({ title: z.string(), text: z.string(), href: z.string() }))
       .optional(),
   }),
 });

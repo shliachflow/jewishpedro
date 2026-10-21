@@ -1,7 +1,6 @@
 {
-  "name": "San Pedro Jewish Center",
-  "shortName": "Chabad of San Pedro",
-  "tagline": "A welcoming Jewish home for everyone in San Pedro and the LA Harbor area.",
+  "name": "Chabad S. Pedro Jewish Center",
+  "shortName": "Chabad S. Pedro",
   "description": "Chabad of San Pedro: Shabbat services, classes, holidays, challah, and community for Jews of every background.",
   "address": {
     "street": "817 W 9th St",
@@ -21,7 +20,8 @@
       "method": "degrees",
       "minutes": 50
     },
-    "zemanimUrl": "https://www.chabad.org/zemanim"
+    "zemanimUrl": "https://www.chabad.org/zemanim",
+    "services": "Saturday morning at 817 W 9th St: 9:45 class, 10:15 services, kiddush lunch"
   },
   "social": {
     "facebook": "https://www.facebook.com/jewishspedro",
@@ -43,19 +43,23 @@
       "children": [
         {
           "label": "Shabbat Experience",
-          "href": "/shabbat-experience"
+          "href": "/shabbat-experience",
+          "desc": "Saturday mornings: class, services, kiddush lunch"
         },
         {
           "label": "Synagogue Services",
-          "href": "/synagogue-services"
+          "href": "/synagogue-services",
+          "desc": "Times and what to expect"
         },
         {
           "label": "Shabbat Meals",
-          "href": "/shabbat-meal"
+          "href": "/shabbat-meal",
+          "desc": "Friday night and Saturday lunch"
         },
         {
           "label": "Bassie's Challah Shoppe",
-          "href": "/bassies-challah-shoppe"
+          "href": "/bassies-challah-shoppe",
+          "desc": "Fresh homemade challah for Shabbat"
         }
       ]
     },
@@ -65,19 +69,23 @@
       "children": [
         {
           "label": "Adult Education",
-          "href": "/adult-education"
+          "href": "/adult-education",
+          "desc": "Classes for every level"
         },
         {
           "label": "Jewish Insights Class",
-          "href": "/jewish-insights-class"
+          "href": "/jewish-insights-class",
+          "desc": "Tuesdays at 7:00 PM on Zoom"
         },
         {
           "label": "Holidays",
-          "href": "/holidays"
+          "href": "/holidays",
+          "desc": "Guides and celebrations all year"
         },
         {
           "label": "Online Resources",
-          "href": "/online-resources"
+          "href": "/online-resources",
+          "desc": "More learning on Chabad.org"
         }
       ]
     },
@@ -87,31 +95,38 @@
       "children": [
         {
           "label": "All Programs",
-          "href": "/programs"
+          "href": "/programs",
+          "desc": "Everything we offer"
         },
         {
           "label": "Men's Club",
-          "href": "/mens-club"
+          "href": "/mens-club",
+          "desc": "A monthly gathering"
         },
         {
           "label": "Women's Circle",
-          "href": "/womens-circle"
+          "href": "/womens-circle",
+          "desc": "Led by Rebbetzin Bassie"
         },
         {
           "label": "Kids & Youth",
-          "href": "/kids-youth-programs"
+          "href": "/kids-youth-programs",
+          "desc": "Programs as interest grows"
         },
         {
           "label": "First Thursday Challah Booth",
-          "href": "/challah-booth-first-thursday"
+          "href": "/challah-booth-first-thursday",
+          "desc": "Free challah at the Art Walk"
         },
         {
           "label": "Move to Pedro",
-          "href": "/move-to-pedro"
+          "href": "/move-to-pedro",
+          "desc": "Why families are moving here"
         },
         {
           "label": "Monthly Planner",
-          "href": "/monthly-planner"
+          "href": "/monthly-planner",
+          "desc": "What is happening this month"
         }
       ]
     },
@@ -125,22 +140,25 @@
       "children": [
         {
           "label": "About Us",
-          "href": "/about"
+          "href": "/about",
+          "desc": "Rabbi Yisroel and Rebbetzin Bassie"
         },
         {
           "label": "FAQ",
-          "href": "/faq"
+          "href": "/faq",
+          "desc": "Common questions"
         },
         {
           "label": "Contact",
-          "href": "/contact"
+          "href": "/contact",
+          "desc": "Call, text, or send a message"
         }
       ]
     }
   ],
   "theme": {
-    "primary": "#14394f",
-    "accent": "#bf4d17"
+    "primary": "#004850",
+    "accent": "#d0a858"
   },
   "footerLinks": [
     {

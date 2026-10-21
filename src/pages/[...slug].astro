@@ -14,8 +14,11 @@ const { Content } = await render(page);
 const { title, description, image, formUrl, contactForm } = page.data;
 ---
 <Base title={title} description={description}>
-  <article class="container page prose">
+  <div class="page-head"><div class="container">
     <h1>{title}</h1>
+    {description && <p class="page-sub">{description}</p>}
+  </div></div>
+  <article class="container page prose">
     {image && <img class="page-image" src={url(image)} alt="" />}
     <Content />
     {contactForm && <ContactForm />}

@@ -1,4 +1,4 @@
-# San Pedro Jewish Center website
+# Chabad S. Pedro Jewish Center website
 
 Static [Astro](https://astro.build) site, deployed to GitHub Pages. Everything center-specific lives in `site.config.json` so the repo can be reused as a template for other Chabad houses.
 

@@ -13,11 +13,12 @@ const { Content } = await render(event);
 const { title, date, time, location, image, rsvpUrl } = event.data;
 ---
 <Base title={title}>
-  <article class="container page prose">
+  <div class="page-head"><div class="container">
     <p><a href={url('/events')}>← All events</a></p>
     <h1>{title}</h1>
-    <p class="event-date">{formatDate(date)}{time && ` · ${time}`}</p>
-    {location && <p class="event-location">{location}</p>}
+    <p class="page-sub">{formatDate(date)}{time && ` · ${time}`}{location && ` · ${location}`}</p>
+  </div></div>
+  <article class="container page prose">
     {image && <img src={url(image)} alt="" />}
     <Content />
     {rsvpUrl && <FormEmbed url={rsvpUrl} title={`RSVP: ${title}`} />}

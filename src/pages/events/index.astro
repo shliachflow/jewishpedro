@@ -1,14 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
-import EventCard from '../../components/EventCard.astro';
+import EventRow from '../../components/EventRow.astro';
 import { getUpcomingEvents } from '../../lib/events';
 const events = await getUpcomingEvents();
 ---
 <Base title="Events">
+  <div class="page-head"><div class="container"><h1>Upcoming events</h1></div></div>
   <div class="container page">
-    <h1>Upcoming events</h1>
     {events.length === 0
       ? <p>No events scheduled right now. Check back soon.</p>
-      : <div class="event-rows">{events.map((e) => <EventCard event={e} compact />)}</div>}
+      : <div class="event-rows">{events.map((e) => <EventRow event={e} />)}</div>}
   </div>
 </Base>
