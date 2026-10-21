@@ -6,10 +6,14 @@ import { join } from 'node:path';
 // YAML turns an unquoted 2027-03-22 into a Date; accept that (date only, no time) or a YYYY-MM-DD string.
 const dateStr = z.preprocess(
   (v) => (v instanceof Date ? (v.getTime() % 86400000 === 0 ? v.toISOString().slice(0, 10) : 'has-a-time') : v),
-  z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Use a date like 2027-03-22 (YYYY-MM-DD), without a time'),
+  z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, 'Use a date like 2027-03-22 (YYYY-MM-DD), without a time')
+    .refine((s) => new Date(`${s}T00:00:00Z`).toISOString().slice(0, 10) === s, 'That is not a real calendar date'),
 );
 const imagePath = z
   .string()
+  .refine((p) => /^(https?:|\/)/.test(p), 'Start the image path with / (for example /images/photo.jpg)')
   .refine((p) => /^https?:/.test(p) || existsSync(join('public', p)), (p) => ({ message: `Image not found in public/: ${p}` }));
 
 const pages = defineCollection({
@@ -27,6 +31,7 @@ const pages = defineCollection({
       // home page only
       accent: z.string().optional(),
       heroImage: imagePath.optional(),
+      heroImageMobile: imagePath.optional(),
       heroAlt: z.string().optional(),
       heroFocus: z.string().optional(),
       heroFocusMobile: z.string().optional(),

@@ -2,8 +2,6 @@
 title: Move to Pedro
 description: A Jewish community 35 min from LA
 ---
-![Chabad S. Pedro logo](/images/move-to-pedro-logo.png)
-
 JEWISH LIFE · SOUTH BAY COAST
 
 ## The Jewish Community LA Hasn't Found Yet
@@ -337,7 +335,7 @@ TALK STRAIGHT · NO SALES PITCH
 
 Moving is a big decision. We'd rather answer your questions straight than sell you on anything. Reach out anytime.
 
-[ · Call 310-935-5236](tel:310-935-5236) [Email the Rabbi](mailto:rabbi@jewishpedro.org) [Send a Message](/contact)
+[Call 310-935-5236](tel:310-935-5236) [Email the Rabbi](mailto:rabbi@jewishpedro.org) [Send a Message](/contact)
 
 **Chabad S. Pedro Jewish Center**
 

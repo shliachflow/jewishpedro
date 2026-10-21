@@ -12,11 +12,14 @@ const { event } = Astro.props;
 const { Content } = await render(event);
 const { title, date, time, location, image, rsvpUrl } = event.data;
 const a = site.address;
+const atCenter = !location || location.includes(a.street);
 const eventLd = {
   '@context': 'https://schema.org', '@type': 'Event', name: title,
   startDate: date.toISOString().slice(0, 10),
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  location: { '@type': 'Place', name: location ?? site.name, address: { '@type': 'PostalAddress', streetAddress: a.street, addressLocality: a.city, addressRegion: a.state, postalCode: site.zip, addressCountry: 'US' } },
+  location: atCenter
+    ? { '@type': 'Place', name: site.name, address: { '@type': 'PostalAddress', streetAddress: a.street, addressLocality: a.city, addressRegion: a.state, postalCode: site.zip, addressCountry: 'US' } }
+    : { '@type': 'Place', name: location },
   organizer: { '@type': 'Organization', name: site.name },
 };
 ---

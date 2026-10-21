@@ -6,6 +6,7 @@ heroFocus: "40% 42%"
 heroFocusMobile: "17% 46%"
 visitPhoto: /images/shul-room.jpg
 visitAlt: The shul at 817 W 9th St with its lit menorah, lectern, and tables set with white linens
+heroImageMobile: /images/hero-harbor-sunset-m.jpg
 heroAlt: A lighthouse at the end of the harbor breakwater at sunset
 feature:
   title: The Shabbat Experience

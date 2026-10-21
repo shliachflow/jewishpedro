@@ -26,6 +26,8 @@ rsvpUrl: https://crm.example.com/form/abc   # optional, shown as an embedded for
 Description in markdown.
 ```
 
+Write dates as real calendar dates. (An impossible unquoted date such as `2027-13-45` is silently rolled forward by the YAML parser before the build can check it.)
+
 Upcoming events appear automatically on the homepage ("Coming up") and `/events` (the next 8, the rest in a "show all" list). Events dated before today are hidden at build time; the site rebuilds daily, so they disappear on their own.
 
 ## Edit a page

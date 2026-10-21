@@ -262,7 +262,7 @@ main:has(> .visit:last-child) + .site-footer { margin-top: 0; border-top: 0; }
   background:
     linear-gradient(180deg, color-mix(in oklab, var(--deep) 80%, transparent) 0, color-mix(in oklab, var(--deep) 40%, transparent) 7rem, transparent 14rem),
     linear-gradient(0deg, color-mix(in oklab, var(--deep) 96%, transparent) 0%, color-mix(in oklab, var(--deep) 70%, transparent) 28%, transparent 62%),
-    var(--hero-img) var(--hero-pos, 40% 42%) / cover no-repeat, var(--deep);
+    var(--hero-img-active, var(--hero-img)) var(--hero-pos, 40% 42%) / cover no-repeat, var(--deep);
   padding-block: clamp(3rem, 8vw, 5rem) clamp(5.5rem, 10vw, 7.5rem); }
 .hero-photo .hero-grid { grid-template-columns: 1fr; width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
 .hero-photo h1 { font-size: clamp(2.6rem, 6.2vw, 5.4rem); line-height: .94; letter-spacing: -.04em; max-width: 6.2em; margin-bottom: .4em; }
@@ -304,7 +304,7 @@ h2 { font-size: clamp(2.1rem, 5vw, 3.2rem); }
 /* Logo reads as a white mark while the header floats over the photo */
 .site-header.over-hero:not(.scrolled):not(.menu-open) .brand img { filter: brightness(0) invert(1); }
 /* Mobile: keep the lighthouse clear of the headline */
-@media (max-width: 40rem) { .hero-photo { background-position: 0 0, 0 0, var(--hero-pos-m, 17% 46%), 0 0; } }
+@media (max-width: 40rem) { .hero-photo { --hero-img-active: var(--hero-img-m, var(--hero-img)); background-position: 0 0, 0 0, var(--hero-pos-m, 17% 46%), 0 0; } }
 /* Feature band: deep teal with brass accents (gold stays for buttons and rules) */
 .feature-band { background: var(--deep); color: #fff; }
 .feature-band h2 { color: #fff; }
@@ -367,3 +367,10 @@ html { scroll-padding-top: 6rem; }
 .explore-cap { padding-top: 5rem; background: linear-gradient(transparent, color-mix(in oklab, var(--deep) 94%, transparent) 60%); }
 
 .contact-heading { margin-top: 2.5rem; font-size: 1.6rem; }
+
+/* Touch targets: 44px */
+.shabbos-link, .more a, .event-what :is(h2, h3) a, .toc li a, .site-footer li a, .prose-index li a, .more-events summary { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.toc li a { display: flex; }
+.prose-index li a { display: flex; margin-bottom: 0; }
+.site-footer li { margin-bottom: 0; }
+.site-footer ul a { padding-block: .35rem; }

@@ -24,7 +24,7 @@ Between the redemption of Passover and the revelation of Shavuot lies a 49‑day
 
 לּג בּעומֶר — Lag BaOmer — takes its name from the Hebrew letters לּ (Lamed = 30) and ג (Gimel = 3), totaling 33. It is a day of bonfires, music, dancing, and deep joy.
 
-### ︎ The End of a Plague
+### The End of a Plague
 
 According to the Talmud, 24,000 students of Rabbi Akiva perished during the Omer period because they did not treat one another with sufficient honor and respect. On Lag BaOmer — the 33rd day — the plague ceased. Their story is a timeless reminder that the way we treat each other is the very heart of Torah.
 
@@ -84,13 +84,13 @@ Tuesday, May 5, 2026 • 18 Iyar 5786
 
 Albert Family Residence - Backyard
 
-BBQ · Fire pit · Music · Kids' Activities · Family Friendly · ︎ All Are Welcome
+BBQ · Fire pit · Music · Kids' Activities · Family Friendly · All Are Welcome
 
 [RSVP Now](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq)
 
 All are welcome
 
-︎ COUNTING THE DAYS
+COUNTING THE DAYS
 
 ## The Omer & Lag BaOmer
 
@@ -170,6 +170,6 @@ Jewish Center
 
 [RSVP for the BBQ & Bonfire](https://secure.givelively.org/event/san-pedro-jewish-center/lag-baomer-bbq)
 
-Brought to you with · by Chabad S. Pedro
+Brought to you by Chabad S. Pedro
 
-︎ Chabad S. Pedro • Lag BaOmer 5786 • [jewishpedro.org](https://www.jewishpedro.org)
+Chabad S. Pedro • Lag BaOmer 5786 • [jewishpedro.org](https://www.jewishpedro.org)

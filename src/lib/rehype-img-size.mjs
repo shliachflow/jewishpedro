@@ -7,17 +7,19 @@ export function rehypeImgSize({ base = '' } = {}) {
   const prefix = base.replace(/\/$/, '');
   return async (tree) => {
     const jobs = [];
+    let first = true;
     visit(tree, 'element', (node) => {
       if (node.tagName !== 'img') return;
       const src = node.properties?.src;
       if (typeof src !== 'string' || !src.startsWith(prefix + '/images/')) return;
+      const isFirst = first; first = false;
       const file = 'public' + src.slice(prefix.length);
       if (!existsSync(file)) return;
       jobs.push(
         sharp(file).metadata().then((m) => {
           node.properties.width = m.width;
           node.properties.height = m.height;
-          node.properties.loading = 'lazy';
+          node.properties.loading = isFirst ? 'eager' : 'lazy';
           node.properties.decoding = 'async';
         }),
       );

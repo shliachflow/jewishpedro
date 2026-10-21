@@ -46,6 +46,7 @@ const api = `https://www.hebcal.com/shabbat?${params}`;
           if (i.category === 'havdalah') set('havdalah', fmt(i.date));
           if (i.category === 'parashat') set('parsha', (box.dataset.prefix ?? '') + i.title.replace(/^Parashat\s+/, ''));
         }
+        ['candles', 'havdalah'].forEach((k) => { if (box.querySelector(`[data-field="${k}"]`)?.textContent === '…') set(k, '—'); });
       })
       .catch(fail)
       .finally(() => clearTimeout(timer));
