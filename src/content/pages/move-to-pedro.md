@@ -335,10 +335,10 @@ TALK STRAIGHT · NO SALES PITCH
 
 Moving is a big decision. We'd rather answer your questions straight than sell you on anything. Reach out anytime.
 
-[Call 310-935-5236](tel:310-935-5236) [Email the Rabbi](mailto:rabbi@jewishpedro.org) [Send a Message](/contact)
+[Call 310-935-5236](tel:310-935-5236) [Email the Rabbi](mailto:info@jewishpedro.org) [Send a Message](/contact)
 
 **Chabad S. Pedro Jewish Center**
 
 817 W 9th St, San Pedro, CA 90731
 
-[310-935-5236](tel:310-935-5236) · [rabbi@jewishpedro.org](mailto:rabbi@jewishpedro.org)
+[310-935-5236](tel:310-935-5236) · [info@jewishpedro.org](mailto:info@jewishpedro.org)
