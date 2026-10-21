@@ -111,6 +111,13 @@ h3 { font-size: 1.25rem; }
 .event-date { font-weight: 600; font-size: .9rem; color: var(--accent); margin: 0 0 .25rem; }
 .event-location { color: var(--muted); font-size: .95rem; margin: .25rem 0 0; }
 
+.event-rows { margin-top: 1.5rem; border-top: 1px solid var(--line); }
+.event-row { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+.event-row h3 { margin: 0; font-size: 1.15rem; }
+.event-row h3 a { text-decoration: none; color: var(--primary); }
+.event-row .event-date { margin-bottom: .1rem; }
+@media (min-width: 48rem) { .event-row { display: grid; grid-template-columns: 25rem 1fr; gap: 1.5rem; align-items: baseline; } }
+
 /* Featured */
 .featured { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 2rem; }
 @media (min-width: 48rem) { .featured { grid-template-columns: repeat(2, 1fr); } }
