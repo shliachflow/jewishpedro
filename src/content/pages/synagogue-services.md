@@ -20,7 +20,7 @@ Featured
 
 ### Shabbat Day
 
-9:45am — Torah Class  
+9:45am — Chassidut Class  
 10:15am — Prayer Services & Torah Reading  
 Following Services — Kiddush Luncheon
 
@@ -28,7 +28,7 @@ Following Services — Kiddush Luncheon
 
 ### Torah Classes
 
-Every Tuesday
+Every Tuesday on Zoom
 
 7:00pm
 

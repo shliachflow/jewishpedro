@@ -31,6 +31,10 @@ Prayer Services & Torah Reading
 Following Services  
 Kiddush Luncheon
 
+## Before You Come
+
+There is no cost to attend. Some programs may ask for a small fee, and no one is ever turned away for lack of funds. Dress as you would for a synagogue. The Kiddush luncheon is kosher.
+
 ## Join Our Shabbat Community
 
 Whether you're a seasoned prayer-goer or new to it, you're welcome to join us and connect with G-d and with each other.

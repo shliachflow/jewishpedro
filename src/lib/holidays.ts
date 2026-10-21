@@ -1,4 +1,5 @@
-import { HebrewCalendar } from '@hebcal/core';
+import { HebrewCalendar, Location, flags } from '@hebcal/core';
+import { site } from './site';
 import holidays from '../data/holidays.json';
 import { getUpcomingEvents, today, addDays } from './events';
 
@@ -23,4 +24,19 @@ export async function getHolidayRows(): Promise<HolidayRow[]> {
     const range = !first ? '' : begin === last ? fmt(last, true) : `${fmt(begin)} (evening) – ${fmt(last, true)}`;
     return { ...h, range, first, offers: upcoming.filter((o) => o.event.data.holiday === h.key) };
   }).sort((a, b) => a.first.localeCompare(b.first));
+}
+
+// Chanukah: which night falls on which date, and the Friday candle-lighting time (before Shabbat).
+export function chanukahNights(first: string) {
+  if (!first) return [];
+  const g = (s: string) => new Date(`${s}T12:00:00`);
+  const loc = new Location(site.location.latitude, site.location.longitude, false, site.timezone);
+  const evs = HebrewCalendar.calendar({ start: g(first), end: g(addDays(first, 8)), location: loc, candlelighting: true, candleLightingMins: -site.shabbos.candleLightingMinutes, noModern: true, noRoshChodesh: true } as any)
+    .filter((e) => e.getFlags() & flags.CHANUKAH_CANDLES);
+  return evs.map((e, i) => {
+    const date = ymd(e.getDate().greg());
+    const dow = new Date(`${date}T12:00:00Z`).getUTCDay();
+    const t12 = (e as any).eventTimeStr?.replace(/^(\d{1,2}):(\d{2})$/, (_: string, h: string, m: string) => `${Number(h) % 12 || 12}:${m}${Number(h) >= 12 ? 'pm' : 'am'}`);
+    return { night: i + 1, date, label: dow === 5 ? `Light before Shabbat candles, ${t12}` : dow === 6 ? 'Light after Shabbat ends' : 'Light after nightfall' };
+  });
 }

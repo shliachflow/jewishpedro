@@ -717,3 +717,7 @@ main:has(> .page-cta:last-child) + .site-footer { margin-top: 0; border-top: 0; 
 .cs-roll dd { margin: 0; display: grid; gap: .2rem; font: 400 1.3rem var(--font-display); }
 .cs-note { color: var(--ink-soft); font-size: .95rem; }
 .cs-faq { padding-bottom: clamp(3rem, 7vw, 6rem); } .cs-more { max-width: 42rem; margin-top: 2rem; }
+.nights { list-style: none; padding: 0; margin: 0; border-top: 2px solid var(--primary); }
+.nights li { display: grid; grid-template-columns: 5.5rem 1fr; gap: .15rem 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+.nights b { font: 700 .8rem var(--font-ui); letter-spacing: .1em; text-transform: uppercase; color: var(--brass-text); padding-top: .25rem; }
+.nights em { grid-column: 2; font-style: normal; color: var(--ink-soft); font-size: .95rem; }

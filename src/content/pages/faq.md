@@ -91,11 +91,11 @@ Another Rabbi services this prison. [Contact us](/contact) and we'll connect you
 
 ### Is there kosher food in San Pedro?
 
-**Grocery Stores:** Ralph's carries some kosher products. For a larger selection, Elat Market (Pico Blvd, Los Angeles) and other kosher markets in the LA area are accessible.
+**Grocery Stores:** Trader Joe's on Western Ave has a surprisingly wide kosher selection, including pas yisroel breads and a strong range of certified products. Ralph's and the other major supermarkets nearby (Vons, Smart & Final, Albertsons) carry some kosher products, and Smart & Final in Long Beach (about 20-30 min) has a bigger kosher section, with milk, yogurts, cold cuts, and cheeses. For a larger selection, Elat Market (Pico Blvd, Los Angeles) and other kosher markets in the LA area are accessible.
 
-**Restaurants & Catering:** There are no kosher restaurants in San Pedro. However, there are numerous options in the greater Los Angeles area. We can refer you to local caterers for events.
+**Restaurants & Catering:** There are no kosher restaurants in San Pedro. However, there are numerous options in the greater Los Angeles area. Emunah (Hawthorne) is a kosher catering and takeout option in the South Bay, and we can refer you to other local caterers for events.
 
-**Deliveries:** Kosher meal delivery services are available to the San Pedro area. Contact us for current recommendations.
+**Deliveries:** Kosher meal delivery services are available to the San Pedro area. Western Kosher delivers to nearby South Bay neighborhoods and may be able to extend here as demand grows. Contact us for current recommendations.
 
 [Back to top ↑](#)
 

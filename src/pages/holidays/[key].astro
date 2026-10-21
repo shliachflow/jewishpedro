@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import EventRow from '../../components/EventRow.astro';
 import PageCta from '../../components/PageCta.astro';
-import { getHolidayRows } from '../../lib/holidays';
+import { getHolidayRows, chanukahNights } from '../../lib/holidays';
 import { url } from '../../lib/site';
 
 export async function getStaticPaths() {
@@ -17,6 +17,8 @@ export async function getStaticPaths() {
 }
 const { h, guide, next } = Astro.props;
 const { Content } = await render(guide);
+const nights = h.key === 'chanukah' ? chanukahNights(h.first) : [];
+const nightDate = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
 <Base title={h.title} description={`${h.description}`}>
   <div class="page-head"><div class="container">
@@ -28,6 +30,14 @@ const { Content } = await render(guide);
     <article class="prose">
       <div class="pg-intro"><p>{h.description}</p></div>
       <Content />
+      {nights.length > 0 && (
+        <section class="pg-sec">
+          <div class="pg-sec-head"><h2>Candle lighting</h2></div>
+          <div class="pg-sec-body">
+            <ol class="nights">{nights.map((n) => <li><b>Night {n.night}</b><span>{nightDate(n.date)}</span><em>{n.label}</em></li>)}</ol>
+          </div>
+        </section>
+      )}
       {h.offers.length > 0 && (
         <section class="pg-sec">
           <div class="pg-sec-head"><h2>Join us</h2></div>
