@@ -1,22 +1,19 @@
 ---
 // Swappable Shabbos box, laid out as a horizontal timetable board.
-// Times are fetched client-side from Hebcal. All settings come from site.config.json.
+// Times are calculated at build time (Hebcal's library), and the daily deploy keeps them current. Settings come from site.config.json.
 import { site } from '../lib/site';
 import { jewishDays } from '../lib/jewish';
 import { today, addDays } from '../lib/events';
 const s = site.shabbos;
 const ui = site.ui;
-const params = new URLSearchParams({ cfg: 'json', zip: site.zip, b: String(s.candleLightingMinutes) });
-if (s.havdalah.method === 'minutes') params.set('m', String(s.havdalah.minutes));
-// method "degrees": Hebcal's default (nightfall at 8.5° below the horizon), so no "m" param.
-const api = `https://www.hebcal.com/shabbat?${params}`;
-// Build-time values, so the board is right with JS off or Hebcal unreachable. The live fetch refreshes them.
+// On Saturday, start from Friday so candle lighting and havdalah belong to the same Shabbos.
 const t0 = today();
-const days = [...jewishDays(new Date(`${t0}T12:00:00`), new Date(`${addDays(t0, 8)}T12:00:00`))];
+const from = new Date(`${t0}T12:00:00`).getDay() === 6 ? addDays(t0, -1) : t0;
+const days = [...jewishDays(new Date(`${from}T12:00:00`), new Date(`${addDays(t0, 8)}T12:00:00`))];
 const find = (kind: string) => days.flatMap(([, d]) => d.items).find((i) => i.kind === kind);
 const built = { candles: find('candles')?.time, havdalah: find('havdalah')?.time, parsha: find('parsha')?.text.replace(/^Parashat\s+/, '') };
 ---
-<section class="shabbos-box" aria-labelledby="shabbos-h" data-api={api} data-tz={site.timezone} data-prefix={ui.parshaPrefix} data-unavailable={ui.timesUnavailable}>
+<section class="shabbos-box" aria-labelledby="shabbos-h">
   <div class="board-title">
     <h2 id="shabbos-h">{ui.shabbatHeading}</h2>
     <p data-field="parsha">{built.parsha ? ui.parshaPrefix + built.parsha : '\u00a0'}</p>
@@ -27,37 +24,7 @@ const built = { candles: find('candles')?.time, havdalah: find('havdalah')?.time
   </dl>
   <div class="board-info">
     {s.services && <p>{s.services.label} at {site.address.street}: {s.services.detail}</p>}
-    <p class="shabbos-note" data-field="note" hidden={!!built.candles}>{ui.timesUnavailable}</p>
+    {!built.candles && <p class="shabbos-note">{ui.timesUnavailable}</p>}
     <a class="shabbos-link" href={s.zemanimUrl}>{ui.zemanimLabel}</a>
   </div>
 </section>
-<script>
-  const box = document.querySelector<HTMLElement>('.shabbos-box');
-  if (box) {
-    const set = (k: string, v: string) => { const el = box.querySelector(`[data-field="${k}"]`); if (el) el.textContent = v; };
-    const fmt = (iso: string) =>
-      new Date(iso).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: box.dataset.tz });
-    const fail = () => {
-      // Keep the build-time times when we have them; only show the fallback when there is nothing.
-      if (box.querySelector('[data-field="candles"]')?.textContent !== '…') return;
-      ['candles', 'havdalah'].forEach((k) => set(k, '—'));
-      box.querySelector<HTMLElement>('[data-field="note"]')!.hidden = false;
-    };
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 6000);
-    fetch(box.dataset.api!, { signal: ctrl.signal })
-      .then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
-      .then((d) => {
-        const items: any[] = Array.isArray(d.items) ? d.items : [];
-        if (!items.some((i) => i.category === 'candles')) throw new Error('no times');
-        for (const i of items) {
-          if (i.category === 'candles') set('candles', fmt(i.date));
-          if (i.category === 'havdalah') set('havdalah', fmt(i.date));
-          if (i.category === 'parashat') set('parsha', (box.dataset.prefix ?? '') + i.title.replace(/^Parashat\s+/, ''));
-        }
-        ['candles', 'havdalah'].forEach((k) => { if (box.querySelector(`[data-field="${k}"]`)?.textContent === '…') set(k, '—'); });
-      })
-      .catch(fail)
-      .finally(() => clearTimeout(timer));
-  }
-</script>
